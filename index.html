@@ -7,13 +7,13 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <style>
-        body * {
+        body {
             margin: 0;
         }
 
         #map {
-            width: 100vh;
-            height: 100vh;
+            width: 100vw;
+            height: 100vh;  
         }
     </style>
 </head>
@@ -29,7 +29,7 @@
             { "label": "Jungenschaft Volundr", "location": [50.7514105, 7.0841944] },
             { "label": "Gau Franken", "location": [48.384001, 10.724682] }]
 
-        var map = L.map('map').setView([51, 11.8], 7);
+        var map = L.map('map').setView([51.287140, 10.179360], 7);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
