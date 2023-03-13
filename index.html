@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <style>
+        body * {
+            margin: 0;
+        }
+
+        #map {
+            width: 100vh;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script>
+        const gruppen = [
+            { "label": "Ring Namata", "location": [51.1798706, 7.1943544] },
+            { "label": "Schwarzer Adler", "location": [50.97674585, 7.0704304370973] },
+            { "label": "Jungenschaft Gawan", "location": [52.632409, 13.2902205] },
+            { "label": "Jungenschaft Volundr", "location": [50.7514105, 7.0841944] },
+            { "label": "Gau Franken", "location": [48.384001, 10.724682] }]
+
+        var map = L.map('map').setView([51, 11.8], 7);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        gruppen.forEach(gruppe => {
+            L.marker(gruppe["location"])
+                .bindPopup(gruppe["label"])
+                .addTo(map);
+        });
+
+    </script>
+</body>
+
+</html>
