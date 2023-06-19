@@ -27,6 +27,7 @@
         body {
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         input,
@@ -66,12 +67,28 @@
 
             font-weight: bold;
             text-decoration: none;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
         }
 
         .wappen {
             margin-inline: auto;
             width: 50%;
+        }
+
+        #search {
+            position: absolute;
+            inset-block-start: 16px;
+            inset-inline-end: 16px;
+            width: 400px;
+            max-width: calc(100% - 16px - 40px - 16px); /* max width - right margin - size of zoom widget - left margin */
+
+            height: 56px;
+            z-index: 1000;
+            
+            padding: 8px 16px;
+            border-radius: 999em;
+            border-color: var(--primary);
+            background-color: rgba(255, 255, 255, 0.95);
         }
     </style>
 
@@ -91,6 +108,7 @@
 
 
 <body>
+    <input id="search" placeholder="Suche ..."/>
     <a class="correction-link button"
         href="https://cloud.deutscher-pfadfinderbund.de/apps/forms/s/J7xJTjJrpkfKWZRDGeLdaft7">Neuen Ort hinzufügen oder
         korrigieren</a>
