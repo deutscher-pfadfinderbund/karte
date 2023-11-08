@@ -77,12 +77,45 @@
         }
 
         .wappen {
-            margin-inline: auto;
-            width: 50%;
+            flex-shrink: 1;
+            object-fit: contain;
+            max-width: 50%;
+        }
+
+        .wappen-container {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
         }
     </style>
 
     <script>
+        /**
+         * Erstell
+         * 
+         * @param  {string | string[]} wappen
+         * @return {HTMLElement}
+         */
+        function formatiereWappen(wappen){
+            if(!Array.isArray(wappen)){
+                wappen = [wappen]
+            }
+
+            const wappenContainer = document.createElement("div")
+            wappenContainer.className = "wappen-container"
+            wappenContainer.append(...wappen.map(url => {
+                const picture = document.createElement("picture")
+                const img = document.createElement("img")
+                img.src = url
+                picture.className = "wappen"
+                picture.append(img)
+                return picture
+            }))
+            return wappenContainer
+        }
+
         function popupFromGruppe(layer) {
             const gruppe = layer.feature.properties
 
@@ -90,7 +123,7 @@
             return `<article class="popup">
                       <h1>${gruppe["label"] ?? ""}</h1>
                       <p>${gruppe["description"] ?? ""}</p>
-                      ${gruppe["wappen"] ? `<img class="wappen" src='${gruppe["wappen"]}'/>` : ""}
+                      ${gruppe["wappen"] ? formatiereWappen(gruppe["wappen"]).outerHTML : ""}
                       ${gruppe["website"] ? `<a href='${gruppe["website"]}' target='_blank' rel='noopener noreferrer'>Website</a>` : ""} 
                     </article>`
         }
