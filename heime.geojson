@@ -4,6 +4,33 @@
         {
             "type": "Feature",
             "properties": {
+                "uid": 3144016,
+                "addr:city": "Schimberg",
+                "addr:housenumber": "10",
+                "addr:postcode": "37308",
+                "addr:street": "Bernteröder Straße",
+                "building": "yes",
+                "castle_type": "stately",
+                "historic": "castle",
+                "name": "Schloss Martinfeld",
+                "wikidata": "Q2242357",
+                "wikipedia": "de:Schloss Martinfeld",
+                "id": "way/331311974",
+                "label": "Schloss Martinfeld",
+                "website": "https://schloss-martinfeld.de/",
+                "wappen": "https://schloss-martinfeld.de/wp-content/uploads/2022/07/Aussen2_komplett.jpg"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.17978,
+                    51.28705
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "label": "Diedrichskotten",
                 "name": "Diederichskotten",
                 "type": "multipolygon",
