@@ -1,0 +1,20 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "label": "Gutshof",
+                "website": "pfadfinder-tempelhof.de",
+                "wappen": "/assets/Pfadiheim BB.png"
+            },
+            "geometry":{
+                "type": "Point",
+                "coordinates": [
+                  13.3904793,
+                  52.463072
+                ]
+              }
+        }
+    ]
+}

@@ -175,8 +175,15 @@
                 const layer = new GeoJSON(json).bindPopup(popupFromGruppe)
                 map.addLayer(layer)                  // Zeige Gruppen sofort an.
                 control.addOverlay(layer, "Gruppen") // Füge Option zum ausblenden von Gruppen an.
-            }
-            );
+            });
+
+        fetch('./heime.geojson')
+            .then((response) => response.json())
+            .then((json) => {
+                console.log(json)
+                const layer = new GeoJSON(json).bindPopup(popupFromGruppe) // Selbe wie Gruppen, bis jemand was hübscheres macht.
+                control.addOverlay(layer, "Heime") 
+            });
     </script>
 </body>
 
