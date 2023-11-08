@@ -41,7 +41,7 @@
             "type": "Feature",
             "properties": {
                 "label": "Gutshof",
-                "website": "pfadfinder-tempelhof.de",
+                "website": "http://pfadfinder-tempelhof.de",
                 "address": "Mädelschaft Jeanne d'Arc & Jungenschaft Jonathan"
             },
             "geometry": {
@@ -56,7 +56,7 @@
             "type": "Feature",
             "properties": {
                 "label": "Frohnauer Häuschen",
-                "website": "pfadfinder-tempelhof.de",
+                "website": "http://pfadfinder-tempelhof.de",
                 "description": "Häuschen ~ Jungenschaft Gawan, Mädelschaft Ginover",
                 "address": "Jungenschaft Gawan, Berlin-Frohnau",
                 "wappen": "https://lh5.googleusercontent.com/p/AF1QipM0jsqvfl5fjHQMYzMfh8OCyGBds2AC4zpwbGJ6=w203-h152-k-no"
