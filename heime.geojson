@@ -4,6 +4,42 @@
         {
             "type": "Feature",
             "properties": {
+                "label": "Diedrichskotten",
+                "name": "Diederichskotten",
+                "type": "multipolygon",
+                "id": "relation/15970416",
+                "addr:city": "Remscheid",
+                "addr:housenumber": "4",
+                "addr:postcode": "42857",
+                "addr:street": "Hammertal",
+                "wappen": "https://lh5.googleusercontent.com/p/AF1QipOpsgHd_oCZWQE_dPIB2IVuFooebEKDdUwTUR0=w408-h306-k-no"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.1683,
+                    51.16632
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "label": "Fischerhütte",
+                "address": "Remscheid",
+                "wappen": "https://lh5.googleusercontent.com/p/AF1QipNvC6T1NCk9k-t3i1-WHJNtosCeJCBCwPfuAVE=w408-h306-k-no"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.16259,
+                    51.1589
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "label": "Gutshof",
                 "website": "pfadfinder-tempelhof.de",
                 "address": "Mädelschaft Jeanne d'Arc & Jungenschaft Jonathan"
@@ -22,7 +58,8 @@
                 "label": "Frohnauer Häuschen",
                 "website": "pfadfinder-tempelhof.de",
                 "description": "Häuschen ~ Jungenschaft Gawan, Mädelschaft Ginover",
-                "address": "Jungenschaft Gawan, Berlin-Frohnau"
+                "address": "Jungenschaft Gawan, Berlin-Frohnau",
+                "wappen": "https://lh5.googleusercontent.com/p/AF1QipM0jsqvfl5fjHQMYzMfh8OCyGBds2AC4zpwbGJ6=w203-h152-k-no"
             },
             "geometry": {
                 "type": "Point",
