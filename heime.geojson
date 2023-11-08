@@ -6,15 +6,48 @@
             "properties": {
                 "label": "Gutshof",
                 "website": "pfadfinder-tempelhof.de",
-                "wappen": "/assets/Pfadiheim BB.png"
+                "address": "Mädelschaft Jeanne d'Arc & Jungenschaft Jonathan"
             },
-            "geometry":{
+            "geometry": {
                 "type": "Point",
                 "coordinates": [
-                  13.3904793,
-                  52.463072
+                    13.3904793,
+                    52.463072
                 ]
-              }
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "label": "Frohnauer Häuschen",
+                "website": "pfadfinder-tempelhof.de",
+                "description": "Häuschen ~ Jungenschaft Gawan, Mädelschaft Ginover",
+                "address": "Jungenschaft Gawan, Berlin-Frohnau"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.28881,
+                    52.64205
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "label": "Pfadfinderburg Berlin",
+                "website": "http://www.pfadfinderburg.de/",
+                "wappen": "/assets/Pfadiheim BB.png",
+                "address": "Ziekowstraße 163 - 13509 Berlin",
+                "description": "Die Pfadfinderburg in Berlin-Tegel ist das Heim vieler Gruppen des Gaues Wartburg im DPB und steht auch anderen Pfadfindergruppen nach Absprache zur Verfügung."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.2911773,
+                    52.595349
+                ]
+            }
         }
     ]
 }
