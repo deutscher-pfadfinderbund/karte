@@ -14,11 +14,6 @@
         :root {
             --primary: #003aba;
             --on-primary: white;
-
-            --md-ref-typeface-brand: 'Open Sans';
-            --md-ref-typeface-plain: system-ui;
-            --md-sys-color-primary: var(--primary);
-
         }
 
         *,
@@ -93,13 +88,13 @@
 
     <script>
         /**
-         * Erstell
+         * Erstelle die IMG HTML Elemente in einem Container für eine oder mehrere Bild URLs.
          * 
          * @param  {string | string[]} wappen
          * @return {HTMLElement}
          */
-        function formatiereWappen(wappen){
-            if(!Array.isArray(wappen)){
+        function formatiereWappen(wappen) {
+            if (!Array.isArray(wappen)) {
                 wappen = [wappen]
             }
 
@@ -168,7 +163,7 @@
         });
 
         map.addControl(control)
-        
+
         fetch('./gruppen.geojson')
             .then((response) => response.json())
             .then((json) => {
@@ -180,9 +175,8 @@
         fetch('./heime.geojson')
             .then((response) => response.json())
             .then((json) => {
-                console.log(json)
                 const layer = new GeoJSON(json).bindPopup(popupFromGruppe) // Selbe wie Gruppen, bis jemand was hübscheres macht.
-                control.addOverlay(layer, "Heime") 
+                control.addOverlay(layer, "Heime")
             });
     </script>
 </body>
