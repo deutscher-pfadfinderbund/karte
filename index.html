@@ -178,6 +178,10 @@
                 const layer = new GeoJSON(json).bindPopup(popupFromGruppe) // Selbe wie Gruppen, bis jemand was hübscheres macht.
                 control.addOverlay(layer, "Heime")
             });
+
+        map.on("contextmenu", function (event) {
+          alert("Die Koordinaten des gewählten Punktes sind: " + event.latlng.toString());
+        });
     </script>
 </body>
 
