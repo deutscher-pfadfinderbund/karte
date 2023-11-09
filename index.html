@@ -1,184 +1,254 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
+  <head>
     <title>Karte des DPB</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9/dist/leaflet.css">
-    <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/leaflet@1.9/+esm" as="script">
-    <link rel="preload" href="./gruppen.geojson" as="fetch" type="application/geo+json" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet@1.9/dist/leaflet.css"
+    />
+    <link
+      rel="modulepreload"
+      href="https://cdn.jsdelivr.net/npm/leaflet@1.9/+esm"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="./gruppen.geojson"
+      as="fetch"
+      type="application/geo+json"
+      crossorigin
+    />
 
     <style>
-        :root {
-            --primary: #003aba;
-            --on-primary: white;
-        }
+      :root {
+        --primary: #003aba;
+        --on-primary: white;
+      }
 
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-        * {
-            margin: 0;
-        }
+      * {
+        margin: 0;
+      }
 
-        body {
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
+      body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
 
-        input,
-        button,
-        textarea,
-        select {
-            font: inherit;
-        }
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
 
-        img,
-        picture,
-        video,
-        canvas,
-        svg {
-            display: block;
-            max-width: 100%;
-        }
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
 
-        #map {
-            width: 100vw;
-            height: 100vh;
-        }
+      #map {
+        width: 100vw;
+        height: 100vh;
+      }
 
-        .correction-link {
-            position: absolute;
-            left: 16px;
-            bottom: 16px;
-            z-index: 1000;
-        }
+      .correction-link {
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        z-index: 1000;
+      }
 
-        .button {
-            background-color: var(--primary);
-            color: var(--on-primary);
+      .button {
+        background-color: var(--primary);
+        color: var(--on-primary);
 
-            padding: 8px 16px;
-            border-radius: 999em;
+        padding: 8px 16px;
+        border-radius: 999em;
 
-            font-weight: bold;
-            text-decoration: none;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
+        font-weight: bold;
+        text-decoration: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
 
-        .wappen {
-            flex-shrink: 1;
-            object-fit: contain;
-            max-width: 50%;
-        }
+      .wappen {
+        flex-shrink: 1;
+        object-fit: contain;
+        max-width: 50%;
+      }
 
-        .wappen-container {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-            max-width: 100%;
-        }
+      .wappen-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+      }
     </style>
 
     <script>
-        /**
-         * Erstelle die IMG HTML Elemente in einem Container für eine oder mehrere Bild URLs.
-         * 
-         * @param  {string | string[]} wappen
-         * @return {HTMLElement}
-         */
-        function formatiereWappen(wappen) {
-            if (!Array.isArray(wappen)) {
-                wappen = [wappen]
-            }
-
-            const wappenContainer = document.createElement("div")
-            wappenContainer.className = "wappen-container"
-            wappenContainer.append(...wappen.map(url => {
-                const picture = document.createElement("picture")
-                const img = document.createElement("img")
-                img.src = url
-                picture.className = "wappen"
-                picture.append(img)
-                return picture
-            }))
-            return wappenContainer
+      /**
+       * Erstelle die IMG HTML Elemente in einem Container für eine oder mehrere Bild URLs.
+       *
+       * @param  {string | string[]} wappen
+       * @return {HTMLElement}
+       */
+      function formatiereWappen(wappen) {
+        if (!Array.isArray(wappen)) {
+          wappen = [wappen];
         }
 
-        function popupFromGruppe(layer) {
-            const gruppe = layer.feature.properties
+        const wappenContainer = document.createElement("div");
+        wappenContainer.className = "wappen-container";
+        wappenContainer.append(
+          ...wappen.map((url) => {
+            const picture = document.createElement("picture");
+            const img = document.createElement("img");
+            img.src = url;
+            picture.className = "wappen";
+            picture.append(img);
+            return picture;
+          })
+        );
+        return wappenContainer;
+      }
 
-            // Folgender Code ist anfällig für Cross Site Scripting, wenn die Gruppendaten nicht von uns direkt kommen.
-            return `<article class="popup">
+      function popupFromGruppe(layer) {
+        const gruppe = layer.feature.properties;
+
+        // Folgender Code ist anfällig für Cross Site Scripting, wenn die Gruppendaten nicht von uns direkt kommen.
+        return `<article class="popup">
                       <h1>${gruppe["label"] ?? ""}</h1>
                       <p>${gruppe["description"] ?? ""}</p>
-                      ${gruppe["wappen"] ? formatiereWappen(gruppe["wappen"]).outerHTML : ""}
-                      ${gruppe["website"] ? `<a href='${gruppe["website"]}' target='_blank' rel='noopener noreferrer'>Website</a>` : ""} 
-                    </article>`
-        }
+                      ${
+                        gruppe["wappen"]
+                          ? formatiereWappen(gruppe["wappen"]).outerHTML
+                          : ""
+                      }
+                      ${
+                        gruppe["website"]
+                          ? `<a href='${gruppe["website"]}' target='_blank' rel='noopener noreferrer'>Website</a>`
+                          : ""
+                      } 
+                    </article>`;
+      }
     </script>
-</head>
+  </head>
 
-
-
-<body>
-    <a class="correction-link button"
-        href="https://cloud.deutscher-pfadfinderbund.de/apps/forms/s/J7xJTjJrpkfKWZRDGeLdaft7">
-        Neuen Ort hinzufügen oder korrigieren</a>
+  <body>
+    <a
+      class="correction-link button"
+      href="https://cloud.deutscher-pfadfinderbund.de/apps/forms/s/J7xJTjJrpkfKWZRDGeLdaft7"
+    >
+      Neuen Ort hinzufügen oder korrigieren</a
+    >
     <div id="map">Das hier wird von der Karte eingebunden</div>
 
-
     <script type="module">
-        import { Map, TileLayer, Marker, GeoJSON, Control } from 'https://cdn.jsdelivr.net/npm/leaflet@1.9/+esm'
+      import {
+        Map,
+        TileLayer,
+        Marker,
+        GeoJSON,
+        Control,
+      } from "https://cdn.jsdelivr.net/npm/leaflet@1.9/+esm";
 
-        const open_street_map = new TileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        })
+      const open_street_map = new TileLayer(
+        "https://tile.openstreetmap.de/{z}/{x}/{y}.png",
+        {
+          maxZoom: 19,
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        }
+      );
 
-        const wanderwege = new TileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://hiking.waymarkedtrails.org/">Waymarked Trails</a>'
-        })
+      const wanderwege = new TileLayer(
+        "https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png",
+        {
+          attribution:
+            '&copy; <a href="https://hiking.waymarkedtrails.org/">Waymarked Trails</a>',
+        }
+      );
 
-        const control = new Control.Layers(
-            { "OpenStreetMap": open_street_map },
-            { "Wanderwege": wanderwege },
-            {
-                hideSingleBase: true,
-                sortLayers: true
-            });
+      const control = new Control.Layers(
+        { OpenStreetMap: open_street_map },
+        { Wanderwege: wanderwege },
+        {
+          hideSingleBase: true,
+          sortLayers: true,
+        }
+      );
 
-        const map = new Map('map', {
-            center: [51.287140, 10.179360],
-            zoom: 7,
-            layers: [
-                open_street_map
-            ]
+      const map = new Map("map", {
+        center: [51.28714, 10.17936],
+        zoom: 7,
+        layers: [open_street_map],
+      });
+
+      map.addControl(control);
+
+      var logoMarkerStyle = L.Icon.extend({
+        options: {
+          iconSize: [32, 32],
+          iconAnchor: [12, 41],
+          popupAnchor: [4, -32],
+        },
+      });
+
+      fetch("./gruppen.geojson")
+        .then((response) => response.json())
+        .then((json) => {
+          var gruppenLayer = L.geoJSON("", {
+            pointToLayer: function (feature, latlng) {
+              if (
+                feature.properties.wappen &&
+                !Array.isArray(feature.properties.wappen)
+              ) {
+                var logoMarker = new logoMarkerStyle({
+                  iconUrl: feature.properties.wappen,
+                  // iconUrl: "./assets/" + feature.properties.wappen, // evtl. lieber die geojson bereinigen und den Pfadf hier aufnehmen
+                });
+              } else if (Array.isArray(feature.properties.wappen)) {
+                // Wenn mehrere Wappen, dann nutzte das erste
+                var logoMarker = new logoMarkerStyle({
+                  iconUrl: feature.properties.wappen[0],
+                  // iconUrl: "./assets/" + feature.properties.wappen, // evtl. lieber die geojson bereinigen und den Pfadf hier aufnehmen
+                });
+              } else {
+                var logoMarker = new logoMarkerStyle({
+                  // Wenn kein Wappen dann Bundeslilie
+                  iconUrl: "./assets/Bundeslilie_positiv.svg",
+                });
+              }
+
+              return L.marker(latlng, { icon: logoMarker });
+            },
+          }).addTo(map);
+          gruppenLayer.addData(json);
+          gruppenLayer.bindPopup(popupFromGruppe);
+          control.addOverlay(layer, "Gruppen"); // Füge Option zum ausblenden von Gruppen an.
         });
 
-        map.addControl(control)
-
-        fetch('./gruppen.geojson')
-            .then((response) => response.json())
-            .then((json) => {
-                const layer = new GeoJSON(json).bindPopup(popupFromGruppe)
-                map.addLayer(layer)                  // Zeige Gruppen sofort an.
-                control.addOverlay(layer, "Gruppen") // Füge Option zum ausblenden von Gruppen an.
-            });
-
         fetch('./heime.geojson')
-            .then((response) => response.json())
-            .then((json) => {
-                const layer = new GeoJSON(json).bindPopup(popupFromGruppe) // Selbe wie Gruppen, bis jemand was hübscheres macht.
-                control.addOverlay(layer, "Heime")
-            });
+        .then((response) => response.json())
+        .then((json) => {
+            const layer = new GeoJSON(json).bindPopup(popupFromGruppe) // Selbe wie Gruppen, bis jemand was hübscheres macht.
+            control.addOverlay(layer, "Heime")
+        });
     </script>
-</body>
-
+  </body>
 </html>
