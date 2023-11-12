@@ -294,9 +294,9 @@
 
       var logoMarkerStyle = L.Icon.extend({
         options: {
-          iconSize: [32, 32],
+          iconSize: [,32],
           iconAnchor: [12, 41],
-          popupAnchor: [4, -32],
+          popupAnchor: [0, -32],
         },
       });
 
@@ -305,7 +305,16 @@
         return urlRegex.test(url);
       }
 
-      var markerLayers = L.markerClusterGroup.layerSupport();
+     var markerLayers = L.markerClusterGroup.layerSupport({maxClusterRadius: 70,  showCoverageOnHover: false, zoomToBoundsOnClick: false});
+     
+
+     markerLayers.on('clusterclick', function (a) {
+      a.layer.zoomToBounds({padding: [20, 20]});
+  });
+    
+    
+
+		
       map.addLayer(markerLayers);
 
       fetch("./gruppen.geojson")

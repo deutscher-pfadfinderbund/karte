@@ -1,127 +1,161 @@
 {
-    "type": "FeatureCollection",
-    "features": [
-        {
-            "type": "Feature",
-            "properties": {
-                "label": "Schloss Martinfeld",
-                "addressLocality": "Schimberg",
-                "postalCode": "37308",
-                "streetAddress": "Bernteröder Straße 10",
-                "website": "https://schloss-martinfeld.de/",
-                "description": "",
-                "imageLogo": "",
-                "imageWappen": "https://schloss-martinfeld.de/wp-content/uploads/2022/07/Aussen2_komplett.jpg"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.17978,
-                    51.28705
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "label": "Diedrichskotten",
-                "addressLocality": "Remscheid",
-                "postalCode": "42857",
-                "streetAddress": "Hammertal 4",
-                "website": "",
-                "description": "",
-                "imageLogo": "",
-                "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipOpsgHd_oCZWQE_dPIB2IVuFooebEKDdUwTUR0=w408-h306-k-no"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    7.1683,
-                    51.16632
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "label": "Fischerhütte",
-                "addressLocality": "Remscheid",
-                "postalCode": "42857",
-                "streetAddress": "Hammertal 4",
-                "website": "",
-                "description": "",
-                "imageLogo": "",
-                "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipNvC6T1NCk9k-t3i1-WHJNtosCeJCBCwPfuAVE=w408-h306-k-no"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    7.16259,
-                    51.1589
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "label": "Gutshof",
-                "addressLocality": "Berlin-Tempelhof",
-                "postalCode": "",
-                "streetAddress": "",
-                "website": "http://pfadfinder-tempelhof.de",
-                "description": "Mädelschaft Jeanne d'Arc & Jungenschaft Jonathan",
-                "imageLogo": "",
-                "imageWappen": ""
-               
-               
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    13.3904793,
-                    52.463072
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "label": "Frohnauer Häuschen",
-                "addressLocality": "Berlin-Fronhau",
-                "postalCode": "",
-                "streetAddress": "",
-                "website": "http://pfadfinder-tempelhof.de",
-                "description": "Häuschen ~ Jungenschaft Gawan, Mädelschaft Ginover",
-                "imageLogo": "",
-                "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipM0jsqvfl5fjHQMYzMfh8OCyGBds2AC4zpwbGJ6=w203-h152-k-no"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    13.28881,
-                    52.64205
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "label": "Pfadfinderburg Berlin",
-                "addressLocality": "Berlin-Tegel",
-                "postalCode": "13509",
-                "streetAddress": "Ziekowstraße 163",
-                "website": "http://www.pfadfinderburg.de/",
-                "imageLogo": "",
-                "imageWappen":"pfadiheim-bb.png",
-                "description": "Die Pfadfinderburg in Berlin-Tegel ist das Heim vieler Gruppen des Gaues Wartburg im DPB und steht auch anderen Pfadfindergruppen nach Absprache zur Verfügung."
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    13.2911773,
-                    52.595349
-                ]
-            }
-        }
-    ]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.17978, 51.28705]
+      },
+      "properties": {
+        "label": "Schloss Martinfeld",
+        "addressLocality": "Schimberg",
+        "postalCode": 37308,
+        "streetAddress": "Bernteröder Straße 10",
+        "imageLogo": "https://schloss-martinfeld.de/wp-content/uploads/2022/07/Logo_braun.png",
+        "imageWappen": "https://schloss-martinfeld.de/wp-content/uploads/2022/07/Aussen2_komplett.jpg",
+        "website": "https://schloss-martinfeld.de/",
+        "description": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.1683, 51.16632]
+      },
+      "properties": {
+        "label": "Diedrichskotten",
+        "addressLocality": "Remscheid",
+        "postalCode": 42857,
+        "streetAddress": "Hammertal 4",
+        "imageLogo": "",
+        "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipOpsgHd_oCZWQE_dPIB2IVuFooebEKDdUwTUR0=w408-h306-k-no",
+        "website": "",
+        "description": ""
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.162552153965908, 51.1594809391117]
+      },
+      "properties": {
+        "label": "Fischerhütte",
+        "addressLocality": "Remscheid",
+        "postalCode": 42857,
+        "streetAddress": "Tyrol",
+        "imageLogo": "",
+        "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipNvC6T1NCk9k-t3i1-WHJNtosCeJCBCwPfuAVE=w408-h306-k-no",
+        "website": "",
+        "description": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.3904793, 52.463072]
+      },
+      "properties": {
+        "label": "Gutshof",
+        "addressLocality": "Berlin-Tempelhof",
+        "postalCode": null,
+        "streetAddress": "",
+        "imageLogo": "",
+        "imageWappen": "",
+        "website": "http://pfadfinder-tempelhof.de",
+        "description": "Heim von Mädelschaft Jeanne d'Arc & Jungenschaft Jonathan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.28881, 52.64205]
+      },
+      "properties": {
+        "label": "Frohnauer Häuschen",
+        "addressLocality": "Berlin-Fronhau",
+        "postalCode": null,
+        "streetAddress": "",
+        "imageLogo": "",
+        "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipM0jsqvfl5fjHQMYzMfh8OCyGBds2AC4zpwbGJ6=w203-h152-k-no",
+        "website": "https://www.pfadfinder-frohnau.de",
+        "description": "Häuschen ~ Jungenschaft Gawan, Mädelschaft Ginover"
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.2911773, 52.595349]
+      },
+      "properties": {
+        "label": "Pfadfinderburg Berlin",
+        "addressLocality": "Berlin-Tegel",
+        "postalCode": 13509,
+        "streetAddress": "Ziekowstraße 163",
+        "imageLogo": "",
+        "imageWappen": "pfadiheim-bb.png",
+        "website": "http://www.pfadfinderburg.de/",
+        "description": "Die Pfadfinderburg in Berlin-Tegel ist das Heim vieler Gruppen des Gaues Wartburg im DPB und steht auch anderen Pfadfindergruppen nach Absprache zur Verfügung."
+      }
+    },
+
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.21929080657017, 50.054186179811104]
+      },
+      "properties": {
+        "label": "Jugendheim Wolfstein e.V.",
+        "addressLocality": "Wiesbaden",
+        "postalCode": null,
+        "streetAddress": "",
+        "imageLogo": "",
+        "imageWappen": "",
+        "website": "https://www.stamm-wolfstein.de/",
+        "description": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.97665, 51.89743]
+      },
+      "properties": {
+        "label": "Pfadfinderheim Bad Meinberg",
+        "addressLocality": "Bad Meinberg",
+        "postalCode": null,
+        "streetAddress": "",
+        "imageLogo": "",
+        "imageWappen": "",
+        "website": "",
+        "description": "Jungenschaft Theotmalli Standort Bad Meinberg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.687605369408751, 51.34676303056911]
+      },
+      "properties": {
+        "label": "Brackeler Hütte - Pfadfinderhaus",
+        "addressLocality": "Iserlohn",
+        "postalCode": 58644,
+        "streetAddress": "Asbecker Weg 20",
+        "imageLogo": "",
+        "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipM42ZjFIrLCzZw4G83CNedKva5xDpIyVfYnCcJs=w426-h240-k-no",
+        "website": "https://brackeler-huette.de",
+        "description": ""
+      }
+    }
+  ]
 }
