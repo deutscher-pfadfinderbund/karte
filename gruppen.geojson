@@ -523,7 +523,7 @@
         "postalCode": null,
         "streetAddress": "",
         "imageLogo": "",
-        "imageWappen": "http://www.gau-franken.de/images/frankenwappen.png",
+        "imageWappen": "",
         "website": "http://www.gau-franken.de",
         "description": ""
       }
@@ -676,7 +676,7 @@
         "postalCode": null,
         "streetAddress": "",
         "imageLogo": "",
-        "imageWappen": "http://www.gau-franken.de/images/frankenwappen.png",
+        "imageWappen": "",
         "website": "http://www.gau-franken.de",
         "description": ""
       }
@@ -1195,7 +1195,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [6.07841767704745, 50.78146142337895]
+        "coordinates": [6.0785894, 50.7814377]
       },
       "properties": {
         "label": "Stamm Wiking",
@@ -1215,14 +1215,14 @@
         "coordinates": [6.0785894, 50.7814377]
       },
       "properties": {
-        "label": "Stamm der Wikinger & Aufbaugilde Sithonen der Mädelschaft Volée",
+        "label": "Aufbaugilde Sithonen der Mädelschaft Volée",
         "addressLocality": "Aachen",
         "postalCode": null,
         "streetAddress": "",
         "imageLogo": "",
         "imageWappen": "",
         "website": "",
-        "description": ""
+        "description": "Stamm Wiking und auch eine neuegründete Mädchengruppe, Kontaktadresse: dpb.aachen@gmail.com"
       }
     }
   ]
