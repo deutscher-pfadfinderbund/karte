@@ -232,7 +232,11 @@
         // Folgender Code ist anfällig für Cross Site Scripting, wenn die Gruppendaten nicht von uns direkt kommen.
         return `<div class="popup">
                    <p style="text-align:right; font-size:1.2em"><img src="./assets/img/fa-house-solid.svg" style="height: 1.2em;" aria-title="Heim"></p>
-             
+                   ${
+                    heime["imageLogo"]
+                      ? `<p style="text-algin: center"><img style="max-height: 3em" src="${heime["imageLogo"]}" alt="Logo von ${heime["label"]}"</p>`
+                      : ""
+                  } 
                       <h2 style="text-align: center">${
                         heime["label"] ?? ""
                       }</h2>
