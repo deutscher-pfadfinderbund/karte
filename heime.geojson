@@ -4,21 +4,14 @@
         {
             "type": "Feature",
             "properties": {
-                "uid": 3144016,
-                "addr:city": "Schimberg",
-                "addr:housenumber": "10",
-                "addr:postcode": "37308",
-                "addr:street": "Bernteröder Straße",
-                "building": "yes",
-                "castle_type": "stately",
-                "historic": "castle",
-                "name": "Schloss Martinfeld",
-                "wikidata": "Q2242357",
-                "wikipedia": "de:Schloss Martinfeld",
-                "id": "way/331311974",
                 "label": "Schloss Martinfeld",
+                "addressLocality": "Schimberg",
+                "postalCode": "37308",
+                "streetAddress": "Bernteröder Straße 10",
                 "website": "https://schloss-martinfeld.de/",
-                "wappen": "https://schloss-martinfeld.de/wp-content/uploads/2022/07/Aussen2_komplett.jpg"
+                "description": "",
+                "imageLogo": "",
+                "imageWappen": "https://schloss-martinfeld.de/wp-content/uploads/2022/07/Aussen2_komplett.jpg"
             },
             "geometry": {
                 "type": "Point",
@@ -32,14 +25,13 @@
             "type": "Feature",
             "properties": {
                 "label": "Diedrichskotten",
-                "name": "Diederichskotten",
-                "type": "multipolygon",
-                "id": "relation/15970416",
-                "addr:city": "Remscheid",
-                "addr:housenumber": "4",
-                "addr:postcode": "42857",
-                "addr:street": "Hammertal",
-                "wappen": "https://lh5.googleusercontent.com/p/AF1QipOpsgHd_oCZWQE_dPIB2IVuFooebEKDdUwTUR0=w408-h306-k-no"
+                "addressLocality": "Remscheid",
+                "postalCode": "42857",
+                "streetAddress": "Hammertal 4",
+                "website": "",
+                "description": "",
+                "imageLogo": "",
+                "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipOpsgHd_oCZWQE_dPIB2IVuFooebEKDdUwTUR0=w408-h306-k-no"
             },
             "geometry": {
                 "type": "Point",
@@ -53,8 +45,13 @@
             "type": "Feature",
             "properties": {
                 "label": "Fischerhütte",
-                "address": "Remscheid",
-                "wappen": "https://lh5.googleusercontent.com/p/AF1QipNvC6T1NCk9k-t3i1-WHJNtosCeJCBCwPfuAVE=w408-h306-k-no"
+                "addressLocality": "Remscheid",
+                "postalCode": "42857",
+                "streetAddress": "Hammertal 4",
+                "website": "",
+                "description": "",
+                "imageLogo": "",
+                "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipNvC6T1NCk9k-t3i1-WHJNtosCeJCBCwPfuAVE=w408-h306-k-no"
             },
             "geometry": {
                 "type": "Point",
@@ -68,8 +65,15 @@
             "type": "Feature",
             "properties": {
                 "label": "Gutshof",
+                "addressLocality": "Berlin-Tempelhof",
+                "postalCode": "",
+                "streetAddress": "",
                 "website": "http://pfadfinder-tempelhof.de",
-                "address": "Mädelschaft Jeanne d'Arc & Jungenschaft Jonathan"
+                "description": "Mädelschaft Jeanne d'Arc & Jungenschaft Jonathan",
+                "imageLogo": "",
+                "imageWappen": ""
+               
+               
             },
             "geometry": {
                 "type": "Point",
@@ -83,10 +87,13 @@
             "type": "Feature",
             "properties": {
                 "label": "Frohnauer Häuschen",
+                "addressLocality": "Berlin-Fronhau",
+                "postalCode": "",
+                "streetAddress": "",
                 "website": "http://pfadfinder-tempelhof.de",
                 "description": "Häuschen ~ Jungenschaft Gawan, Mädelschaft Ginover",
-                "address": "Jungenschaft Gawan, Berlin-Frohnau",
-                "wappen": "https://lh5.googleusercontent.com/p/AF1QipM0jsqvfl5fjHQMYzMfh8OCyGBds2AC4zpwbGJ6=w203-h152-k-no"
+                "imageLogo": "",
+                "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipM0jsqvfl5fjHQMYzMfh8OCyGBds2AC4zpwbGJ6=w203-h152-k-no"
             },
             "geometry": {
                 "type": "Point",
@@ -100,9 +107,12 @@
             "type": "Feature",
             "properties": {
                 "label": "Pfadfinderburg Berlin",
+                "addressLocality": "Berlin-Tegel",
+                "postalCode": "13509",
+                "streetAddress": "Ziekowstraße 163",
                 "website": "http://www.pfadfinderburg.de/",
-                "wappen": "/assets/Pfadiheim BB.png",
-                "address": "Ziekowstraße 163 - 13509 Berlin",
+                "imageLogo": "",
+                "imageWappen":"pfadiheim-bb.png",
                 "description": "Die Pfadfinderburg in Berlin-Tegel ist das Heim vieler Gruppen des Gaues Wartburg im DPB und steht auch anderen Pfadfindergruppen nach Absprache zur Verfügung."
             },
             "geometry": {

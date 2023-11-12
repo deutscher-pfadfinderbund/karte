@@ -4,10 +4,14 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Ring Namata - Remscheid",
-          "wappen": "/assets/ring-namata.svg",
+          "label": "Ring Namata",
+          "imageLogo": "",
+          "imageWappen":  "ring-namata.svg",
           "website": "https://namata.deutscher-pfadfinderbund.de/",
-          "description": "MS Sturmvögel & JS Hohenstaufen"
+          "description": "Mädelschaft Sturmvögel & Jungenschaft Hohenstaufen",
+          "addressLocality" : "Remscheid",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -20,7 +24,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "MS Tilman Riemenschneider - Würzburg"
+          "label": "Mädelschaft Tilman Riemenschneider",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Würzburg",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -33,7 +43,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "MS Tilman Riemenschneider - Oberpleichfeld"
+          "label": "Mädelschaft Tilman Riemenschneider",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Oberpleichfeld",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -46,7 +62,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Stamm Hohlenstein - Thierhaupten"
+          "label": "Stamm Hohlenstein",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Thierhaupten",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -59,7 +81,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Franken - Franken"
+          "label": "Gau Franken",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Franken",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -72,7 +100,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Franken - Hessen"
+          "label": "Gau Franken",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Hessen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -85,7 +119,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "MS Terre de la Joie - Berlin"
+          "label": "Mädelschaft Terre de la Joie",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Berlin",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -98,7 +138,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Jungenschaft Theotmalli - Detmold- Stadtmitte"
+          "label": "Jungenschaft Theotmalli",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Detmold-Stadtmitte",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -111,7 +157,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Jungenschaft Theotmalli - Detmold - Heiligenkirchen"
+          "label": "Jungenschaft Theotmalli",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Detmold-Heiligenkirchen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -124,7 +176,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Jungenschaft Theotmalli - Bad Meinberg"
+          "label": "Jungenschaft Theotmalli",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Bad Meinberg",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -137,7 +195,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Jungenschaft Volundr - Bonn-Altstadt"
+          "label": "Jungenschaft Volundr",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Bonn-Altstadt",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -150,7 +214,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Jungenschaft Volundr - Bonn-Auerberg"
+          "label": "Jungenschaft Volundr",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Bonn-Auerberg",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -163,7 +233,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Jungenschaft Volundr - Bergheim-Glessen"
+          "label": "Jungenschaft Volundr",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Bergheim-Glessen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -176,7 +252,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "JS Martin-Luther-King - Hiddesen"
+          "label": "Jungenschaft Martin-Luther-King",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Hiddesen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -189,7 +271,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Hag Weiße Rose - Hiddesen"
+          "label": "Hag Weiße Rose",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Hiddesen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -202,7 +290,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Stamm Arimathia - Meitingen"
+          "label": "Stamm Arimathia",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Meitingen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -215,7 +309,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Hag Andarta - Meitingen"
+          "label": "Hag Andarta",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Meitingen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -228,7 +328,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "JS Artus - Berlin, Reinickendorf"
+          "label": "Jungenschaft Artus",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Berlin-Reinickendorf",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -241,7 +347,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "JS Artus - Berlin, Lichtenrade"
+          "label": "Jungenschaft Artus",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Berlin-Lichtenrade",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -254,7 +366,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Ring Belakane - Berlin-Reinickendorf"
+          "label": "Ring Belakane",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Berlin-Reinickendorf",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -267,7 +385,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Ring Belakane - Berlin-Lichtenrade"
+          "label": "Ring Belakane",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Berlin-Lichtenrade",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -280,7 +404,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "MS Rheinmöwen - Mühlheim"
+          "label": "Mädelschaft Rheinmöwen",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Mühlheim",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -293,7 +423,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "MS Rheinmöwen - Steinheim"
+          "label": "Mädelschaft Rheinmöwen",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Steinheim",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -306,7 +442,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Jungenschaft und Hag Hohenstaufen - Altenburg/Thüringen"
+          "label": "Jungenschaft und Hag Hohenstaufen",
+          "imageWappen": "https://pfadfinder-altenburg.de/application/files/5316/2041/1912/jungenschaftswappen.gif",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Altenburg/Thüringen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -319,7 +461,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Jungenschaft und Hag Hohenstaufen - Maschen"
+          "label": "Jungenschaft und Hag Hohenstaufen",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Maschen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -332,7 +480,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Sueben - Würzburg"
+          "label": "Gau Sueben",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Würzburg",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -345,7 +499,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Sueben - Augsburg"
+          "label": "Gau Sueben",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Augsburg",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -358,7 +518,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Wartburg - Berlin-Tegel"
+          "label": "Gau Wartburg",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Berlin-Tegel",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -371,7 +537,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Wartburg - Berlin-Lankwitz"
+          "label": "Gau Wartburg",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Berlin-Lankwitz",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -384,7 +556,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Wartburg - Berlin-Lichtenrade"
+          "label": "Gau Wartburg",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Berlin-Lichtenrade",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -397,7 +575,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Mädelschaft Midgard - Bottrop-Kirchhellen"
+          "label": "Mädelschaft Midgard",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Bottrop-Kirchhellen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -410,7 +594,12 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Mädelschaft Midgard - Minden, Petershagen"
+          "label": "Mädelschaft Midgard",
+          "website": "",
+          "imageWappen": "",
+          "addressLocality" : "Minden-Petershagen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -423,7 +612,12 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Mädelschaft Midgard - Münster"
+          "label": "Mädelschaft Midgard",
+          "website": "",
+          "imageWappen": "",
+          "addressLocality" : "Münster",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -436,9 +630,12 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Stamm Hademare - Hemer",
+          "label": "Stamm Hademare",
           "website": "https://stamm-hademare.de",
-          "wappen": "/assets/Stamm-hademare.svg"
+          "imageWappen": "stamm-hademare.svg",
+          "addressLocality" : "Hemer",
+          "postalCode": "58675",
+          "streetAddress" : "Deilinghofer Str."
         },
         "geometry": {
           "type": "Point",
@@ -451,7 +648,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Jungenschaft Gralsritter - Monheim am Rhein"
+          "label": "Jungenschaft Gralsritter",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Monheim am Rhein",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -464,7 +667,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "JS Parzival - Berlin, Reinickendorf"
+          "label": "Jungenschaft Parzival",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Berlin-Reinickendorf",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -477,7 +686,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "MS Michael - Thomasburg"
+          "label": "Mädelschaft Michael",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Thomasburg",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -490,7 +705,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Wolkenburg - Köln Dellbrück"
+          "label": "Gau Wolkenburg",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Köln-Dellbrück",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -503,7 +724,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Wolkenburg - Minden"
+          "label": "Gau Wolkenburg",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Minden",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -516,7 +743,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Wolkenburg - Bottrop"
+          "label": "Gau Wolkenburg",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Bottrop",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -529,7 +762,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "JS Hohenlohe - Würzburg"
+          "label": "Jungenschaft Hohenlohe",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Würzburg",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -542,7 +781,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "JS Hohenlohe - Rottenbauer"
+          "label": "Jungenschaft Hohenlohe",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Rottenbauer",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -555,7 +800,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Rheinland - Hürth"
+          "label": "Gau Rheinland",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Hürth",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -568,7 +819,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Rheinland - Bergheim"
+          "label": "Gau Rheinland",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Bergheim",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -581,7 +838,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Rheinland - Benrath"
+          "label": "Gau Rheinland",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Benrath",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -594,7 +857,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Stamm Saporoger - Hürth"
+          "label": "Stamm Saporoger",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Hürth",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -607,7 +876,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Stamm Wolfstein - Wiesbaden Kloppenheim"
+          "label": "Stamm Wolfstein",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Wiesbaden-Kloppenheim",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -620,7 +895,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Stamm Wolfstein - Wiesbaden Gräselberg"
+          "label": "Stamm Wolfstein",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Wiesbaden-Gräselberg",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -633,7 +914,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Mädelschaft Schwarzer Adler - Köln-Dellbrück"
+          "label": "Mädelschaft Schwarzer Adler",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Köln-Dellbrück",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -646,7 +933,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Jungenschaft Wulfila - Gelsenkirchen"
+          "label": "Jungenschaft Wulfila",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Gelsenkirchen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -660,7 +953,12 @@
         "type": "Feature",
         "properties": {
           "label": "Ring Florian Geyer",
-          "address": "Bremsheide 6, 58638 Iserlohn"
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Iserlohn",
+          "postalCode": "58638",
+          "streetAddress" : "Bremsheide 6"
         },
         "geometry": {
           "type": "Point",
@@ -673,7 +971,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Mädelschaft Zugvögel - Herten"
+          "label": "Mädelschaft Zugvögel",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Herten",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -686,7 +990,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Mädelschaft Zugvögel - Recklinghausen"
+          "label": "Mädelschaft Zugvögel",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Recklinghausen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -699,7 +1009,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Jungenschaft Ritter von Schleiffras - Hanau Steinheim"
+          "label": "Jungenschaft Ritter von Schleiffras",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Hanau-Steinheim",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -712,7 +1028,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Ring Rote Erde - Hemer"
+          "label": "Ring Rote Erde",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Hemer",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -725,7 +1047,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Stamm Izvor - Thomasburg"
+          "label": "Stamm Izvor",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Thomasburg",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -738,7 +1066,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Mädelschaft Volée - Monheim am Rhein"
+          "label": "Mädelschaft Volée",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Monheim am Rhein",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -751,7 +1085,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Mädelschaft Volée - Düsseldorf Benrath"
+          "label": "Mädelschaft Volée",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Düsseldorf-Benrath",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -764,7 +1104,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Goldener Löwe - Herten"
+          "label": "Gau Goldener Löwe",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Herten",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -777,7 +1123,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Gau Goldener Löwe - Recklinghausen"
+          "label": "Gau Goldener Löwe",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Recklinghausen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -790,7 +1142,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "JS Ostgoten - Herten"
+          "label": "Jungenschaft Ostgoten",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Herten",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -803,7 +1161,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Mädelschaft Weiße Taube - Detmold"
+          "label": "Mädelschaft Weiße Taube",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Detmold",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -816,7 +1180,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Mädelschaft Weiße Taube - Heiligenkirchen"
+          "label": "Mädelschaft Weiße Taube",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Heiligenkirchen",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -829,7 +1199,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "MS Ubier - Bonn"
+          "label": "Mädelschaft Ubier",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Bonn",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -842,7 +1218,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Hag Rheintöchter - Bonn"
+          "label": "Hag Rheintöchter",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Bonn",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -855,7 +1237,13 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "JS Gawan - Berlin, Frohnau"
+          "label": "Jungenschaft Gawan",
+          "imageWappen": "",
+          "website": "",
+          "description": "",
+          "addressLocality" : "Berlin-Frohnau",
+          "postalCode": "",
+          "streetAddress" : ""
         },
         "geometry": {
           "type": "Point",
@@ -868,21 +1256,46 @@
       {
         "type": "Feature",
         "properties": {
-          "label": "Mädelschaft Jeanne d'Arc & Jungenschaft Jonathan",
+          "label": "Mädelschaft Jeanne d'Arc",
+          "imageLogo": "",
+          "imageWappen": "ms-jeanne-d-arc.png",
           "website": "http://pfadfinder-tempelhof.de",
-          "address": "Berlin-Tempelhof",
-          "wappen": [
-            "/assets/Wappen Mädelschaft Jeanne dArc.png",
-            "/assets/Wappen Jungenschaft Jonathan.png"
-          ]
+          "description": "",
+          "addressLocality" : "Berlin-Tempelhof",
+          "postalCode": "",
+          "streetAddress" : "" 
         },
+          
         "geometry": {
           "type": "Point",
           "coordinates": [
             13.3904793,
-            52.463072
+            52.463072           
           ]
         }
+        
+      },
+      
+        {
+          "type": "Feature",
+          "properties": {
+            "label": "Jungenschaft Jonathan",
+            "imageLogo": "",
+            "imageWappen": "js-jonathan.png",
+            "website": "http://pfadfinder-tempelhof.de",
+            "description": "",
+            "addressLocality" : "Berlin-Tempelhof",
+            "postalCode": "",
+            "streetAddress" : "" 
+          },
+            
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              13.3904793,
+              52.463072           
+            ]
+          }
       }
     ]
   }

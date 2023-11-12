@@ -1,188 +1,417 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
+  <head>
     <title>Karte des DPB</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9/dist/leaflet.css">
-    <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/leaflet@1.9/+esm" as="script">
-    <link rel="preload" href="./gruppen.geojson" as="fetch" type="application/geo+json" crossorigin>
+    <link
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      rel="stylesheet"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css"
+      rel="stylesheet"
+      crossorigin=""
+    />
+    <link
+      href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css"
+      rel="stylesheet"
+      crossorigin=""
+    />
 
     <style>
-        :root {
-            --primary: #003aba;
-            --on-primary: white;
-        }
+      :root {
+        --primary: #003aba;
+        --on-primary: white;
+      }
 
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-        * {
-            margin: 0;
-        }
+      * {
+        margin: 0;
+      }
 
-        body {
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
+      body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
 
-        input,
-        button,
-        textarea,
-        select {
-            font: inherit;
-        }
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
 
-        img,
-        picture,
-        video,
-        canvas,
-        svg {
-            display: block;
-            max-width: 100%;
-        }
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
 
-        #map {
-            width: 100vw;
-            height: 100vh;
-        }
+      #map {
+        width: 100vw;
+        height: 100vh;
+      }
 
-        .correction-link {
-            position: absolute;
-            left: 16px;
-            bottom: 16px;
-            z-index: 1000;
-        }
+      .correction-link {
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        z-index: 1000;
+      }
 
-        .button {
-            background-color: var(--primary);
-            color: var(--on-primary);
+      .button {
+        background-color: var(--primary);
+        color: var(--on-primary);
 
-            padding: 8px 16px;
-            border-radius: 999em;
+        padding: 8px 16px;
+        border-radius: 999em;
 
-            font-weight: bold;
-            text-decoration: none;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
+        font-weight: bold;
+        text-decoration: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
 
-        .wappen {
-            flex-shrink: 1;
-            object-fit: contain;
-            max-width: 50%;
-        }
+      .wappen {
+        flex-shrink: 1;
+        object-fit: contain;
+        max-width: 50%;
+      }
 
-        .wappen-container {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-            max-width: 100%;
-        }
+      .wappen-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
     </style>
+  </head>
 
-    <script>
-        /**
-         * Erstelle die IMG HTML Elemente in einem Container für eine oder mehrere Bild URLs.
-         * 
-         * @param  {string | string[]} wappen
-         * @return {HTMLElement}
-         */
-        function formatiereWappen(wappen) {
-            if (!Array.isArray(wappen)) {
-                wappen = [wappen]
-            }
-
-            const wappenContainer = document.createElement("div")
-            wappenContainer.className = "wappen-container"
-            wappenContainer.append(...wappen.map(url => {
-                const picture = document.createElement("picture")
-                const img = document.createElement("img")
-                img.src = url
-                picture.className = "wappen"
-                picture.append(img)
-                return picture
-            }))
-            return wappenContainer
-        }
-
-        function popupFromGruppe(layer) {
-            const gruppe = layer.feature.properties
-
-            // Folgender Code ist anfällig für Cross Site Scripting, wenn die Gruppendaten nicht von uns direkt kommen.
-            return `<article class="popup">
-                      <h1>${gruppe["label"] ?? ""}</h1>
-                      <p>${gruppe["description"] ?? ""}</p>
-                      ${gruppe["wappen"] ? formatiereWappen(gruppe["wappen"]).outerHTML : ""}
-                      ${gruppe["website"] ? `<a href='${gruppe["website"]}' target='_blank' rel='noopener noreferrer'>Website</a>` : ""} 
-                    </article>`
-        }
-    </script>
-</head>
-
-
-
-<body>
-    <a class="correction-link button"
-        href="https://cloud.deutscher-pfadfinderbund.de/apps/forms/s/J7xJTjJrpkfKWZRDGeLdaft7">
-        Neuen Ort hinzufügen oder korrigieren</a>
+  <body>
+    <h1 style="display: none">Karte des DPB</h1>
+    <a
+      class="correction-link button"
+      href="https://cloud.deutscher-pfadfinderbund.de/apps/forms/s/J7xJTjJrpkfKWZRDGeLdaft7"
+    >
+      Neuen Ort hinzufügen oder korrigieren</a
+    >
     <div id="map">Das hier wird von der Karte eingebunden</div>
-
-
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"
+      crossorigin=""
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"
+      crossorigin=""
+    ></script>
     <script type="module">
-        import { Map, TileLayer, Marker, GeoJSON, Control } from 'https://cdn.jsdelivr.net/npm/leaflet@1.9/+esm'
+      function isValidUrl(string) {
+        try {
+          new URL(string);
+          return true;
+        } catch (err) {
+          return false;
+        }
+      }
 
-        const open_street_map = new TileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        })
+      /**
+       * Erstelle die IMG HTML Elemente in einem Container für eine oder mehrere Bild URLs.
+       *
+       * @param  {string | string[]} wappen
+       * @return {HTMLElement}
+       */
+      function formatWappenGruppen(wappen) {
+        if (!Array.isArray(wappen)) {
+          wappen = [wappen];
+        }
 
-        const wanderwege = new TileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://hiking.waymarkedtrails.org/">Waymarked Trails</a>'
-        })
+        const wappenContainer = document.createElement("div");
+        wappenContainer.className = "wappen-container";
+        wappenContainer.append(
+          ...wappen.map((url) => {
+            const picture = document.createElement("picture");
+            const img = document.createElement("img");
+            if (isValidUrl(url) == true) {
+              //wenn FQDN... dann lade direkt
+              img.src = url;
+            } else {
+              // wenn kein FQDN dann Suche in assets
+              img.src = "./assets/img/gruppen/" + url;
+            }
+            picture.className = "wappen";
+            picture.append(img);
+            return picture;
+          })
+        );
+        return wappenContainer;
+      }
 
-        const control = new Control.Layers(
-            { "OpenStreetMap": open_street_map },
-            { "Wanderwege": wanderwege },
-            {
-                hideSingleBase: true,
-                sortLayers: true
-            });
+      function formatWappenHeime(wappen) {
+        if (!Array.isArray(wappen)) {
+          wappen = [wappen];
+        }
 
-        const map = new Map('map', {
-            center: [51.287140, 10.179360],
-            zoom: 7,
-            layers: [
-                open_street_map
-            ]
+        const wappenContainer = document.createElement("div");
+        wappenContainer.className = "wappen-container";
+        wappenContainer.append(
+          ...wappen.map((url) => {
+            const picture = document.createElement("picture");
+            const img = document.createElement("img");
+            if (isValidUrl(url) == true) {
+              //wenn FQDN... dann lade direkt
+              img.src = url;
+            } else {
+              // wenn kein FQDN dann Suche in assets
+              img.src = "./assets/img/heime/" + url;
+            }
+            picture.className = "wappen";
+            picture.append(img);
+            return picture;
+          })
+        );
+        return wappenContainer;
+      }
+
+      function popupFromGruppe(layer) {
+        const gruppe = layer.feature.properties;
+
+        // Folgender Code ist anfällig für Cross Site Scripting, wenn die Gruppendaten nicht von uns direkt kommen.
+        return `<div class="popup">
+          <p style="text-align:right; font-size:1.2em"><img src="./assets/img/fa-users-solid.svg" style="height: 1.2em;" aria-title="Gruppe"></p>
+             
+                      <h2 style="text-align: center">${
+                        gruppe["label"] ?? ""
+                      }</h2>
+                      <h3 style="text-align: center">${
+                        gruppe["addressLocality"] ?? ""
+                      }</h3>
+                      ${
+                        gruppe["imageWappen"]
+                          ? formatWappenGruppen(gruppe["imageWappen"]).outerHTML
+                          : ""
+                      }
+                      <p>${gruppe["description"] ?? ""}</p>
+                      ${
+                        gruppe["website"]
+                          ? `<p>&#x1F30D; <a href='${gruppe["website"]}' target='_blank' rel='noopener noreferrer'>Website</a></p>`
+                          : ""
+                      } 
+                      ${
+                        gruppe["streetAddress"]
+                          ? `<p>&#x1F3E0; ${gruppe["streetAddress"]}, ${gruppe["postalCode"]} ${gruppe["addressLocality"]}</p>`
+                          : ""
+                      } 
+                  </div>`;
+      }
+
+      function popupFromHeime(layer) {
+        const heime = layer.feature.properties;
+
+        // Folgender Code ist anfällig für Cross Site Scripting, wenn die Gruppendaten nicht von uns direkt kommen.
+        return `<div class="popup">
+                   <p style="text-align:right; font-size:1.2em"><img src="./assets/img/fa-house-solid.svg" style="height: 1.2em;" aria-title="Heim"></p>
+             
+                      <h2 style="text-align: center">${
+                        heime["label"] ?? ""
+                      }</h2>
+                      <h3 style="text-align: center">${
+                        heime["addressLocality"] ?? ""
+                      }</h3>
+                      ${
+                        heime["imageWappen"]
+                          ? formatWappenHeime(heime["imageWappen"]).outerHTML
+                          : ""
+                      }
+                      <p>${heime["description"] ?? ""}</p>
+                      ${
+                        heime["website"]
+                          ? `<p>&#x1F30D; <a href='${heime["website"]}' target='_blank' rel='noopener noreferrer'>Website</a></p>`
+                          : ""
+                      } 
+                      ${
+                        heime["streetAddress"]
+                          ? `<p>&#x1F3E0; ${heime["streetAddress"]}, ${heime["postalCode"]} ${heime["addressLocality"]}</p>`
+                          : ""
+                      } 
+                       </div>`;
+      }
+
+      const open_street_map = L.tileLayer(
+        "https://tile.openstreetmap.de/{z}/{x}/{y}.png",
+        {
+          maxZoom: 19,
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        }
+      );
+
+      const wanderwege = L.tileLayer(
+        "https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png",
+        {
+          attribution:
+            '&copy; <a href="https://hiking.waymarkedtrails.org/">Waymarked Trails</a>',
+        }
+      );
+
+      const map = L.map("map", {
+        center: [51.163375, 10.447683],
+        zoom: 6,
+        layers: [open_street_map],
+      });
+
+      const control = L.control.layers(
+        { OpenStreetMap: open_street_map },
+        { Wanderwege: wanderwege },
+        {
+          hideSingleBase: true,
+          sortLayers: true,
+        }
+      );
+
+      map.addControl(control);
+
+      var logoMarkerStyle = L.Icon.extend({
+        options: {
+          iconSize: [32, 32],
+          iconAnchor: [12, 41],
+          popupAnchor: [4, -32],
+        },
+      });
+
+      function isUrl(url) {
+        const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+        return urlRegex.test(url);
+      }
+
+      var markerLayers = L.markerClusterGroup.layerSupport();
+      map.addLayer(markerLayers);
+
+      fetch("./gruppen.geojson")
+        .then((response) => response.json())
+        .then((json) => {
+          var gruppenLayer = L.geoJSON("", {
+            pointToLayer: function (feature, latlng) {
+              if (
+                feature.properties.imageLogo &&
+                !Array.isArray(feature.properties.imageLogo)
+              ) {
+                if (isUrl(feature.properties.imageLogo)) {
+                  var logoMarker = new logoMarkerStyle({
+                    iconUrl: feature.properties.imageLogo,
+                  });
+                } else {
+                  var logoMarker = new logoMarkerStyle({
+                    iconUrl:
+                      "./assets/img/gruppen/" + feature.properties.imageLogo,
+                  });
+                }
+              } else if (
+                feature.properties.imageWappen &&
+                !Array.isArray(feature.properties.imageWappen)
+              ) {
+                if (isUrl(feature.properties.imageWappen)) {
+                  var logoMarker = new logoMarkerStyle({
+                    iconUrl: feature.properties.imageWappen,
+                  });
+                } else {
+                  var logoMarker = new logoMarkerStyle({
+                    iconUrl:
+                      "./assets/img/gruppen/" + feature.properties.imageWappen,
+                  });
+                }
+              } else {
+                var logoMarker = new logoMarkerStyle({
+                  iconUrl: "./assets/img/bundeslilie.svg",
+                });
+              }
+
+              return L.marker(latlng, { icon: logoMarker });
+            },
+          });
+          gruppenLayer.addData(json);
+          gruppenLayer.bindPopup(popupFromGruppe);
+          control.addOverlay(gruppenLayer, "Gruppen");
+          markerLayers.addLayer(gruppenLayer);
         });
 
-        map.addControl(control)
+      fetch("./heime.geojson")
+        .then((response) => response.json())
+        .then((json) => {
+          var heimeLayer = L.geoJSON("", {
+            pointToLayer: function (feature, latlng) {
+              if (
+                feature.properties.imageLogo &&
+                !Array.isArray(feature.properties.imageLogo)
+              ) {
+                if (isUrl(feature.properties.imageLogo)) {
+                  var logoMarker = new logoMarkerStyle({
+                    iconUrl: feature.properties.imageLogo,
+                  });
+                } else {
+                  var logoMarker = new logoMarkerStyle({
+                    iconUrl:
+                      "./assets/img/heime/" + feature.properties.imageLogo,
+                  });
+                }
+              } else if (
+                feature.properties.imageWappen &&
+                !Array.isArray(feature.properties.imageWappen)
+              ) {
+                if (isUrl(feature.properties.imageWappen)) {
+                  var logoMarker = new logoMarkerStyle({
+                    iconUrl: feature.properties.imageWappen,
+                  });
+                } else {
+                  var logoMarker = new logoMarkerStyle({
+                    iconUrl:
+                      "./assets/img/heime/" + feature.properties.imageWappen,
+                  });
+                }
+              } else {
+                var logoMarker = new logoMarkerStyle({
+                  iconUrl: "./assets/img/fa-house-solid.svg",
+                });
+              }
 
-        fetch('./gruppen.geojson')
-            .then((response) => response.json())
-            .then((json) => {
-                const layer = new GeoJSON(json).bindPopup(popupFromGruppe)
-                map.addLayer(layer)                  // Zeige Gruppen sofort an.
-                control.addOverlay(layer, "Gruppen") // Füge Option zum ausblenden von Gruppen an.
-            });
-
-        fetch('./heime.geojson')
-            .then((response) => response.json())
-            .then((json) => {
-                const layer = new GeoJSON(json).bindPopup(popupFromGruppe) // Selbe wie Gruppen, bis jemand was hübscheres macht.
-                control.addOverlay(layer, "Heime")
-            });
-
-        map.on("contextmenu", function (event) {
-          alert("Die Koordinaten des gewählten Punktes sind: " + event.latlng.toString());
+              return L.marker(latlng, { icon: logoMarker });
+            },
+          });
+          heimeLayer.addData(json);
+          heimeLayer.bindPopup(popupFromHeime);
+          control.addOverlay(heimeLayer, "Heime");
+          markerLayers.checkIn(heimeLayer);
         });
+
+      markerLayers.addTo(map);
+
+      map.on("contextmenu", function (event) {
+        alert(
+          "Die Koordinaten des gewählten Punktes sind: " +
+            event.latlng.toString()
+        );
+      });
     </script>
-</body>
-
+  </body>
 </html>
