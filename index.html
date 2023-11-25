@@ -21,6 +21,9 @@
       crossorigin=""
     />
 
+    <link href="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.css" rel="stylesheet">
+    
+
     <style>
       :root {
         --primary: #003aba;
@@ -126,6 +129,8 @@
       src="https://unpkg.com/leaflet.markercluster.layersupport@2.0.1/dist/leaflet.markercluster.layersupport.js"
       crossorigin=""
     ></script>
+    <script src="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.js"  crossorigin=""></script>
+
     <script type="module">
       function isValidUrl(string) {
         try {
@@ -233,10 +238,10 @@
         return `<div class="popup">
                    <p style="text-align:right; font-size:1.2em"><img src="./assets/img/fa-house-solid.svg" style="height: 1.2em;" aria-title="Heim"></p>
                    ${
-                    heime["imageLogo"]
-                      ? `<p style="text-algin: center"><img style="max-height: 3em" src="${heime["imageLogo"]}" alt="Logo von ${heime["label"]}"</p>`
-                      : ""
-                  } 
+                     heime["imageLogo"]
+                       ? `<p style="text-algin: center"><img style="max-height: 3em" src="${heime["imageLogo"]}" alt="Logo von ${heime["label"]}"</p>`
+                       : ""
+                   } 
                       <h2 style="text-align: center">${
                         heime["label"] ?? ""
                       }</h2>
@@ -298,7 +303,7 @@
 
       var logoMarkerStyle = L.Icon.extend({
         options: {
-          iconSize: [,28],
+          iconSize: [, 28],
           iconAnchor: [12, 41],
           popupAnchor: [0, -32],
         },
@@ -309,22 +314,25 @@
         return urlRegex.test(url);
       }
 
-     var markerLayers = L.markerClusterGroup.layerSupport({maxClusterRadius: 70,  showCoverageOnHover: false, zoomToBoundsOnClick: false});
-     
+      var markerLayers = L.markerClusterGroup.layerSupport({
+        maxClusterRadius: 70,
+        showCoverageOnHover: false,
+        zoomToBoundsOnClick: false,
+      });
 
-     markerLayers.on('clusterclick', function (a) {
-      a.layer.zoomToBounds({padding: [20, 20]});
-  });
-    
-    
+      markerLayers.on("clusterclick", function (a) {
+        a.layer.zoomToBounds({ padding: [20, 20] });
+      });
 
-		
       map.addLayer(markerLayers);
 
       fetch("./gruppen.geojson")
         .then((response) => response.json())
         .then((json) => {
           var gruppenLayer = L.geoJSON("", {
+            onEachFeature: function(feature, layer) {
+                layer.feature.properties.searchItem = layer.feature.properties.label + ' (' + layer.feature.properties.addressLocality + ')';
+              },
             pointToLayer: function (feature, latlng) {
               if (
                 feature.properties.imageLogo &&
@@ -373,6 +381,9 @@
         .then((response) => response.json())
         .then((json) => {
           var heimeLayer = L.geoJSON("", {
+            onEachFeature: function(feature, layer) {
+                layer.feature.properties.searchItem = layer.feature.properties.label + ' (' + layer.feature.properties.addressLocality + ')';
+              },
             pointToLayer: function (feature, latlng) {
               if (
                 feature.properties.imageLogo &&
@@ -401,16 +412,32 @@
           heimeLayer.bindPopup(popupFromHeime);
           control.addOverlay(heimeLayer, "Heime");
           markerLayers.checkIn(heimeLayer);
+          
         });
 
       markerLayers.addTo(map);
 
-      map.on("contextmenu", function (event) {
+      
+ // Suche
+ 
+ var search = new L.Control.Search({
+    layer: markerLayers,
+    initial: false,
+    minLength: 3,
+    propertyName: 'searchItem',
+    textPlaceholder:'Suche in aktiven Ebenen',
+    zoom:'20',});
+
+  map.addControl(search);
+
+  // Koordinatenanzeige 
+    map.on("contextmenu", function (event) {
         alert(
           "Die Koordinaten des gewählten Punktes sind: " +
             event.latlng.toString()
         );
       });
+
     </script>
   </body>
 </html>
