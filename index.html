@@ -244,8 +244,8 @@
                         heime["addressLocality"] ?? ""
                       }</h3>
                       ${
-                        heime["imageWappen"]
-                          ? formatWappenHeime(heime["imageWappen"]).outerHTML
+                        heime["imagePicture"]
+                          ? formatWappenHeime(heime["imagePicture"]).outerHTML
                           : ""
                       }
                       <p>${heime["description"] ?? ""}</p>
@@ -298,7 +298,7 @@
 
       var logoMarkerStyle = L.Icon.extend({
         options: {
-          iconSize: [,32],
+          iconSize: [,28],
           iconAnchor: [12, 41],
           popupAnchor: [0, -32],
         },
@@ -386,20 +386,6 @@
                   var logoMarker = new logoMarkerStyle({
                     iconUrl:
                       "./assets/img/heime/" + feature.properties.imageLogo,
-                  });
-                }
-              } else if (
-                feature.properties.imageWappen &&
-                !Array.isArray(feature.properties.imageWappen)
-              ) {
-                if (isUrl(feature.properties.imageWappen)) {
-                  var logoMarker = new logoMarkerStyle({
-                    iconUrl: feature.properties.imageWappen,
-                  });
-                } else {
-                  var logoMarker = new logoMarkerStyle({
-                    iconUrl:
-                      "./assets/img/heime/" + feature.properties.imageWappen,
                   });
                 }
               } else {

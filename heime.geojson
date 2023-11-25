@@ -13,7 +13,7 @@
         "postalCode": 37308,
         "streetAddress": "Bernteröder Straße 10",
         "imageLogo": "https://schloss-martinfeld.de/wp-content/uploads/2022/07/Logo_braun.png",
-        "imageWappen": "https://schloss-martinfeld.de/wp-content/uploads/2022/07/Aussen2_komplett.jpg",
+        "imagePicture": "https://schloss-martinfeld.de/wp-content/uploads/2022/07/Aussen2_komplett.jpg",
         "website": "https://schloss-martinfeld.de/",
         "description": ""
       }
@@ -30,7 +30,7 @@
         "postalCode": 42857,
         "streetAddress": "Hammertal 4",
         "imageLogo": "",
-        "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipOpsgHd_oCZWQE_dPIB2IVuFooebEKDdUwTUR0=w408-h306-k-no",
+        "imagePicture": "https://lh5.googleusercontent.com/p/AF1QipOpsgHd_oCZWQE_dPIB2IVuFooebEKDdUwTUR0=w408-h306-k-no",
         "website": "",
         "description": ""
       }
@@ -40,15 +40,15 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [7.162552153965908, 51.1594809391117]
+        "coordinates": [7.162552, 51.158904]
       },
       "properties": {
         "label": "Fischerhütte",
         "addressLocality": "Remscheid",
         "postalCode": 42857,
-        "streetAddress": "Tyrol",
+        "streetAddress": "Tyrol 4",
         "imageLogo": "",
-        "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipNvC6T1NCk9k-t3i1-WHJNtosCeJCBCwPfuAVE=w408-h306-k-no",
+        "imagePicture": "https://lh5.googleusercontent.com/p/AF1QipNvC6T1NCk9k-t3i1-WHJNtosCeJCBCwPfuAVE=w408-h306-k-no",
         "website": "",
         "description": ""
       }
@@ -57,7 +57,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.3904793, 52.463072]
+        "coordinates": [13.390894, 52.463101]
       },
       "properties": {
         "label": "Gutshof",
@@ -65,7 +65,7 @@
         "postalCode": null,
         "streetAddress": "",
         "imageLogo": "",
-        "imageWappen": "",
+        "imagePicture": "",
         "website": "http://pfadfinder-tempelhof.de",
         "description": "Heim von Mädelschaft Jeanne d'Arc & Jungenschaft Jonathan"
       }
@@ -82,7 +82,7 @@
         "postalCode": null,
         "streetAddress": "",
         "imageLogo": "",
-        "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipM0jsqvfl5fjHQMYzMfh8OCyGBds2AC4zpwbGJ6=w203-h152-k-no",
+        "imagePicture": "https://lh5.googleusercontent.com/p/AF1QipM0jsqvfl5fjHQMYzMfh8OCyGBds2AC4zpwbGJ6=w203-h152-k-no",
         "website": "https://www.pfadfinder-frohnau.de",
         "description": "Häuschen ~ Jungenschaft Gawan, Mädelschaft Ginover"
       }
@@ -100,7 +100,7 @@
         "postalCode": 13509,
         "streetAddress": "Ziekowstraße 163",
         "imageLogo": "",
-        "imageWappen": "pfadiheim-bb.png",
+        "imagePicture": "pfadiheim-bb.png",
         "website": "http://www.pfadfinderburg.de/",
         "description": "Die Pfadfinderburg in Berlin-Tegel ist das Heim vieler Gruppen des Gaues Wartburg im DPB und steht auch anderen Pfadfindergruppen nach Absprache zur Verfügung."
       }
@@ -118,7 +118,7 @@
         "postalCode": null,
         "streetAddress": "",
         "imageLogo": "",
-        "imageWappen": "",
+        "imagePicture": "",
         "website": "https://www.stamm-wolfstein.de/",
         "description": ""
       }
@@ -135,7 +135,7 @@
         "postalCode": null,
         "streetAddress": "",
         "imageLogo": "",
-        "imageWappen": "",
+        "imagePicture": "",
         "website": "",
         "description": "Jungenschaft Theotmalli Standort Bad Meinberg"
       }
@@ -144,7 +144,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [7.687605369408751, 51.34676303056911]
+        "coordinates": [7.68786, 51.345622]
       },
       "properties": {
         "label": "Brackeler Hütte - Pfadfinderhaus",
@@ -152,10 +152,49 @@
         "postalCode": 58644,
         "streetAddress": "Asbecker Weg 20",
         "imageLogo": "",
-        "imageWappen": "https://lh5.googleusercontent.com/p/AF1QipM42ZjFIrLCzZw4G83CNedKva5xDpIyVfYnCcJs=w426-h240-k-no",
+        "imagePicture": "https://lh5.googleusercontent.com/p/AF1QipM42ZjFIrLCzZw4G83CNedKva5xDpIyVfYnCcJs=w426-h240-k-no",
         "website": "https://brackeler-huette.de",
         "description": ""
       }
-    }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [6.442305765066847, 50.53353403637016]
+        },
+        "properties": {
+          "label": "Pfadfinderzentrum Ettelscheid",
+          "addressLocality": "Schleiden",
+          "postalCode": 53937,
+          "streetAddress": "Weiherhardt 2",
+          "imageLogo": "",
+          "imagePicture": "",
+          "website": "https://www.akpz-ettelscheid.de/",
+          "description": ""
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.494977, 49.770567]
+        },
+        "properties": {
+          "label": "DPB Landesheim Franken e.V.",
+          "addressLocality": "Pegnitz - Körbeldorf",
+          "postalCode": 91257,
+          "streetAddress": "Hollenbergerweg 8",
+          "imageLogo": "",
+          "imagePicture": "",
+          "website": "http://www.dpb-landesheimfranken.de",
+          "description": ""
+        }
+      }
   ]
 }
+
+
+
+
+ 
