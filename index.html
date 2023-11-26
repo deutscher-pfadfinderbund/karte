@@ -417,13 +417,13 @@
 
   map.addControl(search);
 
-  // Koordinatenanzeige 
-    map.on("contextmenu", function (event) {
-        alert(
-          "Die Koordinaten des gewählten Punktes sind: " +
-            event.latlng.toString()
-        );
-      });
+// Koordinatenanzeige 
+map.on("contextmenu", function (event) {
+    alert(
+        "Die Koordinaten des gewählten Punktes sind: \n \n" +
+        event.latlng.lng.toString() + ", " + event.latlng.lat.toString()
+    );
+});
 
     </script>
   </body>
