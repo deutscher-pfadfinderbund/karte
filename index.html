@@ -283,11 +283,11 @@
 
       map.addControl(control);
 
-      var logoMarkerStyle = L.Icon.extend({
+      const wappen_map_icon_size = 40
+      const logoMarkerStyle = L.Icon.extend({
         options: {
-          iconSize: [, 28],
-          iconAnchor: [12, 41],
-          popupAnchor: [0, -32],
+          iconSize: [wappen_map_icon_size, wappen_map_icon_size],
+          popupAnchor: [0, 0],
         },
       });
 
@@ -296,8 +296,8 @@
         return urlRegex.test(url);
       }
 
-      var markerLayers = L.markerClusterGroup.layerSupport({
-        maxClusterRadius: 70,
+      const markerLayers = L.markerClusterGroup.layerSupport({
+        maxClusterRadius: 10,
         showCoverageOnHover: false,
         zoomToBoundsOnClick: false,
       });
