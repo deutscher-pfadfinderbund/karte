@@ -600,7 +600,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [7.7661798, 51.3854116]
+        "coordinates": [7.758450508117677, 51.37050780837472]
       },
       "properties": {
         "label": "Ring Rote Erde",
@@ -753,7 +753,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [7.6884637, 51.3936724]
+        "coordinates": [7.686342000961305, 51.39366300193064]
       },
       "properties": {
         "label": "Ring Florian Geyer",
