@@ -86,6 +86,11 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        .leaflet-marker-icon.wappen-map-icon {
+          height: 40px;
+          translate: -50% -50%;
+        }
     </style>
   </head>
 
@@ -286,8 +291,8 @@
       const wappen_map_icon_size = 40
       const logoMarkerStyle = L.Icon.extend({
         options: {
-          iconSize: [wappen_map_icon_size, wappen_map_icon_size],
           popupAnchor: [0, 0],
+          className: "wappen-map-icon"
         },
       });
 
