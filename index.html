@@ -506,8 +506,8 @@
                             canvasElement.classList.add("offcanvas-show");
                             mapElement.classList.add("map-offcanvas");
                             var canvasBodyElement = document.getElementById("detailPaneBody");
-                            var latlang = e.layer.feature.geometry.coordinates;
-                            map.setView([latlang[1], latlang[0]], 17);
+                            //var latlang = e.layer.feature.geometry.coordinates;
+                            //map.setView([latlang[1], latlang[0]], 17);
                             if (value == "gruppen") {
                                 canvasBodyElement.innerHTML = createDetailsGruppen(e.layer);
                             } else if (value == "heime") {
