@@ -29,6 +29,8 @@
         :root {
             --primary: #003aba;
             --on-primary: white;
+            --secondary: #8F999F;
+            --on-secondary: black;
             font-family: Inter, sans-serif;
             font-feature-settings: 'liga' 1, 'calt' 1;
             /* fix for Chrome */
@@ -40,9 +42,16 @@
             }
         }
 
+        address {
+            margin-bottom: 1rem;
+            font-style: normal;
+            line-height: inherit;
+        }
+
         #map {
             width: 100vw;
             height: 100vh;
+            transition: 0.1s;
         }
 
         .correction-link {
@@ -50,6 +59,29 @@
             left: 16px;
             bottom: 16px;
             z-index: 1000;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .fs-1 {
+            font-size: 1em;
+            height: 1em;
+        }
+
+        .fs-1_2 {
+            font-size: 1.2em;
+            height: 1.2em;
+        }
+
+
+        .mt-4 {
+            margin-top: 20px;
         }
 
         .button {
@@ -85,6 +117,123 @@
             height: 40px;
             translate: -50% -50%;
         }
+
+        .offcanvas-show {
+            visibility: visible !important;
+        }
+
+
+
+        .offcanvas {
+            visibility: hidden;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            right: 0;
+            background-color: #fefefe;
+            overflow-x: hidden;
+            overflow-y: auto;
+            transition: 0.1s;
+
+
+        }
+
+        @media (max-width: 991.98px) {
+
+            .offcanvas {
+                width: 100vw;
+                height: 75vh;
+
+            }
+
+            .map-offcanvas {
+                height: 0vh !important;
+                
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            .offcanvas {
+                width: 25vw;
+                height: 100vh;
+
+            }
+
+            .map-offcanvas {
+                width: 75vw !important;
+                margin-right: 25vw !important;
+            }
+        }
+
+
+        .offcanvas .closebtn:hover {
+            color: #666;
+        }
+
+        .offcanvas .closebtn {
+            font-size: 2em;
+            font-weight: 600;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 15px;
+
+        }
+
+        .offcanvas h2 {
+            font-size: 1.5em;
+        }
+
+        .offcanvas h3 {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        .offcanvas address {
+            font-size: 1em;
+        }
+
+        .offcanvas-body {
+            padding: 15px;
+        }
+
+        .offcanvas-title {
+            padding: 15px;
+            background-color: var(--secondary);
+            color: var(--on-secondary);
+        }
+
+
+        .offcanvas-header {
+            height: 80px;
+            background-color: var(--primary);
+            padding: 15px;
+            color: var(--on-primary);
+
+        }
+
+        .offcanvas-header img {
+            filter: invert(100);
+            margin: 15px;
+        }
+
+        .offcanvas-body .heimlogo {
+            height: 100%;
+            max-height: 100px;
+            width: auto
+        }
+
+        .self-align-center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
     </style>
 </head>
 
@@ -93,8 +242,21 @@
     <a class="correction-link button"
         href="https://cloud.deutscher-pfadfinderbund.de/apps/forms/s/J7xJTjJrpkfKWZRDGeLdaft7">Neuen Ort hinzufügen oder
         korrigieren</a>
-    <div id="map">Das hier wird von der Karte eingebunden</div>
 
+    <div id="map"><!-- Hier wird die Karte eingebunden --></div>
+
+    <!-- Offcanvas Details -->
+
+    <div id="detailPane" class="offcanvas">
+        <a href="#" class="text-right closebtn" id="detailPaneClose">&times;</a>
+        <div id="detailPaneBody">
+            <!-- Hier landen die Details-->
+        </div>
+    </div>
+
+
+
+    <!-- Skripte -->
     <script src="https://unpkg.com/leaflet@1/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet.markercluster@1/dist/leaflet.markercluster.js" crossorigin=""></script>
@@ -158,17 +320,22 @@
             var item = layer.feature.properties;
 
             var details = `
-                <div class="popup">
-                    <p style="text-align:right; font-size:1.2em"><img src="./assets/img/fa-users-solid.svg" style="height: 1.2em;" aria-title="Gruppe"></p>
-                    <h2 style="text-align: center">${item["label"] ?? ""}</h2>
-                    <h3 style="text-align: center">${item["addressLocality"] ?? ""}</h3>
-                    <div>${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
-                    <p>${item["description"] ?? ""}</p>
-                    <address>
-                        ${item["website"] ? `<div>&#x1F30D; <a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>Website</a></div>` : ""} 
-                        ${item["streetAddress"] ? `<p>&#x1F3E0; ${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
-                    </address>
-                </div>`;
+                    <div class="offcanvas-header">
+                        <img src="./assets/img/fa-users-solid.svg" class="fs-1_2" aria-title="Gruppe">
+                    </div>
+                    <div class="offcanvas-title">
+                        <h2 class="text-center">${item["label"] ?? ""}</h2>
+                        <h3 class="text-center">${item["addressLocality"] ?? ""}</h3>
+                    </div>
+                    <div class="offcanvas-body"> 
+                        <div class="text-center">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
+                        <div>${item["description"] ?? ""}</div>
+                        <address class="mt-4">
+                                ${item["website"] ? `<div>&#x1F30D; <a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
+                                ${item["streetAddress"] ? `<div>&#x1F3E0; ${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
+                        </address>    
+                    </div>
+                `;
 
             return details;
         }
@@ -178,23 +345,30 @@
             var item = layer.feature.properties;
 
             var details = `
-                <div class="popup">
-                    <p style="text-align:right; font-size:1.2em"><img src="./assets/img/fa-house-solid.svg" style="height: 1.2em;" aria-title="Gruppe"></p>
-                    ${item["imageLogo"] ? `<p style="text-algin: center"><img style="max-height: 3em" src="${item["imageLogo"]}" alt="Logo von ${item["label"]}"</p>` : ""} 
-                    <h2 style="text-align: center">${item["label"] ?? ""}</h2>
-                    <h3 style="text-align: center">${item["addressLocality"] ?? ""}</h3>
-                    <div>${item["imagePicture"] ? formatImage(item["imagePicture"], ['heim']).outerHTML : ""}</div>
-                    <p>${item["description"] ?? ""}</p>
-                    <address>
-                        ${item["website"] ? `<div>&#x1F30D; <a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>Website</a></div>` : ""} 
-                        ${item["streetAddress"] ? `<p>&#x1F3E0; ${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
-                    </address>
-                </div>`;
+                <div class="offcanvas-header">
+                    <img src="./assets/img/fa-house-solid.svg" class="fs-1_2" aria-title="Gruppe">
+                </div>
+                <div class="offcanvas-title">
+                   
+                    <h2 class="text-center">${item["label"] ?? ""}</h2>
+                    <h3 class="text-center">${item["addressLocality"] ?? ""}</h3>
+                </div>
+                <div class="offcanvas-body"> 
+                    ${item["imageLogo"] ? `<p class="text-center"><img class="self-align-center heimlogo" src="${item["imageLogo"]}" alt="Logo von ${item["label"]}"</p>` : ""}
+                    <div class="text-center mt-4">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
+                    <div>${item["description"] ?? ""}</div>
+                    <address class="mt-4">
+                            ${item["website"] ? `<div>&#x1F30D; <a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
+                            ${item["streetAddress"] ? `<div>&#x1F3E0; ${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
+                    </address>  
+                    <div>${item["imagePicture"] ? formatImage(item["imagePicture"], ['heim']).outerHTML : ""}</div>  
+                </div>
+            `;
 
             return details;
         }
 
-        // rstellung der eigentlichen Marker
+        // Erstellung der eigentlichen Marker
 
         function createMarkers(feature, type) {
             if (type == "gruppe") {
@@ -250,7 +424,7 @@
             attribution: '&copy; <a href="https://hiking.waymarkedtrails.org/">Waymarked Trails</a>',
         });
 
-       // Karte initialisieren und Steuerelemente hinzufügen
+        // Karte initialisieren und Steuerelemente hinzufügen
 
         const map = L.map("map", {
             center: [51.163375, 10.447683],
@@ -264,14 +438,15 @@
             {
                 hideSingleBase: true,
                 sortLayers: true,
+                collapsed: false,
             }
         );
 
         map.addControl(control);
 
         // Datenlayer
-  
-         const markerLayers = L.markerClusterGroup.layerSupport({
+
+        const markerLayers = L.markerClusterGroup.layerSupport({
             maxClusterRadius: 10,
             showCoverageOnHover: false,
             zoomToBoundsOnClick: false,
@@ -303,10 +478,10 @@
                         // Create the Markers
                         pointToLayer: function (feature, latlng) {
                             if (value == "gruppen") {
-                            var logoMarker = createMarkers(feature, ['gruppe']);
+                                var logoMarker = createMarkers(feature, ['gruppe']);
                             } else if (value == "heime") {
                                 var logoMarker = createMarkers(feature, ['heim']);
-                                }
+                            }
 
                             return L.marker(latlng, { icon: logoMarker });
                         },
@@ -315,18 +490,62 @@
                     dataLayer.addData(json);
 
                     if (value == "gruppen") {
-                        dataLayer.bindPopup(createDetailsGruppen);
+                        //dataLayer.bindPopup(createDetailsGruppen);
                         control.addOverlay(dataLayer, "Gruppen");
                         markerLayers.addLayer(dataLayer);
                     } else if (value == "heime") {
-                        dataLayer.bindPopup(createDetailsHeime);
+                        // dataLayer.bindPopup(createDetailsHeime);
                         control.addOverlay(dataLayer, "Heime");
                         markerLayers.checkIn(dataLayer);
                     }
+
+                    dataLayer.on("click", function (e) {
+                        if (e.layer instanceof L.Marker) {
+                            var canvasElement = document.getElementById("detailPane");
+                            var mapElement = document.getElementById("map");
+                            canvasElement.classList.add("offcanvas-show");
+                            mapElement.classList.add("map-offcanvas");
+                            var canvasBodyElement = document.getElementById("detailPaneBody");
+                            var latlang = e.layer.feature.geometry.coordinates;
+                            map.setView([latlang[1], latlang[0]], 17);
+                            if (value == "gruppen") {
+                                canvasBodyElement.innerHTML = createDetailsGruppen(e.layer);
+                            } else if (value == "heime") {
+                                canvasBodyElement.innerHTML = createDetailsHeime(e.layer);
+                            }
+
+                        }
+                    });
                 });
         }
 
         markerLayers.addTo(map);
+
+
+        function closeOffcanvas() {
+            var canvasElement = document.getElementById("detailPane");
+            var mapElement = document.getElementById("map");
+            var canvasBodyElement = document.getElementById("detailPaneBody");
+            canvasElement.classList.remove("offcanvas-show");
+            mapElement.classList.remove("map-offcanvas");
+            canvasBodyElement.innerHTML = "";
+        };
+
+
+        const detailPaneClose = document.getElementById("detailPaneClose");
+
+
+        detailPaneClose.addEventListener("click", function (event) {
+            event.preventDefault();
+            closeOffcanvas();
+        });
+
+        map.on("click", function (event) {
+            closeOffcanvas();
+        });
+
+
+
 
         // Suchfunktion hinzufügen nachdem die Datenlayer geladen sind
         var search = new L.Control.Search({
