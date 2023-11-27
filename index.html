@@ -302,7 +302,12 @@
                         },
                         // Create the Markers
                         pointToLayer: function (feature, latlng) {
+                            if (value == "gruppen") {
                             var logoMarker = createMarkers(feature, ['gruppe']);
+                            } else if (value == "heime") {
+                                var logoMarker = createMarkers(feature, ['heim']);
+                                }
+
                             return L.marker(latlng, { icon: logoMarker });
                         },
                     });
