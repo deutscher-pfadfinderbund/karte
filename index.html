@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
+
+<head>
     <title>Karte des DPB</title>
     <meta name="description" content="Eine Übersichtskarte der Gruppen im Deutschen Pfadfinderbund." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,72 +11,65 @@
     <link rel="preconnect" href="https://unpkg.com/">
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="preconnect" href="https://tile.openstreetmap.de">
-    
+
     <link rel="preload" href="assets/styles/reset.css" as="style">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
-    <link
-      href="https://unpkg.com/leaflet@1/dist/leaflet.css"
-      rel="stylesheet"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
-    <link
-      href="https://unpkg.com/leaflet.markercluster@1/dist/MarkerCluster.css"
-      rel="stylesheet"
-      crossorigin=""
-    />
-    <link
-      href="https://unpkg.com/leaflet.markercluster@1/dist/MarkerCluster.Default.css"
-      rel="stylesheet"
-      crossorigin=""
-    />
+    <link href="https://unpkg.com/leaflet@1/dist/leaflet.css" rel="stylesheet"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link href="https://unpkg.com/leaflet.markercluster@1/dist/MarkerCluster.css" rel="stylesheet" crossorigin="" />
+    <link href="https://unpkg.com/leaflet.markercluster@1/dist/MarkerCluster.Default.css" rel="stylesheet"
+        crossorigin="" />
 
     <link href="https://unpkg.com/leaflet-search@4/dist/leaflet-search.min.css" rel="stylesheet">
     <style>
         @layer reset;
         @import url("/assets/styles/reset.css") layer(reset);
-    
+
         :root {
             --primary: #003aba;
             --on-primary: white;
             font-family: Inter, sans-serif;
-            font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+            font-feature-settings: 'liga' 1, 'calt' 1;
+            /* fix for Chrome */
         }
+
         @supports (font-variation-settings: normal) {
-            :root { font-family: InterVariable, sans-serif; }
+            :root {
+                font-family: InterVariable, sans-serif;
+            }
         }
-    
+
         #map {
             width: 100vw;
             height: 100vh;
         }
-    
+
         .correction-link {
             position: absolute;
             left: 16px;
             bottom: 16px;
             z-index: 1000;
         }
-    
+
         .button {
             background-color: var(--primary);
             color: var(--on-primary);
-    
+
             padding: 8px 16px;
             border-radius: 999em;
-    
+
             font-weight: bold;
             text-decoration: none;
         }
-    
-        .wappen {
+
+        .image {
             flex-shrink: 1;
             object-fit: contain;
             max-width: 50%;
         }
-    
-        .wappen-container {
+
+        .image-container {
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
@@ -87,344 +81,269 @@
             margin-right: auto;
         }
 
-        .leaflet-marker-icon.wappen-map-icon {
-          height: 40px;
-          translate: -50% -50%;
+        .leaflet-marker-icon.image-map-icon {
+            height: 40px;
+            translate: -50% -50%;
         }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <h1 style="display: none">Karte des DPB</h1>
-    <a
-      class="correction-link button"
-      href="https://cloud.deutscher-pfadfinderbund.de/apps/forms/s/J7xJTjJrpkfKWZRDGeLdaft7"
-    >
-      Neuen Ort hinzufügen oder korrigieren</a
-    >
+    <a class="correction-link button"
+        href="https://cloud.deutscher-pfadfinderbund.de/apps/forms/s/J7xJTjJrpkfKWZRDGeLdaft7">Neuen Ort hinzufügen oder
+        korrigieren</a>
     <div id="map">Das hier wird von der Karte eingebunden</div>
-    <script
-      src="https://unpkg.com/leaflet@1/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
-    <script
-      src="https://unpkg.com/leaflet.markercluster@1/dist/leaflet.markercluster.js"
-      crossorigin=""
-    ></script>
-    <script
-      src="https://unpkg.com/leaflet.markercluster.layersupport@2/dist/leaflet.markercluster.layersupport.js"
-      crossorigin=""
-    ></script>
-    <script src="https://unpkg.com/leaflet-search@4/dist/leaflet-search.min.js"  crossorigin=""></script>
+
+    <script src="https://unpkg.com/leaflet@1/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1/dist/leaflet.markercluster.js" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster.layersupport@2/dist/leaflet.markercluster.layersupport.js"
+        crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-search@4/dist/leaflet-search.min.js" crossorigin=""></script>
 
     <script type="module">
-      function isValidUrl(string) {
-        try {
-          new URL(string);
-          return true;
-        } catch (err) {
-          return false;
-        }
-      }
 
-      /**
-       * Erstelle die IMG HTML Elemente in einem Container für eine oder mehrere Bild URLs.
-       *
-       * @param  {string | string[]} wappen
-       * @return {HTMLElement}
-       */
-      function formatWappenGruppen(wappen) {
-        if (!Array.isArray(wappen)) {
-          wappen = [wappen];
-        }
-
-        const wappenContainer = document.createElement("div");
-        wappenContainer.className = "wappen-container";
-        wappenContainer.append(
-          ...wappen.map((url) => {
-            const picture = document.createElement("picture");
-            const img = document.createElement("img");
-            if (isValidUrl(url) == true) {
-              //wenn FQDN... dann lade direkt
-              img.src = url;
-            } else {
-              // wenn kein FQDN dann Suche in assets
-              img.src = "./assets/img/gruppen/" + url;
+        function isValidUrl(string) {
+            try {
+                new URL(string);
+                return true;
+            } catch (err) {
+                return false;
             }
-            picture.className = "wappen";
-            picture.append(img);
-            return picture;
-          })
-        );
-        return wappenContainer;
-      }
-
-      function formatWappenHeime(wappen) {
-        if (!Array.isArray(wappen)) {
-          wappen = [wappen];
         }
 
-        const wappenContainer = document.createElement("div");
-        wappenContainer.className = "wappen-container";
-        wappenContainer.append(
-          ...wappen.map((url) => {
-            const picture = document.createElement("picture");
-            const img = document.createElement("img");
-            if (isValidUrl(url) == true) {
-              //wenn FQDN... dann lade direkt
-              img.src = url;
-            } else {
-              // wenn kein FQDN dann Suche in assets
-              img.src = "./assets/img/heime/" + url;
+        /**
+         * Erstelle die IMG HTML Elemente in einem Container für eine oder mehrere Bild URLs.
+         *
+         * @param  {string | string[]} wappen
+         * @return {HTMLElement}
+         */
+        function formatImage(image, type) {
+            if (type == "gruppe") {
+                var img_path = "gruppen";
+            } else if (type == "heim") {
+                var img_path = "heime";
             }
-            picture.className = "wappen";
-            picture.append(img);
-            return picture;
-          })
-        );
-        return wappenContainer;
-      }
 
-      function popupFromGruppe(layer) {
-        const gruppe = layer.feature.properties;
+            if (!Array.isArray(image)) {
+                image = [image];
+            }
 
-        // Folgender Code ist anfällig für Cross Site Scripting, wenn die Gruppendaten nicht von uns direkt kommen.
-        return `<div class="popup">
-          <p style="text-align:right; font-size:1.2em"><img src="./assets/img/fa-users-solid.svg" style="height: 1.2em;" aria-title="Gruppe"></p>
-             
-                      <h2 style="text-align: center">${
-                        gruppe["label"] ?? ""
-                      }</h2>
-                      <h3 style="text-align: center">${
-                        gruppe["addressLocality"] ?? ""
-                      }</h3>
-                      ${
-                        gruppe["imageWappen"]
-                          ? formatWappenGruppen(gruppe["imageWappen"]).outerHTML
-                          : ""
-                      }
-                      <p>${gruppe["description"] ?? ""}</p>
-                      ${
-                        gruppe["website"]
-                          ? `<p>&#x1F30D; <a href='${gruppe["website"]}' target='_blank' rel='noopener noreferrer'>Website</a></p>`
-                          : ""
-                      } 
-                      ${
-                        gruppe["streetAddress"]
-                          ? `<p>&#x1F3E0; ${gruppe["streetAddress"]}, ${gruppe["postalCode"]} ${gruppe["addressLocality"]}</p>`
-                          : ""
-                      } 
-                  </div>`;
-      }
-
-      function popupFromHeime(layer) {
-        const heime = layer.feature.properties;
-
-        // Folgender Code ist anfällig für Cross Site Scripting, wenn die Gruppendaten nicht von uns direkt kommen.
-        return `<div class="popup">
-                   <p style="text-align:right; font-size:1.2em"><img src="./assets/img/fa-house-solid.svg" style="height: 1.2em;" aria-title="Heim"></p>
-                   ${
-                     heime["imageLogo"]
-                       ? `<p style="text-algin: center"><img style="max-height: 3em" src="${heime["imageLogo"]}" alt="Logo von ${heime["label"]}"</p>`
-                       : ""
-                   } 
-                      <h2 style="text-align: center">${
-                        heime["label"] ?? ""
-                      }</h2>
-                      <h3 style="text-align: center">${
-                        heime["addressLocality"] ?? ""
-                      }</h3>
-                      ${
-                        heime["imagePicture"]
-                          ? formatWappenHeime(heime["imagePicture"]).outerHTML
-                          : ""
-                      }
-                      <p>${heime["description"] ?? ""}</p>
-                      ${
-                        heime["website"]
-                          ? `<p>&#x1F30D; <a href='${heime["website"]}' target='_blank' rel='noopener noreferrer'>Website</a></p>`
-                          : ""
-                      } 
-                      ${
-                        heime["streetAddress"]
-                          ? `<p>&#x1F3E0; ${heime["streetAddress"]}, ${heime["postalCode"]} ${heime["addressLocality"]}</p>`
-                          : ""
-                      } 
-                       </div>`;
-      }
-
-      const open_street_map = L.tileLayer(
-        "https://tile.openstreetmap.de/{z}/{x}/{y}.png",
-        {
-          maxZoom: 19,
-          attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+            const imageContainer = document.createElement("div");
+            imageContainer.className = "image-container";
+            imageContainer.append(
+                ...image.map((url) => {
+                    const picture = document.createElement("picture");
+                    const img = document.createElement("img");
+                    if (isValidUrl(url) == true) {
+                        //wenn FQDN... dann lade direkt
+                        img.src = url;
+                    } else {
+                        // wenn kein FQDN dann Suche in assets
+                        img.src = "./assets/img/" + img_path + "/" + url;
+                    }
+                    picture.className = "image";
+                    picture.append(img);
+                    return picture;
+                })
+            );
+            return imageContainer;
         }
-      );
 
-      const wanderwege = L.tileLayer(
-        "https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png",
-        {
-          attribution:
-            '&copy; <a href="https://hiking.waymarkedtrails.org/">Waymarked Trails</a>',
+        // Erstelle die Details für die Popups/Detailansichten
+
+        function createDetailsGruppen(layer) {
+
+            var item = layer.feature.properties;
+
+            var details = `
+                <div class="popup">
+                    <p style="text-align:right; font-size:1.2em"><img src="./assets/img/fa-users-solid.svg" style="height: 1.2em;" aria-title="Gruppe"></p>
+                    <h2 style="text-align: center">${item["label"] ?? ""}</h2>
+                    <h3 style="text-align: center">${item["addressLocality"] ?? ""}</h3>
+                    <div>${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
+                    <p>${item["description"] ?? ""}</p>
+                    <address>
+                        ${item["website"] ? `<div>&#x1F30D; <a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>Website</a></div>` : ""} 
+                        ${item["streetAddress"] ? `<p>&#x1F3E0; ${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
+                    </address>
+                </div>`;
+
+            return details;
         }
-      );
 
-      const map = L.map("map", {
-        center: [51.163375, 10.447683],
-        zoom: 6,
-        layers: [open_street_map],
-      });
+        function createDetailsHeime(layer) {
 
-      const control = L.control.layers(
-        { OpenStreetMap: open_street_map },
-        { Wanderwege: wanderwege },
-        {
-          hideSingleBase: true,
-          sortLayers: true,
+            var item = layer.feature.properties;
+
+            var details = `
+                <div class="popup">
+                    <p style="text-align:right; font-size:1.2em"><img src="./assets/img/fa-house-solid.svg" style="height: 1.2em;" aria-title="Gruppe"></p>
+                    ${item["imageLogo"] ? `<p style="text-algin: center"><img style="max-height: 3em" src="${item["imageLogo"]}" alt="Logo von ${item["label"]}"</p>` : ""} 
+                    <h2 style="text-align: center">${item["label"] ?? ""}</h2>
+                    <h3 style="text-align: center">${item["addressLocality"] ?? ""}</h3>
+                    <div>${item["imagePicture"] ? formatImage(item["imagePicture"], ['heim']).outerHTML : ""}</div>
+                    <p>${item["description"] ?? ""}</p>
+                    <address>
+                        ${item["website"] ? `<div>&#x1F30D; <a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>Website</a></div>` : ""} 
+                        ${item["streetAddress"] ? `<p>&#x1F3E0; ${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
+                    </address>
+                </div>`;
+
+            return details;
         }
-      );
 
-      map.addControl(control);
+        // rstellung der eigentlichen Marker
 
-      const wappen_map_icon_size = 40
-      const logoMarkerStyle = L.Icon.extend({
-        options: {
-          popupAnchor: [0, 0],
-          className: "wappen-map-icon"
-        },
-      });
+        function createMarkers(feature, type) {
+            if (type == "gruppe") {
+                var img_path = "gruppen";
+                var img_generic = "bundeslilie.svg";
+                var logo = feature.properties.imageLogo;
+                var image = feature.properties.imageWappen;
+            } else if (type == "heim") {
+                var img_path = "heime";
+                var img_generic = "fa-house-solid.svg";
+                var logo = feature.properties.imageLogo;
+                var image = false;
+            }
 
-      function isUrl(url) {
-        const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
-        return urlRegex.test(url);
-      }
-
-      const markerLayers = L.markerClusterGroup.layerSupport({
-        maxClusterRadius: 10,
-        showCoverageOnHover: false,
-        zoomToBoundsOnClick: false,
-      });
-
-      markerLayers.on("clusterclick", function (a) {
-        a.layer.zoomToBounds({ padding: [20, 20] });
-      });
-
-      map.addLayer(markerLayers);
-
-      fetch("./gruppen.geojson")
-        .then((response) => response.json())
-        .then((json) => {
-          var gruppenLayer = L.geoJSON("", {
-            onEachFeature: function(feature, layer) {
-                layer.feature.properties.searchItem = layer.feature.properties.label + ' (' + layer.feature.properties.addressLocality + ')';
-              },
-            pointToLayer: function (feature, latlng) {
-              if (
-                feature.properties.imageLogo &&
-                !Array.isArray(feature.properties.imageLogo)
-              ) {
-                if (isUrl(feature.properties.imageLogo)) {
-                  var logoMarker = new logoMarkerStyle({
-                    iconUrl: feature.properties.imageLogo,
-                  });
+            if (feature.properties.imageLogo && !Array.isArray(feature.properties.imageLogo)) {
+                if (isValidUrl(feature.properties.imageLogo)) {
+                    var logoMarker = new logoMarkerStyle({ iconUrl: feature.properties.imageLogo });
                 } else {
-                  var logoMarker = new logoMarkerStyle({
-                    iconUrl:
-                      "./assets/img/gruppen/" + feature.properties.imageLogo,
-                  });
+                    var logoMarker = new logoMarkerStyle({ iconUrl: "./assets/img/" + img_path + "/" + logo });
                 }
-              } else if (
-                feature.properties.imageWappen &&
-                !Array.isArray(feature.properties.imageWappen)
-              ) {
-                if (isUrl(feature.properties.imageWappen)) {
-                  var logoMarker = new logoMarkerStyle({
-                    iconUrl: feature.properties.imageWappen,
-                  });
+            } else if (image && !Array.isArray(image)) {
+                if (isValidUrl(image)) {
+                    var logoMarker = new logoMarkerStyle({ iconUrl: image });
                 } else {
-                  var logoMarker = new logoMarkerStyle({
-                    iconUrl:
-                      "./assets/img/gruppen/" + feature.properties.imageWappen,
-                  });
+                    var logoMarker = new logoMarkerStyle({ iconUrl: "./assets/img/" + img_path + "/" + image });
                 }
-              } else {
-                var logoMarker = new logoMarkerStyle({
-                  iconUrl: "./assets/img/bundeslilie.svg",
-                });
-              }
+            } else {
+                var logoMarker = new logoMarkerStyle({ iconUrl: "./assets/img/" + img_generic });
+            }
 
-              return L.marker(latlng, { icon: logoMarker });
+            return logoMarker;
+        }
+
+        const wappen_map_icon_size = 40
+        const logoMarkerStyle = L.Icon.extend({
+            options: {
+                popupAnchor: [0, 0],
+                className: "image-map-icon"
             },
-          });
-          gruppenLayer.addData(json);
-          gruppenLayer.bindPopup(popupFromGruppe);
-          control.addOverlay(gruppenLayer, "Gruppen");
-          markerLayers.addLayer(gruppenLayer);
         });
 
-      fetch("./heime.geojson")
-        .then((response) => response.json())
-        .then((json) => {
-          var heimeLayer = L.geoJSON("", {
-            onEachFeature: function(feature, layer) {
-                layer.feature.properties.searchItem = layer.feature.properties.label + ' (' + layer.feature.properties.addressLocality + ')';
-              },
-            pointToLayer: function (feature, latlng) {
-              if (
-                feature.properties.imageLogo &&
-                !Array.isArray(feature.properties.imageLogo)
-              ) {
-                if (isUrl(feature.properties.imageLogo)) {
-                  var logoMarker = new logoMarkerStyle({
-                    iconUrl: feature.properties.imageLogo,
-                  });
-                } else {
-                  var logoMarker = new logoMarkerStyle({
-                    iconUrl:
-                      "./assets/img/heime/" + feature.properties.imageLogo,
-                  });
-                }
-              } else {
-                var logoMarker = new logoMarkerStyle({
-                  iconUrl: "./assets/img/fa-house-solid.svg",
-                });
-              }
+        // Definition der Karte und Datenquellen
 
-              return L.marker(latlng, { icon: logoMarker });
-            },
-          });
-          heimeLayer.addData(json);
-          heimeLayer.bindPopup(popupFromHeime);
-          control.addOverlay(heimeLayer, "Heime");
-          markerLayers.checkIn(heimeLayer);
-          
+        // Externe Tile-Server
+
+        const open_street_map = L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         });
 
-      markerLayers.addTo(map);
+        const wanderwege = L.tileLayer("https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://hiking.waymarkedtrails.org/">Waymarked Trails</a>',
+        });
 
-      
- // Suche
- 
- var search = new L.Control.Search({
-    layer: markerLayers,
-    initial: false,
-    minLength: 3,
-    propertyName: 'searchItem',
-    textPlaceholder:'Suche in aktiven Ebenen',
-    zoom:'20',});
+       // Karte initialisieren und Steuerelemente hinzufügen
 
-  map.addControl(search);
+        const map = L.map("map", {
+            center: [51.163375, 10.447683],
+            zoom: 6,
+            layers: [open_street_map],
+        });
 
-// Koordinatenanzeige 
-map.on("contextmenu", function (event) {
-    alert(
-        "Die Koordinaten des gewählten Punktes sind: \n \n" +
-        event.latlng.lng.toString() + ", " + event.latlng.lat.toString()
-    );
-});
+        const control = L.control.layers(
+            { OpenStreetMap: open_street_map },
+            { Wanderwege: wanderwege },
+            {
+                hideSingleBase: true,
+                sortLayers: true,
+            }
+        );
+
+        map.addControl(control);
+
+        // Datenlayer
+  
+         const markerLayers = L.markerClusterGroup.layerSupport({
+            maxClusterRadius: 10,
+            showCoverageOnHover: false,
+            zoomToBoundsOnClick: false,
+        });
+
+        markerLayers.on("clusterclick", function (a) {
+            a.layer.zoomToBounds({ padding: [20, 20] });
+        });
+
+        map.addLayer(markerLayers);
+
+
+        const layers = ['gruppen', 'heime'];
+
+        layers.forEach(createDataLayer)
+
+        function createDataLayer(value, index, array) {
+
+            const file = "./" + value + ".geojson";
+
+            fetch(file)
+                .then((response) => response.json())
+                .then((json) => {
+                    var dataLayer = L.geoJSON("", {
+                        // Combine Label and AddressLocality for search function
+                        onEachFeature: function (feature, layer) {
+                            layer.feature.properties.searchItem = layer.feature.properties.label + ' (' + layer.feature.properties.addressLocality + ')';
+                        },
+                        // Create the Markers
+                        pointToLayer: function (feature, latlng) {
+                            var logoMarker = createMarkers(feature, ['gruppe']);
+                            return L.marker(latlng, { icon: logoMarker });
+                        },
+                    });
+                    // Add the Layer to map and controls
+                    dataLayer.addData(json);
+
+                    if (value == "gruppen") {
+                        dataLayer.bindPopup(createDetailsGruppen);
+                        control.addOverlay(dataLayer, "Gruppen");
+                        markerLayers.addLayer(dataLayer);
+                    } else if (value == "heime") {
+                        dataLayer.bindPopup(createDetailsHeime);
+                        control.addOverlay(dataLayer, "Heime");
+                        markerLayers.checkIn(dataLayer);
+                    }
+                });
+        }
+
+        markerLayers.addTo(map);
+
+        // Suchfunktion hinzufügen nachdem die Datenlayer geladen sind
+        var search = new L.Control.Search({
+            layer: markerLayers,
+            initial: false,
+            minLength: 3,
+            propertyName: 'searchItem',
+            textPlaceholder: 'Suche in aktiven Ebenen',
+            zoom: '19',
+        });
+
+        map.addControl(search);
+
+        // Einfache Koordinatenanzeige bei Rechtscklick
+        map.on("contextmenu", function (event) {
+            alert(
+                "Die Koordinaten des gewählten Punktes sind: \n \n" +
+                event.latlng.lng.toString() + ", " + event.latlng.lat.toString()
+            );
+        });
 
     </script>
-  </body>
+</body>
+
 </html>
