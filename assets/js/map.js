@@ -60,12 +60,15 @@ function createDetailsGruppen(layer) {
                 <h3 class="text-center">${item["addressLocality"] ?? ""}</h3>
             </div>
             <div class="offcanvas-body"> 
-                <div class="text-center">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
-                <div>${item["description"] ?? ""}</div>
-                <address class="mt-4">
-                        ${item["website"] ? `<div>&#x1F30D; <a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
-                        ${item["streetAddress"] ? `<div>&#x1F3E0; ${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
-                </address>    
+                <div class="text-center mb-4">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
+                <div class="mt-4 mb-4 hyphens justified">${item["description"] ?? ""}</div>
+                <div class="mt-4"><strong>Kontakt</strong></div>
+                 <address class="mt-1">
+                        ${item["contact"] ? `<div class="mb-2">${item["contact"]}</div>` : ""} 
+                        ${item["email"] ? `<div class="mb-2">&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
+                        ${item["website"] ? `<div class="mb-2">&#x1F30D;&nbsp;&nbsp;<a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
+                        ${item["streetAddress"] ? `<div class="mb-2">&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
+                </address>   
             </div>
         `;
 
@@ -88,10 +91,13 @@ function createDetailsHeime(layer) {
             ${item["imageLogo"] ? `<p class="text-center"><img class="self-align-center heimlogo" src="${item["imageLogo"]}" alt="Logo von ${item["label"]}"</p>` : ""}
             <div class="text-center mt-4">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
             <div>${item["description"] ?? ""}</div>
-            <address class="mt-4">
-                    ${item["website"] ? `<div>&#x1F30D; <a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
-                    ${item["streetAddress"] ? `<div>&#x1F3E0; ${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
-            </address>  
+            <div class="mt-4"><strong>Kontakt</strong></div>
+            <address class="mt-1">
+                        ${item["contact"] ? `<div class="mb-2">${item["contact"]}</div>` : ""} 
+                        ${item["email"] ? `<div class="mb-2">&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
+                        ${item["website"] ? `<div class="mb-2">&#x1F30D;&nbsp;&nbsp;<a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
+                        ${item["streetAddress"] ? `<div class="mb-2">&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
+                </address>  
             <div>${item["imagePicture"] ? formatImage(item["imagePicture"], ['heim']).outerHTML : ""}</div>  
         </div>
     `;
