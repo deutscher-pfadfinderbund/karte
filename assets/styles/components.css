@@ -16,6 +16,18 @@
     margin-right: auto;
 }
 
+.wappen-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .correction-link {
     position: absolute;
     left: 16px;

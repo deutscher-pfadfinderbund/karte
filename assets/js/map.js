@@ -25,7 +25,11 @@ function formatImage(image, type) {
     }
 
     const imageContainer = document.createElement("div");
+    if (type == "gruppe") {
+    imageContainer.className = "wappen-container";
+    } else if (type == "heim") {
     imageContainer.className = "image-container";
+    }
     imageContainer.append(
         ...image.map((url) => {
             const picture = document.createElement("picture");
