@@ -23,35 +23,31 @@
     <link href="https://unpkg.com/leaflet.markercluster@1/dist/MarkerCluster.Default.css" rel="stylesheet" crossorigin="" />
     <link href="https://unpkg.com/leaflet-search@4/dist/leaflet-search.min.css" rel="stylesheet">
     <link href="assets/styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.css">
+
 </head>
 
 <body>
-    <nav class="navbar p-2">
+    <nav class="navbar">
 
-        <h1 id="branding" class="my-auto ">
-            <img src="./assets/img/bundeslilie.svg" class="img-fluid align-middle">Karte des DPB
+        <h1 id="branding">
+            <img src="./assets/img/bundeslilie_duo.svg"> Karte des DPB
         </h1>
 
-        <ul class="my-auto mr-auto nav">
-            <li class="nav-item">
-                <a id="mapReload" class="nav-link" href="#">Karte neu laden</a>
+        <ul>
+            <li>
+                <a href="https://cloud.deutscher-pfadfinderbund.de/apps/forms/s/J7xJTjJrpkfKWZRDGeLdaft7">Ort hinzufügen oder korrigieren</a>
             </li>
-            <li class="nav-item">
-                <a id="mapResetZoom" class="nav-link" href="#">Zoom zurücksetzen</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://cloud.deutscher-pfadfinderbund.de/apps/forms/s/J7xJTjJrpkfKWZRDGeLdaft7">Ort hinzufügen oder korrigieren</a>
-            </li>
+           
         </ul>
-
-        <form id="search" class="d-flex my-auto" role="search"></form>
+    
     
     </nav>
 
     <div id="map"><!-- Hier wird die Karte eingebunden --></div>
    
     <div id="detailPane" class="offcanvas">
-        <a href="#" class="text-right closebtn" id="detailPaneClose">&times;</a>
+        <a href="#" class="closebtn" id="detailPaneClose">&times;</a>
         <div id="detailPaneBody">
             <!-- Hier landen die Details-->
         </div>
@@ -62,6 +58,7 @@
     <script src="https://unpkg.com/leaflet.markercluster@1/dist/leaflet.markercluster.js" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet.markercluster.layersupport@2/dist/leaflet.markercluster.layersupport.js" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet-search@4/dist/leaflet-search.min.js" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.js"></script>
     <script src="assets/js/map.js" type="module" ></script>
 
 </body>

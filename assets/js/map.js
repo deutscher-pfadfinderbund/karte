@@ -60,18 +60,18 @@ function createDetailsGruppen(layer) {
                 <img src="./assets/img/fa-users-solid.svg" class="fs-1_2" aria-title="Gruppe">
             </div>
             <div class="offcanvas-title">
-                <h2 class="text-center">${item["label"] ?? ""}</h2>
-                <h3 class="text-center">${item["addressLocality"] ?? ""}</h3>
+                <h2>${item["label"] ?? ""}</h2>
+                <h3>${item["addressLocality"] ?? ""}</h3>
             </div>
             <div class="offcanvas-body"> 
-                <div class="text-center mb-4">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
-                <div class="mt-4 mb-4 hyphens justified">${item["description"] ?? ""}</div>
-                <div class="mt-4"><strong>Kontakt</strong></div>
-                 <address class="mt-1">
-                        ${item["contact"] ? `<div class="mb-2">${item["contact"]}</div>` : ""} 
-                        ${item["email"] ? `<div class="mb-2">&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
-                        ${item["website"] ? `<div class="mb-2">&#x1F30D;&nbsp;&nbsp;<a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
-                        ${item["streetAddress"] ? `<div class="mb-2">&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
+                <div class="detailWappen">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
+                <div class="detailDescription">${item["description"] ?? ""}</div>
+                <div><strong>Kontakt</strong></div>
+                 <address>
+                        ${item["contact"] ? `<div>${item["contact"]}</div>` : ""} 
+                        ${item["email"] ? `<div>&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
+                        ${item["website"] ? `<div>&#x1F30D;&nbsp;&nbsp;<a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
+                        ${item["streetAddress"] ? `<div>&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
                 </address>   
             </div>
         `;
@@ -93,14 +93,14 @@ function createDetailsHeime(layer) {
         </div>
         <div class="offcanvas-body"> 
             ${item["imageLogo"] ? `<p class="text-center"><img class="self-align-center heimlogo" src="${item["imageLogo"]}" alt="Logo von ${item["label"]}"</p>` : ""}
-            <div class="text-center mt-4">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
-            <div>${item["description"] ?? ""}</div>
-            <div class="mt-4"><strong>Kontakt</strong></div>
-            <address class="mt-1">
-                        ${item["contact"] ? `<div class="mb-2">${item["contact"]}</div>` : ""} 
-                        ${item["email"] ? `<div class="mb-2">&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
-                        ${item["website"] ? `<div class="mb-2">&#x1F30D;&nbsp;&nbsp;<a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
-                        ${item["streetAddress"] ? `<div class="mb-2">&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
+            <div class="detailWappen">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
+            <div class="detailDescription">${item["description"] ?? ""}</div>
+            <div><strong>Kontakt</strong></div>
+            <address">
+                        ${item["contact"] ? `<div>${item["contact"]}</div>` : ""} 
+                        ${item["email"] ? `<div>&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
+                        ${item["website"] ? `<div>&#x1F30D;&nbsp;&nbsp;<a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
+                        ${item["streetAddress"] ? `<div>&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
                 </address>  
             <div>${item["imagePicture"] ? formatImage(item["imagePicture"], ['heim']).outerHTML : ""}</div>  
         </div>
@@ -155,7 +155,7 @@ function createMarkers(feature, type) {
             var markerImageMargin = "8px 8px 8px 8px";
         }
         else {
-            var markerImageMargin = "5px 5px 5px 5px";
+            var markerImageMargin = "3px 3px 3px 3px";
         }
 
         var markerIcon = "./assets/img/" + img_generic;
@@ -163,7 +163,7 @@ function createMarkers(feature, type) {
 
     var logoMarker = L.divIcon({
         className: "marker-div-icon",
-        html: `<div class="marker-pin" style="--marker-color: ` + markerColor + `;"  title="` + feature.properties.label + `"><div class="marker-pin-inner"><img class="marker-image self-align-center" src="` + markerIcon + `" style="--markerImageMargin: ` + markerImageMargin + `;"></div></div>`,
+        html: `<div class="marker-pin" style="--marker-color: ` + markerColor + `;"  title="` + feature.properties.label + `"><div class="marker-pin-inner"><img class="marker-image" src="` + markerIcon + `" style="--markerImageMargin: ` + markerImageMargin + `;"></div></div>`,
         iconSize: [40, 40],
         iconAnchor: [25, 50]
     });
@@ -213,9 +213,12 @@ map.addControl(control);
 // Datenlayer
 
 const markerLayers = L.markerClusterGroup.layerSupport({
-    maxClusterRadius: 15,
+    maxClusterRadius: 1,
     showCoverageOnHover: false,
-    zoomToBoundsOnClick: false,
+    zoomToBoundsOnClick: true,
+    spiderfyOnMaxZoom: true,
+    animate:false,
+    
 });
 
 markerLayers.on("clusterclick", function (a) {
@@ -223,7 +226,6 @@ markerLayers.on("clusterclick", function (a) {
 });
 
 map.addLayer(markerLayers);
-
 
 const layers = ['gruppen', 'heime'];
 
@@ -310,20 +312,26 @@ map.on("click", function (event) {
     closeOffcanvas();
 });
 
+// Karteansicht zurücksetzen
 
+L.control.resetView({
+    position: "topleft",
+    title: "Zoom zurücksetzen",
+    latlng: L.latLng([initialLatitude, initialLongitude]),
+    zoom: initialZoom,
+}).addTo(map);
 
 
 // Suchfunktion hinzufügen nachdem die Datenlayer geladen sind
 var search = new L.Control.Search({
     layer: markerLayers,
     initial: false,
-    collapsed: false,
-    minLength: 3,
+    collapsed: true,
+    minLength: 1,
     propertyName: 'searchItem',
     textPlaceholder: 'Suche in aktiven Ebenen',
     textErr: 'Nicht gefunden',
     zoom: '19',
-    container: 'search',
     firstTipSubmit: true,
 });
 
@@ -338,20 +346,5 @@ map.on("contextmenu", function (event) {
     );
 });
 
-// Karteansicht zurücksetzen
-
-const mapReloadButton = document.getElementById("mapReload")
-const mapResetZoomButton = document.getElementById("mapResetZoom")
-
-mapResetZoomButton.addEventListener('click', function (event) {
-    event.preventDefault();
-    map.setView([initialLatitude, initialLongitude], initialZoom);
 
 
-});
-
-mapReloadButton.addEventListener('click', function (event) {
-    event.preventDefault();
-    location.reload();
-
-});
