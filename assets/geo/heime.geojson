@@ -242,6 +242,138 @@
                 "contact": "",
                 "description": ""
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.09198,
+                    50.96878
+                ]
+            },
+            "properties": {
+                "label": "Adlerhorst",
+                "addressLocality": "Köln",
+                "postalCode": 51069,
+                "streetAddress": "Penningsfelder Weg 2",
+                "imageLogo": "",
+                "imagePicture": "",
+                "website": "https://schwarzer-adler.org",
+                "email": "",
+                "contact": "",
+                "description": ""
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.08155,
+                    51.58228
+                ]
+            },
+            "properties": {
+                "label": "Am Schacht",
+                "addressLocality": "Gelsenkirchen",
+                "postalCode": 45892,
+                "streetAddress": "Ressestr. 55a",
+                "imageLogo": "",
+                "imagePicture": "",
+                "website": "https://pfadfinder-gelsenkirchen.de/pfadfinderheim/",
+                "email": "",
+                "contact": "",
+                "description": ""
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.18212,
+                    51.03417
+                ]
+            },
+            "properties": {
+                "label": "Forsthaus Willershausen",
+                "addressLocality": "Herleshausen-Willershausen",
+                "postalCode": 37293,
+                "streetAddress": "Bergring 10",
+                "imageLogo": "",
+                "imagePicture": "",
+                "website": "https://www.ausruester-eschwege.de/Gaestehaus-Willershausen:_:36.html",
+                "email": "",
+                "contact": "",
+                "description": ""
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.217639,
+                    50.177361
+                ]
+            },
+            "properties": {
+                "label": "DPB Pfadfinderheim am Limes",
+                "addressLocality": "Taunusstein",
+                "postalCode": 65232,
+                "streetAddress": "Im Maisel 1b",
+                "imageLogo": "",
+                "imagePicture": "",
+                "website": "https://www.dpb-taunusstein.de/informationen",
+                "email": "",
+                "contact": "",
+                "description": ""
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.90483,
+                    53.60108
+                ]
+            },
+            "properties": {
+                "label": "Schaalseeheim",
+                "addressLocality": "Seedorf - Groß Zecher",
+                "postalCode": 23883,
+                "streetAddress": "",
+                "imageLogo": "",
+                "imagePicture": "",
+                "website": "https://pfadfinderheim-gross-zecher.de",
+                "email": "",
+                "contact": "",
+                "description": ""
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.878889,
+                    50.86878
+                ]
+            },
+            "properties": {
+                "label": "Tierpark Hürth",
+                "addressLocality": "Hürth",
+                "postalCode": 50354,
+                "streetAddress": "Luxemburgerstraße 519",
+                "imageLogo": "",
+                "imagePicture": "",
+                "website": "https://saporoger.de/pfadfinderheim/",
+                "email": "",
+                "contact": "",
+                "description": ""
+            }
         }
     ]
 }
