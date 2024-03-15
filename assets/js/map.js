@@ -109,8 +109,9 @@ function createDetailsGruppen(layer) {
             <div class="offcanvas-body"> 
                 <div class="detailWappen">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
                 <div class="detailDescription">${item["description"] ?? ""}</div>
+                <hr>
                 <address>
-                        ${item["contact"] ? `<div>${item["contact"]}</div>` : ""} 
+                        ${item["contact"] ? `<div>&#x1F464;&nbsp;&nbsp;${item["contact"]}</div>` : ""} 
                         ${item["email"] ? `<div>&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
                         ${item["website"] ? formatWebsite(item["website"]) : ""} 
                         ${item["streetAddress"] ? `<div>&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
@@ -138,13 +139,14 @@ function createDetailsHeime(layer) {
             ${item["imageLogo"] ? `<p class="text-center"><img class="self-align-center heimlogo" src="${item["imageLogo"]}" alt="Logo von ${item["label"]}"</p>` : ""}
             <div class="detailWappen">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
             <div class="detailDescription">${item["description"] ?? ""}</div>
-            <div><strong>Kontakt</strong></div>
+           <hr>
             <address">
                         ${item["contact"] ? `<div>${item["contact"]}</div>` : ""} 
                         ${item["email"] ? `<div>&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
                         ${item["website"] ? formatWebsite(item["website"]) : ""} 
                        ${item["streetAddress"] ? `<div>&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
             </address>  
+            <hr>
             <div>${item["imagePicture"] ? formatImage(item["imagePicture"], ['heim']).outerHTML : ""}</div>  
         </div>
     `;
@@ -266,14 +268,13 @@ const markerLayers = L.markerClusterGroup.layerSupport({
     iconCreateFunction: function(cluster) {
         var clusterIcon = L.divIcon({
         className: "marker-div-icon",
-        //html: `<div class="marker-pin" style="--marker-color: var(--primary);" ><div class="marker-pin-inner">`+ cluster.getChildCount() + `</div></div>`,
         html: `<div class="marker-pin" style="--marker-color: var(--primary);" ><div class="marker-pin-inner"><img class="marker-image" src="assets/img/bundeslilie.svg" style="--markerImageMargin: 3px 3px 3px 3px;"></div></div>`,
         iconSize: [40, 40],
         iconAnchor: [25, 50]
         });
         return clusterIcon;
     	},
-    maxClusterRadius: 0,
+    maxClusterRadius: 5,
     showCoverageOnHover: false,
     zoomToBoundsOnClick: true,
     spiderfyOnMaxZoom: true,
@@ -306,7 +307,7 @@ function createDataLayer(value, index, array) {
                 // Combine Label and AddressLocality for search function
                 onEachFeature: function (feature, layer) {
                     if(layer.feature.properties.parent) {
-                        var parentS = formatParent(layer.feature.properties.parent)
+                        var parentS = formatParentS(layer.feature.properties.parent)
                         layer.feature.properties.searchItem = layer.feature.properties.label + ' - ' + parentS + ' (' + layer.feature.properties.addressLocality + ')';
                     }
                     else {
