@@ -49,6 +49,49 @@ function formatImage(image, type) {
     return imageContainer;
 }
 
+
+
+
+function formatParent(parent) {
+    
+    if (!Array.isArray(parent)) {
+        parent = [parent];
+    }
+
+    const parentContainer = parent.map(function (parent) {
+        return '<div>' + parent + '</div>';
+    }).join('')
+    return parentContainer;
+    };
+
+function formatParentS(parent) {
+    
+        if (!Array.isArray(parent)) {
+            parent = [parent];
+        }
+    
+        const parentContainer = parent.map(function (parent) {
+            return parent;
+        }).join(' - ')
+        return parentContainer;
+        };
+
+        
+function formatWebsite(website) {
+
+    if (!Array.isArray(website)) {
+        website = [website];
+    }
+
+    const websiteContainer = website.map(function (website) {
+        var websiteElement = "<div>&#x1F30D;&nbsp;&nbsp;<a href='" + website + "' target='_blank' rel='noopener noreferrer'>"+ website + "</a></div>";
+        return websiteElement;
+    }).join('')
+
+
+    return websiteContainer;
+    };
+
 // Erstelle die Details für die Popups/Detailansichten
 
 function createDetailsGruppen(layer) {
@@ -61,18 +104,18 @@ function createDetailsGruppen(layer) {
             </div>
             <div class="offcanvas-title">
                 <h2>${item["label"] ?? ""}</h2>
-                <h3>${item["addressLocality"] ?? ""}</h3>
+                <div class="text-centered">${item["addressLocality"] ?? ""}</div>
             </div>
             <div class="offcanvas-body"> 
                 <div class="detailWappen">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
                 <div class="detailDescription">${item["description"] ?? ""}</div>
-                <div><strong>Kontakt</strong></div>
-                 <address>
+                <address>
                         ${item["contact"] ? `<div>${item["contact"]}</div>` : ""} 
                         ${item["email"] ? `<div>&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
-                        ${item["website"] ? `<div>&#x1F30D;&nbsp;&nbsp;<a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
+                        ${item["website"] ? formatWebsite(item["website"]) : ""} 
                         ${item["streetAddress"] ? `<div>&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
                 </address>   
+                ${item["parent"] ? `<h3>Übergeordnete Gliederung(en)</h3><div>${formatParent(item["parent"])}</h3>` : ""} 
             </div>
         `;
 
@@ -99,9 +142,9 @@ function createDetailsHeime(layer) {
             <address">
                         ${item["contact"] ? `<div>${item["contact"]}</div>` : ""} 
                         ${item["email"] ? `<div>&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
-                        ${item["website"] ? `<div>&#x1F30D;&nbsp;&nbsp;<a href='${item["website"]}' target='_blank' rel='noopener noreferrer'>${item["website"]}</a></div>` : ""} 
-                        ${item["streetAddress"] ? `<div>&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
-                </address>  
+                        ${item["website"] ? formatWebsite(item["website"]) : ""} 
+                       ${item["streetAddress"] ? `<div>&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
+            </address>  
             <div>${item["imagePicture"] ? formatImage(item["imagePicture"], ['heim']).outerHTML : ""}</div>  
         </div>
     `;
@@ -143,7 +186,12 @@ function createMarkers(feature, type) {
          var markerIcon =  "./assets/img/" + img_generic;
      }*/
 
-    if (image && !Array.isArray(image)) {
+    if (image) {
+        if (!Array.isArray(image)) { // Bei mehreren Bildern wird im Marker nur das erste angezeigt.
+            image = image;
+        } else {
+            image = image[0];
+        }
         if (isValidUrl(image)) {
             var markerIcon = image;
         } else {
@@ -212,8 +260,20 @@ map.addControl(control);
 
 // Datenlayer
 
+
+
 const markerLayers = L.markerClusterGroup.layerSupport({
-    maxClusterRadius: 1,
+    iconCreateFunction: function(cluster) {
+        var clusterIcon = L.divIcon({
+        className: "marker-div-icon",
+        //html: `<div class="marker-pin" style="--marker-color: var(--primary);" ><div class="marker-pin-inner">`+ cluster.getChildCount() + `</div></div>`,
+        html: `<div class="marker-pin" style="--marker-color: var(--primary);" ><div class="marker-pin-inner"><img class="marker-image" src="assets/img/bundeslilie.svg" style="--markerImageMargin: 3px 3px 3px 3px;"></div></div>`,
+        iconSize: [40, 40],
+        iconAnchor: [25, 50]
+        });
+        return clusterIcon;
+    	},
+    maxClusterRadius: 0,
     showCoverageOnHover: false,
     zoomToBoundsOnClick: true,
     spiderfyOnMaxZoom: true,
@@ -221,10 +281,14 @@ const markerLayers = L.markerClusterGroup.layerSupport({
     
 });
 
-markerLayers.on("clusterclick", function (a) {
+
+
+
+
+/*markerLayers.on("clusterclick", function (a) {
     a.layer.zoomToBounds({ padding: [20, 20] });
 });
-
+*/
 map.addLayer(markerLayers);
 
 const layers = ['gruppen', 'heime'];
@@ -241,7 +305,13 @@ function createDataLayer(value, index, array) {
             var dataLayer = L.geoJSON("", {
                 // Combine Label and AddressLocality for search function
                 onEachFeature: function (feature, layer) {
-                    layer.feature.properties.searchItem = layer.feature.properties.label + ' (' + layer.feature.properties.addressLocality + ')';
+                    if(layer.feature.properties.parent) {
+                        var parentS = formatParent(layer.feature.properties.parent)
+                        layer.feature.properties.searchItem = layer.feature.properties.label + ' - ' + parentS + ' (' + layer.feature.properties.addressLocality + ')';
+                    }
+                    else {
+                        layer.feature.properties.searchItem = layer.feature.properties.label + ' (' + layer.feature.properties.addressLocality + ')';
+                    }
                 },
                 // Create the Markers
                 pointToLayer: function (feature, latlng) {
@@ -311,6 +381,7 @@ detailPaneClose.addEventListener("click", function (event) {
 map.on("click", function (event) {
     closeOffcanvas();
 });
+
 
 // Karteansicht zurücksetzen
 

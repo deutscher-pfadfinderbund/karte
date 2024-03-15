@@ -15,7 +15,9 @@
         font-family: InterVariable, sans-serif;
     }
 }
-
+.text-centered {
+    text-align: center;
+}
 address {
     margin-bottom: 1rem;
     font-style: normal;
@@ -177,12 +179,12 @@ address {
     text-align: right;
 }
 
-.offcanvas h2 {
+.offcanvas-title h2 {
     font-size: 1.5em;
     text-align: center;
 }
 
-.offcanvas h3 {
+.offcanvas-title h3 {
     font-size: 1.2em;
     font-weight: 400;
     text-align: center;
