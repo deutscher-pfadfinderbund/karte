@@ -26,9 +26,9 @@ function formatImage(image, type) {
 
     const imageContainer = document.createElement("div");
     if (type == "gruppe") {
-    imageContainer.className = "wappen-container";
+        imageContainer.className = "wappen-container";
     } else if (type == "heim") {
-    imageContainer.className = "image-container";
+        imageContainer.className = "image-container";
     }
     imageContainer.append(
         ...image.map((url) => {
@@ -53,30 +53,30 @@ function formatImage(image, type) {
 
 
 function formatParent(parent) {
-    
+
     if (!Array.isArray(parent)) {
         parent = [parent];
     }
 
     const parentContainer = parent.map(function (parent) {
-        return '<div>' + parent + '</div>';
-    }).join('')
+        return parent;
+    }).join(' im ')
     return parentContainer;
-    };
+};
 
 function formatParentS(parent) {
-    
-        if (!Array.isArray(parent)) {
-            parent = [parent];
-        }
-    
-        const parentContainer = parent.map(function (parent) {
-            return parent;
-        }).join(' - ')
-        return parentContainer;
-        };
 
-        
+    if (!Array.isArray(parent)) {
+        parent = [parent];
+    }
+
+    const parentContainer = parent.map(function (parent) {
+        return parent;
+    }).join(' im ')
+    return parentContainer;
+};
+
+
 function formatWebsite(website) {
 
     if (!Array.isArray(website)) {
@@ -84,13 +84,13 @@ function formatWebsite(website) {
     }
 
     const websiteContainer = website.map(function (website) {
-        var websiteElement = "<div>&#x1F30D;&nbsp;&nbsp;<a href='" + website + "' target='_blank' rel='noopener noreferrer'>"+ website + "</a></div>";
+        var websiteElement = "<div>&#x1F30D;&nbsp;&nbsp;<a href='" + website + "' target='_blank' rel='noopener noreferrer'>" + website + "</a></div>";
         return websiteElement;
     }).join('')
 
 
     return websiteContainer;
-    };
+};
 
 // Erstelle die Details für die Popups/Detailansichten
 
@@ -98,27 +98,51 @@ function createDetailsGruppen(layer) {
 
     var item = layer.feature.properties;
 
-    var details = `
-            <div class="offcanvas-header">
-                <img src="./assets/img/fa-users-solid.svg" class="fs-1_2" aria-title="Gruppe">
-            </div>
-            <div class="offcanvas-title">
-                <h2>${item["label"] ?? ""}</h2>
-                <div class="text-centered">${item["addressLocality"] ?? ""}</div>
-            </div>
-            <div class="offcanvas-body"> 
-                <div class="detailWappen">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
-                <div class="detailDescription">${item["description"] ?? ""}</div>
-                <hr>
-                <address>
-                        ${item["contact"] ? `<div>&#x1F464;&nbsp;&nbsp;${item["contact"]}</div>` : ""} 
-                        ${item["email"] ? `<div>&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
-                        ${item["website"] ? formatWebsite(item["website"]) : ""} 
-                        ${item["streetAddress"] ? `<div>&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
-                </address>   
-                ${item["parent"] ? `<h3>Übergeordnete Gliederung(en)</h3><div>${formatParent(item["parent"])}</h3>` : ""} 
-            </div>
-        `;
+    var details = (`
+        <div class="offcanvas-header">
+            <img src="./assets/img/fa-users-solid.svg" class="fs-1_2" aria-title="Gruppe">
+          
+        </div>
+       <div class="text-centered" style="background: var(--primary); color: var(--on-primary); padding-bottom: 1em;">
+       ${item.address["streetAddress"] ? `${item.address["streetAddress"]}, ` : ""}
+       ${item.address["postalCode"] ? `${item.address["postalCode"]} ` : ""}
+       ${item.address["locality"]}
+       </div>
+        `);
+
+    item.groups.forEach(element => {
+
+
+
+        details += (`
+        <div class="offcanvas-title">
+            <h2>${element["name"]}</h2>
+            ${element["parent"] ? `<div class="text-centered parent">${formatParent(element["parent"])}</div>` : ""} 
+            
+           
+        </div>
+        <div class="offcanvas-body"> 
+        ${element["imageWappen"] ? formatImage(element["imageWappen"], ['gruppe']).outerHTML : ""}
+            <div class="detailDescription">${element["description"] ?? ""}</div>
+                <div>
+                    ${element["contact"] ? `<div>&#x1F464;&nbsp;&nbsp;${element["contact"]}</div>` : ""} 
+                    ${element["email"] ? `<div>&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${element["email"]}' target='_blank' rel='noopener noreferrer'>${element["email"]}</a></div>` : ""} 
+                    ${element["website"] ? formatWebsite(element["website"]) : ""} 
+                    
+                    
+                </div>  
+        </div> 
+               
+               
+        `);
+
+
+
+
+
+    });
+
+    details += (`</div>`);
 
     return details;
 }
@@ -126,6 +150,8 @@ function createDetailsGruppen(layer) {
 function createDetailsHeime(layer) {
 
     var item = layer.feature.properties;
+
+
 
     var details = `
         <div class="offcanvas-header">
@@ -159,39 +185,55 @@ function createMarkers(feature, type) {
     if (type == "gruppe") {
         var img_path = "gruppen";
         var img_generic = "bundeslilie.svg";
-        var logo = feature.properties.imageLogo;
-        var image = feature.properties.imageWappen;
-        var markerColor = "var(--primary)"
+
+        // Sind mehrere Gruppen am Ort, Globales Wappen oder Bundeslilie Nutzen
+        if ((feature.properties.groups.length != 1) && (feature.properties.globalWappen != null)) {
+            image = feature.properties.globalWappen;
+        } else if ((feature.properties.groups.length == 1) && (feature.properties.groups[0].imageWappen != null)) {
+            image = feature.properties.groups[0].imageWappen;
+        }
+
+        var markerColor = "var(--primary)";
+        var markerTitle = [];
+        feature.properties.groups.forEach(function (element, index) {
+
+
+            if (element.parent != null) {
+                var parentS = formatParentS(element.parent)
+                if (index == 0) {
+                    markerTitle += element.name + ' - ' + parentS + ' (' + feature.properties.address.locality + ')';
+                } else {
+                    markerTitle += '\n' + element.name + ' - ' + parentS + ' (' + feature.properties.address.locality + ')';
+                }
+            }
+            else {
+                markerTitle = element.name + ' (' + feature.properties.address.locality + ')';
+            }
+
+
+            
+           
+        })
+
+
+
+
+
+
+
     } else if (type == "heim") {
         var img_path = "heime";
         var img_generic = "fa-house-solid.svg";
         var scalinghack = true;
         var logo = feature.properties.imageLogo;
-        var image = false;
+        var image = null;
         var markerColor = "#000000"
+        var markerTitle = feature.properties.name;
     }
 
-    /* if (feature.properties.imageLogo && !Array.isArray(feature.properties.imageLogo)) {
-         if (isValidUrl(feature.properties.imageLogo)) {
-             var markerIcon = feature.properties.imageLogo;
-           
-         } else {
-             var markerIcon = "./assets/img/" + img_path + "/" + logo;
-         }
-     } else if (image && !Array.isArray(image)) {
-         if (isValidUrl(image)) {
-             var markerIcon = image;
-         } else {
-             var markerIcon =  "./assets/img/" + img_path + "/" + image;
-         }
-     } else {
-         var markerIcon =  "./assets/img/" + img_generic;
-     }*/
 
-    if (image) {
-        if (!Array.isArray(image)) { // Bei mehreren Bildern wird im Marker nur das erste angezeigt.
-            image = image;
-        } else {
+    if (image != null) {
+        if (Array.isArray(image)) { // Bei mehreren Bildern wird im Marker nur das erste angezeigt.
             image = image[0];
         }
         if (isValidUrl(image)) {
@@ -213,7 +255,7 @@ function createMarkers(feature, type) {
 
     var logoMarker = L.divIcon({
         className: "marker-div-icon",
-        html: `<div class="marker-pin" style="--marker-color: ` + markerColor + `;"  title="` + feature.properties.label + `"><div class="marker-pin-inner"><img class="marker-image" src="` + markerIcon + `" style="--markerImageMargin: ` + markerImageMargin + `;"></div></div>`,
+        html: `<div class="marker-pin" style="--marker-color: ` + markerColor + `;"  title="` + markerTitle + `"><div class="marker-pin-inner"><img class="marker-image" src="` + markerIcon + `" style="--markerImageMargin: ` + markerImageMargin + `;"></div></div>`,
         iconSize: [40, 40],
         iconAnchor: [25, 50]
     });
@@ -258,12 +300,10 @@ const control = L.control.layers(
     }
 );
 
+
 map.addControl(control);
 
 // Datenlayer
-
-
-
 const markerLayers = L.markerClusterGroup.layerSupport({
     iconCreateFunction: function(cluster) {
         var clusterIcon = L.divIcon({
@@ -274,7 +314,7 @@ const markerLayers = L.markerClusterGroup.layerSupport({
         });
         return clusterIcon;
     	},
-    maxClusterRadius: 5,
+    maxClusterRadius: 0,
     showCoverageOnHover: false,
     zoomToBoundsOnClick: true,
     spiderfyOnMaxZoom: true,
@@ -282,17 +322,11 @@ const markerLayers = L.markerClusterGroup.layerSupport({
     
 });
 
-
-
-
-
-/*markerLayers.on("clusterclick", function (a) {
-    a.layer.zoomToBounds({ padding: [20, 20] });
-});
-*/
 map.addLayer(markerLayers);
 
 const layers = ['gruppen', 'heime'];
+
+
 
 layers.forEach(createDataLayer)
 
@@ -306,12 +340,29 @@ function createDataLayer(value, index, array) {
             var dataLayer = L.geoJSON("", {
                 // Combine Label and AddressLocality for search function
                 onEachFeature: function (feature, layer) {
-                    if(layer.feature.properties.parent) {
-                        var parentS = formatParentS(layer.feature.properties.parent)
-                        layer.feature.properties.searchItem = layer.feature.properties.label + ' - ' + parentS + ' (' + layer.feature.properties.addressLocality + ')';
+
+                    if (layer.feature.properties.groups != null) {
+                        var searchItem = "";
+                        layer.feature.properties.groups.forEach(function (element, index) {
+
+                            if (element.parent != null) {
+                                var parentS = formatParentS(element.parent)
+                                if (index == 0) {
+                                    searchItem += element.name + ' - ' + parentS + ' (' + layer.feature.properties.address.locality + ')';
+                                } else {
+                                    searchItem += ' <br> ' + element.name + ' - ' + parentS + ' (' + layer.feature.properties.address.locality + ')';
+                                }
+                            }
+                            else {
+                                searchItem = element.name + ' (' + layer.feature.properties.address.locality + ')';
+                            }
+                        });
+                        layer.feature.properties.searchItem = searchItem;
+                      
                     }
                     else {
-                        layer.feature.properties.searchItem = layer.feature.properties.label + ' (' + layer.feature.properties.addressLocality + ')';
+                        layer.feature.properties.searchItem = layer.feature.properties.name + ' (' + layer.feature.properties.addressLocality + ')';
+
                     }
                 },
                 // Create the Markers
@@ -333,7 +384,7 @@ function createDataLayer(value, index, array) {
                 control.addOverlay(dataLayer, "Gruppen");
                 markerLayers.addLayer(dataLayer);
             } else if (value == "heime") {
-                // dataLayer.bindPopup(createDetailsHeime);
+               // dataLayer.bindPopup(createDetailsHeime);
                 control.addOverlay(dataLayer, "Heime");
                 markerLayers.checkIn(dataLayer);
             }
@@ -358,7 +409,8 @@ function createDataLayer(value, index, array) {
         });
 }
 
-markerLayers.addTo(map);
+//markerLayers.addTo(map);
+
 
 
 function closeOffcanvas() {
@@ -409,14 +461,18 @@ var search = new L.Control.Search({
 
 map.addControl(search);
 
+map.on("overlayadd", function(event) {
+search.layer = markerLayers;
+});
+
 // Einfache Koordinatenanzeige bei Rechtscklick 
 
-map.on("contextmenu", function (event) {
+/*map.on("contextmenu", function (event) {
     alert(
         "Die Koordinaten des gewählten Punktes sind: \n \n" +
         event.latlng.lng.toString() + ", " + event.latlng.lat.toString()
     );
 });
 
-
+*/
 

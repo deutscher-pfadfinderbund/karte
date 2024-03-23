@@ -11,7 +11,7 @@
                 ]
             },
             "properties": {
-                "label": "Schloss Martinfeld",
+                "name": "Schloss Martinfeld",
                 "addressLocality": "Schimberg",
                 "postalCode": 37308,
                 "streetAddress": "Bernteröder Straße 10",
@@ -33,7 +33,7 @@
                 ]
             },
             "properties": {
-                "label": "Diedrichskotten",
+                "name": "Diedrichskotten",
                 "addressLocality": "Remscheid",
                 "postalCode": 42857,
                 "streetAddress": "Hammertal 4",
@@ -55,7 +55,7 @@
                 ]
             },
             "properties": {
-                "label": "Fischerhütte",
+                "name": "Fischerhütte",
                 "addressLocality": "Remscheid",
                 "postalCode": 42857,
                 "streetAddress": "Tyrol 4",
@@ -77,7 +77,7 @@
                 ]
             },
             "properties": {
-                "label": "Gutshof",
+                "name": "Gutshof",
                 "addressLocality": "Berlin-Tempelhof",
                 "postalCode": 12099,
                 "streetAddress": "Götzstr. 30-32 (keine Postadresse)",
@@ -99,7 +99,7 @@
                 ]
             },
             "properties": {
-                "label": "Frohnauer Häuschen",
+                "name": "Frohnauer Häuschen",
                 "addressLocality": "Berlin-Fronhau",
                 "postalCode": 13465,
                 "streetAddress": "Schönfliesser Str. 11B",
@@ -121,7 +121,7 @@
                 ]
             },
             "properties": {
-                "label": "Pfadfinderburg Berlin",
+                "name": "Pfadfinderburg Berlin",
                 "addressLocality": "Berlin-Tegel",
                 "postalCode": 13509,
                 "streetAddress": "Ziekowstraße 163",
@@ -143,7 +143,7 @@
                 ]
             },
             "properties": {
-                "label": "Jugendheim Wolfstein e.V.",
+                "name": "Jugendheim Wolfstein e.V.",
                 "addressLocality": "Wiesbaden",
                 "postalCode": null,
                 "streetAddress": "",
@@ -165,7 +165,7 @@
                 ]
             },
             "properties": {
-                "label": "Pfadfinderheim Bad Meinberg",
+                "name": "Pfadfinderheim Bad Meinberg",
                 "addressLocality": "Bad Meinberg",
                 "postalCode": null,
                 "streetAddress": "",
@@ -187,7 +187,7 @@
                 ]
             },
             "properties": {
-                "label": "Brackeler Hütte - Pfadfinderhaus",
+                "name": "Brackeler Hütte - Pfadfinderhaus",
                 "addressLocality": "Iserlohn",
                 "postalCode": 58644,
                 "streetAddress": "Asbecker Weg 20",
@@ -209,7 +209,7 @@
                 ]
             },
             "properties": {
-                "label": "Pfadfinderzentrum Ettelscheid",
+                "name": "Pfadfinderzentrum Ettelscheid",
                 "addressLocality": "Schleiden",
                 "postalCode": 53937,
                 "streetAddress": "Weiherhardt 2",
@@ -231,7 +231,7 @@
                 ]
             },
             "properties": {
-                "label": "DPB Landesheim Franken e.V.",
+                "name": "DPB Landesheim Franken e.V.",
                 "addressLocality": "Pegnitz - Körbeldorf",
                 "postalCode": 91257,
                 "streetAddress": "Hollenbergerweg 8",
@@ -253,7 +253,7 @@
                 ]
             },
             "properties": {
-                "label": "Adlerhorst",
+                "name": "Adlerhorst",
                 "addressLocality": "Köln",
                 "postalCode": 51069,
                 "streetAddress": "Penningsfelder Weg 2",
@@ -275,7 +275,7 @@
                 ]
             },
             "properties": {
-                "label": "Am Schacht",
+                "name": "Am Schacht",
                 "addressLocality": "Gelsenkirchen",
                 "postalCode": 45892,
                 "streetAddress": "Ressestr. 55a",
@@ -297,7 +297,7 @@
                 ]
             },
             "properties": {
-                "label": "Forsthaus Willershausen",
+                "name": "Forsthaus Willershausen",
                 "addressLocality": "Herleshausen-Willershausen",
                 "postalCode": 37293,
                 "streetAddress": "Bergring 10",
@@ -319,7 +319,7 @@
                 ]
             },
             "properties": {
-                "label": "DPB Pfadfinderheim am Limes",
+                "name": "DPB Pfadfinderheim am Limes",
                 "addressLocality": "Taunusstein",
                 "postalCode": 65232,
                 "streetAddress": "Im Maisel 1b",
@@ -341,7 +341,7 @@
                 ]
             },
             "properties": {
-                "label": "Schaalseeheim",
+                "name": "Schaalseeheim",
                 "addressLocality": "Seedorf - Groß Zecher",
                 "postalCode": 23883,
                 "streetAddress": "",
@@ -363,7 +363,7 @@
                 ]
             },
             "properties": {
-                "label": "Tierpark Hürth",
+                "name": "Tierpark Hürth",
                 "addressLocality": "Hürth",
                 "postalCode": 50354,
                 "streetAddress": "Luxemburgerstraße 519",
