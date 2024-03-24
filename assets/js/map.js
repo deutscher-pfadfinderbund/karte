@@ -296,7 +296,7 @@ var search = new L.Control.Search({
     propertyName: 'searchItem',
     textPlaceholder: 'Suche in aktiven Ebenen',
     textErr: 'Nicht gefunden',
-    zoom: '19',
+    zoom: '15',
     firstTipSubmit: true,
     position: "topleft",
     autoCollapse: true,
@@ -449,3 +449,8 @@ map.on("contextmenu", function (event) {
         event.latlng.lng.toString() + ", " + event.latlng.lat.toString()
     );
 });
+
+// Karte anpasssen sobald sich die Größe des Containers ändert
+new ResizeObserver(() => {
+    map.invalidateSize();
+  }).observe(document.getElementById("map"));
