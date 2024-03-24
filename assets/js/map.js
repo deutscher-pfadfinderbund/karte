@@ -460,6 +460,31 @@ var search = new L.Control.Search({
     autoCollapse: true,
 });
 
+search.on('search:locationfound', function(e) {
+
+    if(e.layer.feature.properties.addressLocality != null) {
+        var value = "heime";
+    } else {
+        var value = "gruppen";
+    }
+
+
+    if (e.layer instanceof L.Marker) {
+        var canvasElement = document.getElementById("detailPane");
+        var mapElement = document.getElementById("map");
+        canvasElement.classList.add("offcanvas-show");
+        mapElement.classList.add("map-offcanvas");
+        var canvasBodyElement = document.getElementById("detailPaneBody");
+        //var latlang = e.layer.feature.geometry.coordinates;
+        //map.setView([latlang[1], latlang[0]], 17);
+        if (value == "gruppen") {
+            canvasBodyElement.innerHTML = createDetailsGruppen(e.layer);
+        } else if (value == "heime") {
+            canvasBodyElement.innerHTML = createDetailsHeime(e.layer);
+        }
+
+    }
+});
 
 map.addControl(search);
 
