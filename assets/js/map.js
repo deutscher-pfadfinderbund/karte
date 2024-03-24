@@ -103,43 +103,38 @@ function createDetailsGruppen(layer) {
             <img src="./assets/img/fa-users-solid.svg" class="fs-1_2" aria-title="Gruppe">
           
         </div>
-       <div class="text-centered" style="background: var(--primary); color: var(--on-primary); padding-bottom: 1em;">
-       ${item.address["streetAddress"] ? `${item.address["streetAddress"]}, ` : ""}
-       ${item.address["postalCode"] ? `${item.address["postalCode"]} ` : ""}
-       ${item.address["locality"]}
+        <div class="offcanvas-title">
+            <h2>
+                ${item.address["streetAddress"] ? `${item.address["streetAddress"]}<br>` : ""}
+                ${item.address["postalCode"] ? `${item.address["postalCode"]} ` : ""}
+                ${item.address["locality"]}
+             </h2>
        </div>
+       <div class="offcanvas-body">
         `);
 
-    item.groups.forEach(element => {
-
-
-
+    item.groups.forEach(element => {   
         details += (`
-        <div class="offcanvas-title">
-            <h2>${element["name"]}</h2>
-            ${element["parent"] ? `<div class="text-centered parent">${formatParent(element["parent"])}</div>` : ""} 
-            
-           
-        </div>
-        <div class="offcanvas-body"> 
-        ${element["imageWappen"] ? formatImage(element["imageWappen"], ['gruppe']).outerHTML : ""}
-            <div class="detailDescription">${element["description"] ?? ""}</div>
-                <div>
-                    ${element["contact"] ? `<div>&#x1F464;&nbsp;&nbsp;${element["contact"]}</div>` : ""} 
+            <div class="group">
+            <div class="group-header">
+                <h3>${element["name"]}</h3>
+                ${element["parent"] ? formatParent(element.parent) : ""}
+            </div>
+            ${element["imageWappen"] ? formatImage(element["imageWappen"], ['gruppe']).outerHTML : ""}
+	        ${element["description"] ? `<div class="group-description">${element["description"]}</div>` : ""} 
+        `);
+        if (element.contact != null || element.email != null || element.website != null) {
+            details += (`
+                <div class="group-contact">
+                    ${element["contact"] ? `<div>&#x1F464;&nbsp;&nbsp;${element["contact"]}</div>` : ""}
                     ${element["email"] ? `<div>&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${element["email"]}' target='_blank' rel='noopener noreferrer'>${element["email"]}</a></div>` : ""} 
                     ${element["website"] ? formatWebsite(element["website"]) : ""} 
-                    
-                    
                 </div>  
-        </div> 
-               
-               
+            `);
+        }
+        details += (` 
+            </div>
         `);
-
-
-
-
-
     });
 
     details += (`</div>`);
@@ -158,8 +153,8 @@ function createDetailsHeime(layer) {
             <img src="./assets/img/fa-house-solid.svg" class="fs-1_2" aria-title="Gruppe">
         </div>
         <div class="offcanvas-title">
-            <h2 class="text-center">${item["label"] ?? ""}</h2>
-            <h3 class="text-center">${item["addressLocality"] ?? ""}</h3>
+            <h2 class="heime">${item["name"] ?? ""}</h2>
+            <h3 class="text-centered">${item["addressLocality"] ?? ""}</h3>
         </div>
         <div class="offcanvas-body"> 
             ${item["imageLogo"] ? `<p class="text-center"><img class="self-align-center heimlogo" src="${item["imageLogo"]}" alt="Logo von ${item["label"]}"</p>` : ""}
@@ -211,8 +206,8 @@ function createMarkers(feature, type) {
             }
 
 
-            
-           
+
+
         })
 
 
@@ -296,30 +291,31 @@ const control = L.control.layers(
     {
         hideSingleBase: true,
         sortLayers: true,
-        collapsed: false,
+        collapsed: true,
+        position: "topright"
     }
 );
 
 
 map.addControl(control);
-
+map.zoomControl.setPosition('topleft');
 // Datenlayer
 const markerLayers = L.markerClusterGroup.layerSupport({
-    iconCreateFunction: function(cluster) {
+    iconCreateFunction: function (cluster) {
         var clusterIcon = L.divIcon({
-        className: "marker-div-icon",
-        html: `<div class="marker-pin" style="--marker-color: var(--primary);" ><div class="marker-pin-inner"><img class="marker-image" src="assets/img/bundeslilie.svg" style="--markerImageMargin: 3px 3px 3px 3px;"></div></div>`,
-        iconSize: [40, 40],
-        iconAnchor: [25, 50]
+            className: "marker-div-icon",
+            html: `<div class="marker-pin" style="--marker-color: var(--primary);" ><div class="marker-pin-inner"><img class="marker-image" src="assets/img/bundeslilie.svg" style="--markerImageMargin: 3px 3px 3px 3px;"></div></div>`,
+            iconSize: [40, 40],
+            iconAnchor: [25, 50]
         });
         return clusterIcon;
-    	},
+    },
     maxClusterRadius: 0,
     showCoverageOnHover: false,
     zoomToBoundsOnClick: true,
     spiderfyOnMaxZoom: true,
-    animate:false,
-    
+    animate: false,
+
 });
 
 map.addLayer(markerLayers);
@@ -348,23 +344,26 @@ function createDataLayer(value, index, array) {
                             if (element.parent != null) {
                                 var parentS = formatParentS(element.parent)
                                 if (index == 0) {
-                                    searchItem += element.name + ' - ' + parentS + ' (' + layer.feature.properties.address.locality + ')';
+                                    searchItem += '<strong>' + layer.feature.properties.address.locality + '</strong><br>' + element.name + '  (' + parentS + ')';
                                 } else {
-                                    searchItem += ' <br> ' + element.name + ' - ' + parentS + ' (' + layer.feature.properties.address.locality + ')';
+                                    searchItem += ' <br> ' + element.name + ' (' + parentS + ')';
                                 }
                             }
                             else {
-                                searchItem = element.name + ' (' + layer.feature.properties.address.locality + ')';
+                                searchItem = '<strong>' + layer.feature.properties.address.locality + '</strong><br>' + element.name;
                             }
                         });
-                        layer.feature.properties.searchItem = searchItem;
-                      
-                    }
-                    else {
-                        layer.feature.properties.searchItem = layer.feature.properties.name + ' (' + layer.feature.properties.addressLocality + ')';
+
 
                     }
+                    else {
+                        searchItem = '<strong>' + layer.feature.properties.addressLocality + '</strong><br>' + layer.feature.properties.name;
+
+                    }
+
+                    layer.feature.properties.searchItem = searchItem;
                 },
+
                 // Create the Markers
                 pointToLayer: function (feature, latlng) {
                     if (value == "gruppen") {
@@ -384,7 +383,7 @@ function createDataLayer(value, index, array) {
                 control.addOverlay(dataLayer, "Gruppen");
                 markerLayers.addLayer(dataLayer);
             } else if (value == "heime") {
-               // dataLayer.bindPopup(createDetailsHeime);
+                // dataLayer.bindPopup(createDetailsHeime);
                 control.addOverlay(dataLayer, "Heime");
                 markerLayers.checkIn(dataLayer);
             }
@@ -446,6 +445,8 @@ L.control.resetView({
 }).addTo(map);
 
 
+
+
 // Suchfunktion hinzufügen nachdem die Datenlayer geladen sind
 var search = new L.Control.Search({
     layer: markerLayers,
@@ -457,22 +458,18 @@ var search = new L.Control.Search({
     textErr: 'Nicht gefunden',
     zoom: '19',
     firstTipSubmit: true,
+    position: "topleft",
+    autoCollapse: true,
 });
+
 
 map.addControl(search);
 
-map.on("overlayadd", function(event) {
-search.layer = markerLayers;
-});
 
-// Einfache Koordinatenanzeige bei Rechtscklick 
-
-/*map.on("contextmenu", function (event) {
+// Einfache Koordinatenanzeige bei Rechtscklick
+map.on("contextmenu", function (event) {
     alert(
         "Die Koordinaten des gewählten Punktes sind: \n \n" +
         event.latlng.lng.toString() + ", " + event.latlng.lat.toString()
     );
 });
-
-*/
-

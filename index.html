@@ -12,20 +12,27 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="preconnect" href="https://tile.openstreetmap.de">
 
-    <link rel="preload" href="assets/styles/style.css" as="style">
-    <link rel="preload" href="assets/styles/utilities.css" as="style">
-    <link rel="preload" href="assets/styles/components.css" as="style">
-    <link rel="preload" href="assets/styles/reset.css" as="style">
+     <!-- preload lokale Stylesheet s-->
+     <link rel="preload" href="assets/styles/style.css" as="style">
+     <link rel="preload" href="assets/styles/utilities.css" as="style">
+     <link rel="preload" href="assets/styles/components.css" as="style">
+     <link rel="preload" href="assets/styles/reset.css" as="style">
 
+    <!-- externe Stylesheet s-->
     <link href="https://rsms.me/inter/inter.css" rel="stylesheet" crossorigin="">
-    <link href="https://unpkg.com/leaflet@1/dist/leaflet.css" rel="stylesheet" crossorigin="" />
-    <link href="https://unpkg.com/leaflet.markercluster@1/dist/MarkerCluster.css" rel="stylesheet" crossorigin="" />
-    <link href="https://unpkg.com/leaflet.markercluster@1/dist/MarkerCluster.Default.css" rel="stylesheet" crossorigin="" />
-    <link href="https://unpkg.com/leaflet-search@4/dist/leaflet-search.min.css" rel="stylesheet">
-    <link href="assets/styles/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.css">
-  
-    
+    <link href="https://unpkg.com/leaflet@1/dist/leaflet.css" rel="stylesheet" crossorigin="">
+    <link href="https://unpkg.com/leaflet.markercluster@1/dist/MarkerCluster.css" rel="stylesheet" crossorigin="">
+    <link href="https://unpkg.com/leaflet.markercluster@1/dist/MarkerCluster.Default.css" rel="stylesheet" crossorigin="">
+    <link href="https://unpkg.com/leaflet-search@4/dist/leaflet-search.min.css" rel="stylesheet" crossorigin="">
+    <link href="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.css" rel="stylesheet" crossorigin="">
+
+   <!-- lokales Stylesheet -->
+   <link href="assets/styles/style.css" rel="stylesheet">
+
+   <!-- SVG-Favicon -->
+   <link href="assets/img/bundeslilie_duo.svg" rel="icon" type="image/svg+xml">
+
+
 
 </head>
 
@@ -56,15 +63,15 @@
     </div>
 
     <!-- Skripte -->
+    
     <script src="https://unpkg.com/leaflet@1/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet.markercluster@1/dist/leaflet.markercluster.js" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet.markercluster.layersupport@2/dist/leaflet.markercluster.layersupport.js" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet-search@4/dist/leaflet-search.min.js" crossorigin=""></script>
     <script src="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.js"></script>
     
-    
     <script src="assets/js/map.js" type="module" ></script>
-
+    <script src="assets/js/accordion.js"></script>
 </body>
 
 </html>
