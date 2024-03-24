@@ -157,17 +157,15 @@ function createDetailsHeime(layer) {
             <h3 class="text-centered">${item["addressLocality"] ?? ""}</h3>
         </div>
         <div class="offcanvas-body"> 
-            ${item["imageLogo"] ? `<p class="text-center"><img class="self-align-center heimlogo" src="${item["imageLogo"]}" alt="Logo von ${item["label"]}"</p>` : ""}
-            <div class="detailWappen">${item["imageWappen"] ? formatImage(item["imageWappen"], ['gruppe']).outerHTML : ""}</div>
+            ${item["imageLogo"] ? `<p class="text-center"><img class="self-align-center heimlogo" src="${item["imageLogo"]}" alt="Logo von ${item["name"]}"</p>` : ""}
             <div class="detailDescription">${item["description"] ?? ""}</div>
-           <hr>
-            <address">
+           <address>
                         ${item["contact"] ? `<div>${item["contact"]}</div>` : ""} 
                         ${item["email"] ? `<div>&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
                         ${item["website"] ? formatWebsite(item["website"]) : ""} 
-                       ${item["streetAddress"] ? `<div>&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
+                        ${item["streetAddress"] ? `<div>&#x1F3E0;&nbsp;&nbsp;${item["streetAddress"]}, ${item["postalCode"]} ${item["addressLocality"]}</div>` : ""} 
             </address>  
-            <hr>
+            
             <div>${item["imagePicture"] ? formatImage(item["imagePicture"], ['heim']).outerHTML : ""}</div>  
         </div>
     `;
