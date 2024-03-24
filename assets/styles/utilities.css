@@ -26,7 +26,7 @@ address {
 
 #map {
     width: 100vw;
-    height: calc(100vh - 60px - 1.6em);
+    height: calc(100vh - 60px);
     transition: 0.1s;
 }
 
@@ -288,4 +288,9 @@ address {
    
     margin-top: 0.5em;
     padding: 0.5em;
+}
+
+
+.leaflet-control-search .search-tooltip {
+max-height: 60vh!important;
 }

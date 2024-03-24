@@ -50,14 +50,10 @@ function formatImage(image, type) {
 }
 
 
-
-
 function formatParent(parent) {
-
     if (!Array.isArray(parent)) {
         parent = [parent];
     }
-
     const parentContainer = parent.map(function (parent) {
         return parent;
     }).join(' im ')
@@ -65,11 +61,9 @@ function formatParent(parent) {
 };
 
 function formatParentS(parent) {
-
     if (!Array.isArray(parent)) {
         parent = [parent];
     }
-
     const parentContainer = parent.map(function (parent) {
         return parent;
     }).join(' im ')
@@ -78,30 +72,23 @@ function formatParentS(parent) {
 
 
 function formatWebsite(website) {
-
     if (!Array.isArray(website)) {
         website = [website];
     }
-
     const websiteContainer = website.map(function (website) {
         var websiteElement = "<div>&#x1F30D;&nbsp;&nbsp;<a href='" + website + "' target='_blank' rel='noopener noreferrer'>" + website + "</a></div>";
         return websiteElement;
     }).join('')
-
-
     return websiteContainer;
 };
 
 // Erstelle die Details für die Popups/Detailansichten
 
 function createDetailsGruppen(layer) {
-
     var item = layer.feature.properties;
-
     var details = (`
         <div class="offcanvas-header">
             <img src="./assets/img/fa-users-solid.svg" class="fs-1_2" aria-title="Gruppe">
-          
         </div>
         <div class="offcanvas-title">
             <h2>
@@ -111,8 +98,7 @@ function createDetailsGruppen(layer) {
              </h2>
        </div>
        <div class="offcanvas-body">
-        `);
-
+    `);
     item.groups.forEach(element => {   
         details += (`
             <div class="group">
@@ -132,23 +118,15 @@ function createDetailsGruppen(layer) {
                 </div>  
             `);
         }
-        details += (` 
-            </div>
-        `);
+        details += (`</div>`);
     });
-
     details += (`</div>`);
-
     return details;
 }
 
 function createDetailsHeime(layer) {
-
     var item = layer.feature.properties;
-
-
-
-    var details = `
+    var details = (`
         <div class="offcanvas-header">
             <img src="./assets/img/fa-house-solid.svg" class="fs-1_2" aria-title="Gruppe">
         </div>
@@ -159,7 +137,7 @@ function createDetailsHeime(layer) {
         <div class="offcanvas-body"> 
             ${item["imageLogo"] ? `<p class="text-center"><img class="self-align-center heimlogo" src="${item["imageLogo"]}" alt="Logo von ${item["name"]}"</p>` : ""}
             <div class="detailDescription">${item["description"] ?? ""}</div>
-           <address>
+       <address>
                         ${item["contact"] ? `<div>${item["contact"]}</div>` : ""} 
                         ${item["email"] ? `<div>&#x1F4E7;&nbsp;&nbsp;<a href='mailto:${item["email"]}' target='_blank' rel='noopener noreferrer'>${item["email"]}</a></div>` : ""} 
                         ${item["website"] ? formatWebsite(item["website"]) : ""} 
@@ -168,8 +146,7 @@ function createDetailsHeime(layer) {
             
             <div>${item["imagePicture"] ? formatImage(item["imagePicture"], ['heim']).outerHTML : ""}</div>  
         </div>
-    `;
-
+    `);
     return details;
 }
 
@@ -189,8 +166,7 @@ function createMarkers(feature, type) {
         var markerColor = "var(--primary)";
         var markerTitle = [];
         feature.properties.groups.forEach(function (element, index) {
-
-
+        
             if (element.parent != null) {
                 var parentS = formatParentS(element.parent)
                 if (index == 0) {
@@ -200,20 +176,13 @@ function createMarkers(feature, type) {
                 }
             }
             else {
-                markerTitle = element.name + ' (' + feature.properties.address.locality + ')';
+                if (index == 0) {
+                    markerTitle += element.name + ' (' + feature.properties.address.locality + ')';
+                } else {
+                    markerTitle += '\n' + element.name + ' (' + feature.properties.address.locality + ')';
+                }
             }
-
-
-
-
         })
-
-
-
-
-
-
-
     } else if (type == "heim") {
         var img_path = "heime";
         var img_generic = "fa-house-solid.svg";
@@ -223,8 +192,6 @@ function createMarkers(feature, type) {
         var markerColor = "#000000"
         var markerTitle = feature.properties.name;
     }
-
-
     if (image != null) {
         if (Array.isArray(image)) { // Bei mehreren Bildern wird im Marker nur das erste angezeigt.
             image = image[0];
@@ -242,7 +209,6 @@ function createMarkers(feature, type) {
         else {
             var markerImageMargin = "3px 3px 3px 3px";
         }
-
         var markerIcon = "./assets/img/" + img_generic;
     }
 
@@ -252,27 +218,23 @@ function createMarkers(feature, type) {
         iconSize: [40, 40],
         iconAnchor: [25, 50]
     });
-
     return logoMarker;
 }
 
 
-// Definition der Karte und Datenquellen
-
-// Externe Tile-Server
-
+// Externe Tile-Server definieren
 const open_street_map = L.tileLayer("https://tile.openstreetmap.de/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 });
-
 const wanderwege = L.tileLayer("https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '&copy; <a href="https://hiking.waymarkedtrails.org/">Waymarked Trails</a>',
 });
 
-// Karte initialisieren und Steuerelemente hinzufügen
 
+
+// Karte initialisieren
 const initialLatitude = 51.163375;
 const initialLongitude = 10.447683;
 const initialZoom = 6;
@@ -283,21 +245,7 @@ const map = L.map("map", {
     layers: [open_street_map],
 });
 
-const control = L.control.layers(
-    { OpenStreetMap: open_street_map },
-    { Wanderwege: wanderwege },
-    {
-        hideSingleBase: true,
-        sortLayers: true,
-        collapsed: true,
-        position: "topright"
-    }
-);
-
-
-map.addControl(control);
-map.zoomControl.setPosition('topleft');
-// Datenlayer
+// Datenlayer definieren
 const markerLayers = L.markerClusterGroup.layerSupport({
     iconCreateFunction: function (cluster) {
         var clusterIcon = L.divIcon({
@@ -308,7 +256,7 @@ const markerLayers = L.markerClusterGroup.layerSupport({
         });
         return clusterIcon;
     },
-    maxClusterRadius: 0,
+    maxClusterRadius: 0, // kein Clustering....
     showCoverageOnHover: false,
     zoomToBoundsOnClick: true,
     spiderfyOnMaxZoom: true,
@@ -317,10 +265,67 @@ const markerLayers = L.markerClusterGroup.layerSupport({
 });
 
 map.addLayer(markerLayers);
-
 const layers = ['gruppen', 'heime'];
 
+//  Steuerelemente definieren
+var control = L.control.layers(
+    { OpenStreetMap: open_street_map },
+    { Wanderwege: wanderwege },
+    {
+        hideSingleBase: true,
+        sortLayers: true,
+        collapsed: true,
+        position: "topright"
+    }
+).addTo(map);
 
+map.zoomControl.setPosition('topleft');
+
+L.control.resetView({
+    position: "topleft",
+    title: "Zoom zurücksetzen",
+    latlng: L.latLng([initialLatitude, initialLongitude]),
+    zoom: initialZoom,
+}).addTo(map);
+
+var search = new L.Control.Search({
+    layer: markerLayers,
+    initial: false,
+    collapsed: true,
+    minLength: 1,
+    propertyName: 'searchItem',
+    textPlaceholder: 'Suche in aktiven Ebenen',
+    textErr: 'Nicht gefunden',
+    zoom: '19',
+    firstTipSubmit: true,
+    position: "topleft",
+    autoCollapse: true,
+});
+
+search.on('search:locationfound', function(e) {
+
+    if(e.layer.feature.properties.addressLocality != null) {
+        var value = "heime";
+    } else {
+        var value = "gruppen";
+    }
+
+    if (e.layer instanceof L.Marker) {
+        var canvasElement = document.getElementById("detailPane");
+        var mapElement = document.getElementById("map");
+        canvasElement.classList.add("offcanvas-show");
+        mapElement.classList.add("map-offcanvas");
+        var canvasBodyElement = document.getElementById("detailPaneBody");
+        //var latlang = e.layer.feature.geometry.coordinates;
+        //map.setView([latlang[1], latlang[0]], 17);
+        if (value == "gruppen") {
+            canvasBodyElement.innerHTML = createDetailsGruppen(e.layer);
+        } else if (value == "heime") {
+            canvasBodyElement.innerHTML = createDetailsHeime(e.layer);
+        }
+
+    }
+});
 
 layers.forEach(createDataLayer)
 
@@ -348,7 +353,11 @@ function createDataLayer(value, index, array) {
                                 }
                             }
                             else {
-                                searchItem = '<strong>' + layer.feature.properties.address.locality + '</strong><br>' + element.name;
+                                if (index == 0) {
+                                    searchItem += '<strong>' + layer.feature.properties.address.locality + '</strong><br>' + element.name;
+                                } else {
+                                    searchItem += ' <br> ' + element.name;
+                                }
                             }
                         });
 
@@ -406,10 +415,6 @@ function createDataLayer(value, index, array) {
         });
 }
 
-//markerLayers.addTo(map);
-
-
-
 function closeOffcanvas() {
     var canvasElement = document.getElementById("detailPane");
     var mapElement = document.getElementById("map");
@@ -422,7 +427,6 @@ function closeOffcanvas() {
 
 const detailPaneClose = document.getElementById("detailPaneClose");
 
-
 detailPaneClose.addEventListener("click", function (event) {
     event.preventDefault();
     closeOffcanvas();
@@ -433,59 +437,8 @@ map.on("click", function (event) {
 });
 
 
-// Karteansicht zurücksetzen
-
-L.control.resetView({
-    position: "topleft",
-    title: "Zoom zurücksetzen",
-    latlng: L.latLng([initialLatitude, initialLongitude]),
-    zoom: initialZoom,
-}).addTo(map);
-
-
-
 
 // Suchfunktion hinzufügen nachdem die Datenlayer geladen sind
-var search = new L.Control.Search({
-    layer: markerLayers,
-    initial: false,
-    collapsed: true,
-    minLength: 1,
-    propertyName: 'searchItem',
-    textPlaceholder: 'Suche in aktiven Ebenen',
-    textErr: 'Nicht gefunden',
-    zoom: '19',
-    firstTipSubmit: true,
-    position: "topleft",
-    autoCollapse: true,
-});
-
-search.on('search:locationfound', function(e) {
-
-    if(e.layer.feature.properties.addressLocality != null) {
-        var value = "heime";
-    } else {
-        var value = "gruppen";
-    }
-
-
-    if (e.layer instanceof L.Marker) {
-        var canvasElement = document.getElementById("detailPane");
-        var mapElement = document.getElementById("map");
-        canvasElement.classList.add("offcanvas-show");
-        mapElement.classList.add("map-offcanvas");
-        var canvasBodyElement = document.getElementById("detailPaneBody");
-        //var latlang = e.layer.feature.geometry.coordinates;
-        //map.setView([latlang[1], latlang[0]], 17);
-        if (value == "gruppen") {
-            canvasBodyElement.innerHTML = createDetailsGruppen(e.layer);
-        } else if (value == "heime") {
-            canvasBodyElement.innerHTML = createDetailsHeime(e.layer);
-        }
-
-    }
-});
-
 map.addControl(search);
 
 
