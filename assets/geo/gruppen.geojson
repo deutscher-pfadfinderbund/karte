@@ -40,34 +40,6 @@
         {
             "geometry": {
                 "coordinates": [
-                    10.8986971,
-                    48.3668041
-                ],
-                "type": "Point"
-            },
-            "properties": {
-                "address": {
-                    "locality": "Augsburg",
-                    "postalCode": null,
-                    "streetAddress": null
-                },
-                "groups": [
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": null,
-                        "name": "Gau Sueben",
-                        "parent": null,
-                        "website": null
-                    }
-                ]
-            },
-            "type": "Feature"
-        },
-        {
-            "geometry": {
-                "coordinates": [
                     8.973811861,
                     51.89577195
                 ],
@@ -210,6 +182,7 @@
                         "description": null,
                         "email": null,
                         "name": "Mädelschaft Ginover",
+                        "imageWappen": "ms-ginover.png",
                         "website": "https://www.pfadfinder-frohnau.de/ginover.html"
                     }
                 ]
@@ -346,7 +319,15 @@
                     "postalCode": "12169",
                     "streetAddress": "Bergstraße 51"
                 },
-                "groups": [
+                "globalWappen": "gau-wartburg.png",
+                "groups": [{
+                    "contact": null,
+                    "description": null,
+                    "email": null,
+                    "imageWappen": "gau-wartburg.png",
+                    "name": "Gau Wartburg",
+                    "website": "http://gau-wartburg.de"
+                },
                     {
                         "contact": null,
                         "description": null,
@@ -416,6 +397,15 @@
                     "streetAddress": null
                 },
                 "groups": [
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
+                        "name": "Gau Wolkenburg",
+                        "parent": null,
+                        "website": null
+                    },
                     {
                         "contact": null,
                         "description": null,
@@ -508,6 +498,15 @@
                     "streetAddress": null
                 },
                 "groups": [
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
+                        "name": "Gau Wolkenburg",
+                        "parent": null,
+                        "website": null
+                    },
                     {
                         "contact": null,
                         "description": null,
@@ -634,12 +633,23 @@
                     "postalCode": 63165,
                     "streetAddress": "Am Grünen See 19"
                 },
+                "globalWappen": "gau-franken.png",
                 "groups": [
                     {
                         "contact": null,
                         "description": null,
                         "email": null,
                         "imageWappen": "gau-franken.png",
+                        "name": "Gau Franken",
+                        "website": [
+                            "http://www.gau-franken.de/"
+                        ]
+                    },
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
                         "name": "Stamm der Tscherkessen",
                         "parent": [
                             "Jungenschaft Ritter von Schleiffras",
@@ -665,12 +675,23 @@
                     "postalCode": 63456,
                     "streetAddress": "Schachenwaldstraße 17"
                 },
+                "globalWappen": "gau-franken.png",
                 "groups": [
                     {
                         "contact": null,
                         "description": null,
                         "email": null,
                         "imageWappen": "gau-franken.png",
+                        "name": "Gau Franken",
+                        "website": [
+                            "http://www.gau-franken.de/"
+                        ]
+                    },
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
                         "name": "Stamm Wodan",
                         "parent": [
                             "Jungenschaft Ritter von Schleiffras",
@@ -757,7 +778,7 @@
                         "email": null,
                         "imageWappen": "ring-goldener-loewe.png",
                         "name": "Ring Goldener Löwe",
-                        "website": null
+                        "website": "https://pfadfinder-herten.de"
                     },
                     {
                         "contact": null,
@@ -897,6 +918,15 @@
                         "description": null,
                         "email": null,
                         "imageWappen": null,
+                        "name": "Gau Wolkenburg",
+                        "parent": null,
+                        "website": null
+                    },
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
                         "name": "Mädelschaft Schwarzer Adler",
                         "parent": [
                             "Gau Wolkenburg"
@@ -932,6 +962,7 @@
                     "postalCode": null,
                     "streetAddress": null
                 },
+                "globalWappen": "js-hohenstaufen-altenburg.gif",
                 "groups": [
                     {
                         "contact": null,
@@ -947,7 +978,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": "js-hohenstaufen-altenburg.gif",
+                        "imageWappen": "",
                         "name": "Stamm Heinrich der Löwe",
                         "parent": "Jungenschaft Hohenstaufen (Altenburg)",
                         "website": [
@@ -962,8 +993,8 @@
         {
             "geometry": {
                 "coordinates": [
-                    10.85,
-                    48.55
+                    10.84282,
+                    48.53752
                 ],
                 "type": "Point"
             },
@@ -978,14 +1009,31 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageLogo": "gau-franken.png",
+                        "imageWappen": "gau-franken.png",
+                        "name": "Gau Franken",
+                        "website": [
+                            "http://www.gau-franken.de/"
+                        ]
+                    },
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
                         "imageWappen": null,
                         "name": "Stamm Arimathia",
                         "parent": "Gau Franken",
                         "website": [
-                            "https://www.pfadfinder-meitingen.de",
-                            "http://www.gau-franken.de/"
+                            "https://www.pfadfinder-meitingen.de"
                         ]
+                    },
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
+                        "name": "Gau Sueben",
+                        "parent": null,
+                        "website": null
                     },
                     {
                         "contact": null,
@@ -1015,6 +1063,15 @@
                     "streetAddress": null
                 },
                 "groups": [
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
+                        "name": "Gau Wolkenburg",
+                        "parent": null,
+                        "website": null
+                    },
                     {
                         "contact": null,
                         "description": null,
@@ -1079,7 +1136,17 @@
                     "postalCode": null,
                     "streetAddress": null
                 },
+                "globalWappen": null,
                 "groups": [
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
+                        "name": "Gau Sueben",
+                        "parent": null,
+                        "website": null
+                    },
                     {
                         "contact": null,
                         "description": null,
@@ -1115,6 +1182,15 @@
                         "description": null,
                         "email": null,
                         "imageWappen": null,
+                        "name": "Gau Wolkenburg",
+                        "parent": null,
+                        "website": null
+                    },
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
                         "name": "Mädelschaft Midgard",
                         "parent": [
                             "Gau Wolkenburg"
@@ -1139,7 +1215,17 @@
                     "postalCode": null,
                     "streetAddress": null
                 },
+                "globalWappen": null,
                 "groups": [
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
+                        "name": "Gau Sueben",
+                        "parent": null,
+                        "website": null
+                    },
                     {
                         "contact": null,
                         "description": null,
@@ -1180,7 +1266,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": "ring-goldener-loewe.png",
+                        "imageWappen": null,
                         "name": "Mädelschaft Zugvögel",
                         "parent": [
                             "Ring Goldener Löwe"
@@ -1191,7 +1277,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": "ring-goldener-loewe.png",
+                        "imageWappen": null,
                         "name": "Jungenschaft Ostgoten",
                         "parent": [
                             "Ring Goldener Löwe"
@@ -1243,7 +1329,17 @@
                     "postalCode": null,
                     "streetAddress": null
                 },
+                "globalWappen": null,
                 "groups": [
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
+                        "name": "Gau Sueben",
+                        "parent": null,
+                        "website": null
+                    },
                     {
                         "contact": null,
                         "description": null,
@@ -1273,7 +1369,16 @@
                     "postalCode": null,
                     "streetAddress": null
                 },
+                "globalWappen": "gau-franken.png",
                 "groups": [
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": "gau-franken.png",
+                        "name": "Gau Franken",
+                        "website": "https://gau-franken.de"
+                    },
                     {
                         "contact": null,
                         "description": null,
@@ -1343,7 +1448,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
+                        "imageWappen": "stamm-wolfstein.jpg",
                         "name": "Stamm Wolfstein",
                         "website": "https://www.stamm-wolfstein.de"
                     }
@@ -1370,7 +1475,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
+                        "imageWappen": "stamm-wolfstein.jpg",
                         "name": "Stamm Wolfstein",
                         "website": "https://www.stamm-wolfstein.de"
                     }
@@ -1397,6 +1502,16 @@
                         "contact": null,
                         "description": null,
                         "email": null,
+                        "imageWappen": "gau-franken.png",
+                        "name": "Gau Franken",
+                        "website": [
+                            "http://www.gau-franken.de/"
+                        ]
+                    },
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
                         "imageWappen": "gau-franken-stamm-schwarzer-haufen.jpg",
                         "name": "Stamm Schwarzer Haufen",
                         "parent": "Gau Franken",
@@ -1404,6 +1519,15 @@
                             "http://pfadfinder-wuerzburg.de/",
                             "http://www.gau-franken.de/"
                         ]
+                    },
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
+                        "name": "Gau Sueben",
+                        "parent": null,
+                        "website": null
                     },
                     {
                         "contact": null,
