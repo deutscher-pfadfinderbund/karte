@@ -173,7 +173,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": "js-gawan.png",
+                        "imageWappen": "js-gawan.svg",
                         "name": "Jungenschaft Gawan",
                         "website": "https://www.pfadfinder-frohnau.de/gawan.html"
                     },
@@ -511,7 +511,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
+                        "imageWappen": "ms-midgard.jpg",
                         "name": "Mädelschaft Midgard",
                         "parent": [
                             "Gau Wolkenburg"
@@ -1030,7 +1030,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
+                        "imageWappen": "gau-sueben.jpg",
                         "name": "Gau Sueben",
                         "parent": null,
                         "website": null
@@ -1039,7 +1039,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
+                        "imageWappen": "gau-sueben-hag-andarta.jpg",
                         "name": "Hag Andarta",
                         "parent": "Gau Sueben",
                         "website": "https://www.pfadfinder-meitingen.de"
@@ -1076,7 +1076,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
+                        "imageWappen": "ms-midgard.jpg",
                         "name": "Mädelschaft Midgard",
                         "parent": [
                             "Gau Wolkenburg"
@@ -1136,13 +1136,13 @@
                     "postalCode": null,
                     "streetAddress": null
                 },
-                "globalWappen": null,
+                "globalWappen": "gau-sueben.jpg",
                 "groups": [
                     {
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
+                        "imageWappen": "gau-sueben.jpg",
                         "name": "Gau Sueben",
                         "parent": null,
                         "website": null
@@ -1190,7 +1190,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
+                        "imageWappen": "ms-midgard.jpg",
                         "name": "Mädelschaft Midgard",
                         "parent": [
                             "Gau Wolkenburg"
@@ -1215,13 +1215,13 @@
                     "postalCode": null,
                     "streetAddress": null
                 },
-                "globalWappen": null,
+                "globalWappen": "gau-sueben.jpg",
                 "groups": [
                     {
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
+                        "imageWappen": "gau-sueben.jpg",
                         "name": "Gau Sueben",
                         "parent": null,
                         "website": null
@@ -1329,13 +1329,13 @@
                     "postalCode": null,
                     "streetAddress": null
                 },
-                "globalWappen": null,
+                "globalWappen": "gau-sueben.jpg",
                 "groups": [
                     {
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
+                        "imageWappen": "gau-sueben.jpg",
                         "name": "Gau Sueben",
                         "parent": null,
                         "website": null
@@ -1524,7 +1524,7 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
+                        "imageWappen": "gau-sueben.jpg",
                         "name": "Gau Sueben",
                         "parent": null,
                         "website": null
