@@ -996,52 +996,49 @@
                 "type": "Point"
             },
             "properties": {
-                "address": {
-                    "locality": "Meitingen",
-                    "postalCode": null,
-                    "streetAddress": null
+              "address": {
+                "locality": "Meitingen",
+                "postalCode": null,
+                "streetAddress": null
+              },
+              "globalWappen": "gau-franken.png",
+              "groups": [
+                {
+                  "contact": null,
+                  "description": null,
+                  "email": null,
+                  "imageWappen": "gau-franken.png",
+                  "name": "Gau Franken",
+                  "website": ["http://www.gau-franken.de/"]
                 },
-                "groups": [
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": "gau-franken.png",
-                        "name": "Gau Franken",
-                        "website": [
-                            "http://www.gau-franken.de/"
-                        ]
-                    },
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": null,
-                        "name": "Stamm Arimathia",
-                        "parent": "Gau Franken",
-                        "website": [
-                            "https://www.pfadfinder-meitingen.de"
-                        ]
-                    },
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": "gau-sueben.jpg",
-                        "name": "Gau Sueben",
-                        "parent": null,
-                        "website": null
-                    },
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": "gau-sueben-hag-andarta.jpg",
-                        "name": "Hag Andarta",
-                        "parent": "Gau Sueben",
-                        "website": "https://www.pfadfinder-meitingen.de"
-                    }
-                ]
+                {
+                  "contact": null,
+                  "description": null,
+                  "email": null,
+                  "imageWappen": null,
+                  "name": "Stamm Arimathia",
+                  "parent": "Gau Franken",
+                  "website": ["https://www.pfadfinder-meitingen.de"]
+                },
+                {
+                  "contact": null,
+                  "description": null,
+                  "email": null,
+                  "imageWappen": "gau-sueben.jpg",
+                  "name": "Gau Sueben",
+                  "parent": null,
+                  "website": null
+                },
+                {
+                  "contact": null,
+                  "description": null,
+                  "email": null,
+                  "imageWappen": "gau-sueben-hag-andarta.jpg",
+                  "name": "Hag Andarta",
+                  "parent": "Gau Sueben",
+                  "website": "https://www.pfadfinder-meitingen.de"
+                }
+              ]
             },
             "type": "Feature"
         },
@@ -1502,53 +1499,52 @@
                 "type": "Point"
             },
             "properties": {
-                "address": {
-                    "locality": "Würzburg",
-                    "postalCode": 97072,
-                    "streetAddress": "Platenstraße 5"
+              "address": {
+                "locality": "Würzburg",
+                "postalCode": 97072,
+                "streetAddress": "Platenstraße 5"
+              },
+              "globalWappen": "gau-franken.png",
+              "groups": [
+                {
+                  "contact": null,
+                  "description": null,
+                  "email": null,
+                  "imageWappen": "gau-franken.png",
+                  "name": "Gau Franken",
+                  "website": ["http://www.gau-franken.de/"]
                 },
-                "groups": [
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": "gau-franken.png",
-                        "name": "Gau Franken",
-                        "website": [
-                            "http://www.gau-franken.de/"
-                        ]
-                    },
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": "gau-franken-stamm-schwarzer-haufen.jpg",
-                        "name": "Stamm Schwarzer Haufen",
-                        "parent": "Gau Franken",
-                        "website": [
-                            "http://pfadfinder-wuerzburg.de/",
-                            "http://www.gau-franken.de/"
-                        ]
-                    },
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": "gau-sueben.jpg",
-                        "name": "Gau Sueben",
-                        "parent": null,
-                        "website": null
-                    },
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": null,
-                        "name": "Mädelschaft Tilman Riemenschneider",
-                        "parent": "Gau Sueben",
-                        "website": "http://pfadfinder-wuerzburg.de/"
-                    }
-                ]
+                {
+                  "contact": null,
+                  "description": null,
+                  "email": null,
+                  "imageWappen": "gau-franken-stamm-schwarzer-haufen.jpg",
+                  "name": "Stamm Schwarzer Haufen",
+                  "parent": "Gau Franken",
+                  "website": [
+                    "http://pfadfinder-wuerzburg.de/",
+                    "http://www.gau-franken.de/"
+                  ]
+                },
+                {
+                  "contact": null,
+                  "description": null,
+                  "email": null,
+                  "imageWappen": "gau-sueben.jpg",
+                  "name": "Gau Sueben",
+                  "parent": null,
+                  "website": null
+                },
+                {
+                  "contact": null,
+                  "description": null,
+                  "email": null,
+                  "imageWappen": null,
+                  "name": "Mädelschaft Tilman Riemenschneider",
+                  "parent": "Gau Sueben",
+                  "website": "http://pfadfinder-wuerzburg.de/"
+                }
+              ]
             },
             "type": "Feature"
         },
