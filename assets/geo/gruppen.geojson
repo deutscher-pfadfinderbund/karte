@@ -766,43 +766,40 @@
                 "type": "Point"
             },
             "properties": {
-                "address": {
-                    "locality": "Herten",
-                    "postalCode": null,
-                    "streetAddress": null
+              "address": {
+                "locality": "Herten",
+                "postalCode": null,
+                "streetAddress": null
+              },
+              "globalWappen": "ring-goldener-loewe.png",
+              "groups": [
+                {
+                  "contact": null,
+                  "description": null,
+                  "email": null,
+                  "imageWappen": "ring-goldener-loewe.png",
+                  "name": "Ring Goldener Löwe",
+                  "website": "https://pfadfinder-herten.de"
                 },
-                "groups": [
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": "ring-goldener-loewe.png",
-                        "name": "Ring Goldener Löwe",
-                        "website": "https://pfadfinder-herten.de"
-                    },
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": null,
-                        "name": "Mädelschaft Zugvögel",
-                        "parent": [
-                            "Ring Goldener Löwe"
-                        ],
-                        "website": null
-                    },
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": null,
-                        "name": "Jungenschaft Ostgoten",
-                        "parent": [
-                            "Ring Goldener Löwe"
-                        ],
-                        "website": null
-                    }
-                ]
+                {
+                  "contact": null,
+                  "description": null,
+                  "email": null,
+                  "imageWappen": null,
+                  "name": "Mädelschaft Zugvögel",
+                  "parent": ["Ring Goldener Löwe"],
+                  "website": null
+                },
+                {
+                  "contact": null,
+                  "description": null,
+                  "email": null,
+                  "imageWappen": null,
+                  "name": "Jungenschaft Ostgoten",
+                  "parent": ["Ring Goldener Löwe"],
+                  "website": null
+                }
+              ]
             },
             "type": "Feature"
         },
@@ -1240,53 +1237,47 @@
             "type": "Feature"
         },
         {
-            "geometry": {
-                "coordinates": [
-                    7.1978546,
-                    51.6143815
-                ],
-                "type": "Point"
+          "geometry": {
+            "coordinates": [7.1978546, 51.6143815],
+            "type": "Point"
+          },
+          "properties": {
+            "address": {
+              "locality": "Recklinghausen",
+              "postalCode": null,
+              "streetAddress": null
             },
-            "properties": {
-                "address": {
-                    "locality": "Recklinghausen",
-                    "postalCode": null,
-                    "streetAddress": null
-                },
-                "groups": [
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": "ring-goldener-loewe.png",
-                        "name": "Ring Goldener Löwe",
-                        "website": "https://pfadfinder-herten.de"
-                    },
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": null,
-                        "name": "Mädelschaft Zugvögel",
-                        "parent": [
-                            "Ring Goldener Löwe"
-                        ],
-                        "website": null
-                    },
-                    {
-                        "contact": null,
-                        "description": null,
-                        "email": null,
-                        "imageWappen": null,
-                        "name": "Jungenschaft Ostgoten",
-                        "parent": [
-                            "Ring Goldener Löwe"
-                        ],
-                        "website": null
-                    }
-                ]
-            },
-            "type": "Feature"
+            "globalWappen": "ring-goldener-loewe.png",
+            "groups": [
+              {
+                "contact": null,
+                "description": null,
+                "email": null,
+                "imageWappen": "ring-goldener-loewe.png",
+                "name": "Ring Goldener Löwe",
+                "website": "https://pfadfinder-herten.de"
+              },
+              {
+                "contact": null,
+                "description": null,
+                "email": null,
+                "imageWappen": null,
+                "name": "Mädelschaft Zugvögel",
+                "parent": ["Ring Goldener Löwe"],
+                "website": null
+              },
+              {
+                "contact": null,
+                "description": null,
+                "email": null,
+                "imageWappen": null,
+                "name": "Jungenschaft Ostgoten",
+                "parent": ["Ring Goldener Löwe"],
+                "website": null
+              }
+            ]
+          },
+          "type": "Feature"
         },
         {
             "geometry": {
