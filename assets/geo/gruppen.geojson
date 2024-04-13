@@ -20,7 +20,7 @@
                         "description": null,
                         "email": null,
                         "imageWappen": "js-hohenstaufen-altenburg.gif",
-                        "name": "Jungenschaft Hohenstaufen",
+                        "name": "Jungenschaft Hohenstaufen (Altenburg)",
                         "parent": null,
                         "website": "https://www.pfadfinder-altenburg.de"
                     },
@@ -1302,14 +1302,33 @@
                     "postalCode": null,
                     "streetAddress": null
                 },
+                "globalWappen": "ring-namata.svg",
                 "groups": [
                     {
                         "contact": null,
-                        "description": "Mädelschaft Sturmvögel & Jungenschaft Hohenstaufen",
+                        "description": null,
                         "email": null,
                         "imageWappen": "ring-namata.svg",
                         "name": "Ring Namata",
                         "website": "https://namata.deutscher-pfadfinderbund.de/"
+                    },
+                    {
+                      "contact": null,
+                      "description": null,
+                      "email": null,
+                      "imageWappen": "ring-namata-js-hohenstaufen-remscheid.gif",
+                      "name": "Jungenschaft Hohenstaufen (Remscheid)",
+                      "website": "https://namata.deutscher-pfadfinderbund.de/",
+                      "parent": ["Ring Namata"]
+                    },
+                    {
+                      "contact": null,
+                      "description": null,
+                      "email": null,
+                      "imageWappen": "ring-namata-ms-sturmvoegel.gif",
+                      "name": "Mädelschaft Sturmvögel",
+                      "website": "https://namata.deutscher-pfadfinderbund.de/",
+                      "parent": ["Ring Namata"]
                     }
                 ]
             },
