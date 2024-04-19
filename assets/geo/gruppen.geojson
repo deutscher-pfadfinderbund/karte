@@ -1001,7 +1001,7 @@
                 "postalCode": null,
                 "streetAddress": null
               },
-              "globalWappen": "gau-franken.png",
+              "globalWappen": null,
               "groups": [
                 {
                   "contact": null,
@@ -1504,7 +1504,7 @@
                 "postalCode": 97072,
                 "streetAddress": "Platenstraße 5"
               },
-              "globalWappen": "gau-franken.png",
+              "globalWappen": null,
               "groups": [
                 {
                   "contact": null,
