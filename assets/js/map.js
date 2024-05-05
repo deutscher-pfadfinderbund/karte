@@ -154,7 +154,7 @@ function createDetailsHeime(layer) {
 function createMarkers(feature, type) {
     if (type == "gruppe") {
         var img_path = "gruppen";
-        var img_generic = "bundeslilie_dynamic.svg";
+        var img_generic = "Bundeslilie_dynamic.svg";
 
         // Sind mehrere Gruppen am Ort, Globales Wappen oder Bundeslilie Nutzen
         if ((feature.properties.groups.length != 1) && (feature.properties.globalWappen != null)) {
@@ -250,7 +250,7 @@ const markerLayers = L.markerClusterGroup.layerSupport({
     iconCreateFunction: function (cluster) {
         var clusterIcon = L.divIcon({
             className: "marker-div-icon",
-            html: `<div class="marker-pin" style="--marker-color: var(--primary);" ><div class="marker-pin-inner"><img class="marker-image" src="assets/img/bundeslilie_dynamic.svg" style="color-scheme: light; --markerImageMargin: 3px 3px 3px 3px;"></div></div>`,
+            html: `<div class="marker-pin" style="--marker-color: var(--primary);" ><div class="marker-pin-inner"><img class="marker-image" src="assets/img/Bundeslilie_dynamic.svg" style="color-scheme: light; --markerImageMargin: 3px 3px 3px 3px;"></div></div>`,
             iconSize: [40, 40],
             iconAnchor: [25, 50]
         });
