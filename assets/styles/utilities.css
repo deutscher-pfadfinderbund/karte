@@ -108,7 +108,7 @@ address {
 @media (max-width: 767.98px) {
 
     .offcanvas {
-        width: 75vw;
+        width: 100vw;
         height: 100vh;
 
     }

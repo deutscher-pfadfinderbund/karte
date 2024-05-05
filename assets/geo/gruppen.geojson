@@ -14,12 +14,13 @@
                     "postalCode": null,
                     "streetAddress": null
                 },
+                "globalWappen": "js_ms-hohenstaufen-altenburg.gif",
                 "groups": [
                     {
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": "js-hohenstaufen-altenburg.gif",
+                        "imageWappen": "js_ms-hohenstaufen-altenburg.gif",
                         "name": "Jungenschaft Hohenstaufen (Altenburg)",
                         "parent": null,
                         "website": "https://www.pfadfinder-altenburg.de"
@@ -28,8 +29,8 @@
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": null,
-                        "name": "Hag Hohenstaufen",
+                        "imageWappen": "js_ms-hohenstaufen-altenburg.gif",
+                        "name": "Hag Hohenstaufen (Altenburg)",
                         "parent": null,
                         "website": "https://www.pfadfinder-altenburg.de"
                     }
@@ -744,14 +745,33 @@
                     "postalCode": 58675,
                     "streetAddress": "Rückertstraße"
                 },
+                "globalWappen": "ring-rote-erde.png",
                 "groups": [
                     {
                         "contact": null,
-                        "description": "Jungenschaft Cherusker & Mädelschaft Grieptoo",
-                        "email": null,
+                        "description": null,
+                        "email": "info@pfadfinder-hemer.de",
                         "imageWappen": "ring-rote-erde.png",
                         "name": "Ring Rote Erde",
                         "website": "https://www.pfadfinder-hemer.de"
+                    },
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
+                        "parent": "Ring Rote Erde",
+                        "name": "Jungenschaft Cherusker",
+                        "website": null
+                    },
+                    {
+                        "contact": null,
+                        "description": null,
+                        "email": null,
+                        "imageWappen": null,
+                        "parent": "Ring Rote Erde",
+                        "name": "Mädelschaft Grieptoo",
+                        "website": null
                     }
                 ]
             },
@@ -928,7 +948,7 @@
                         "parent": [
                             "Gau Wolkenburg"
                         ],
-                        "website": null
+                        "website": "https://schwarzer-adler.org"
                     },
                     {
                         "contact": null,
@@ -939,7 +959,7 @@
                         "parent": [
                             "Gau Wolkenburg"
                         ],
-                        "website": null
+                        "website": "https://schwarzer-adler.org"
                     }
                 ]
             },
@@ -959,13 +979,13 @@
                     "postalCode": null,
                     "streetAddress": null
                 },
-                "globalWappen": "js-hohenstaufen-altenburg.gif",
+                "globalWappen": "js_ms-hohenstaufen-altenburg.gif",
                 "groups": [
                     {
                         "contact": null,
                         "description": null,
                         "email": null,
-                        "imageWappen": "js-hohenstaufen-altenburg.gif",
+                        "imageWappen": "js_ms-hohenstaufen-altenburg.gif",
                         "name": "Jungenschaft Hohenstaufen (Altenburg)",
                         "website": [
                             "https://www.pfadfinder-altenburg.de"
@@ -1577,7 +1597,7 @@
                     {
                         "contact": null,
                         "description": "Aufbaugilde Sithonen",
-                        "email": null,
+                        "email": "dpb.aachen@gmail.com",
                         "imageWappen": null,
                         "locality": "Aachen",
                         "name": "Mädeschaft Volée",
