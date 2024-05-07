@@ -25,7 +25,6 @@ address {
 }
 
 #map {
-    width: 100vw;
     height: calc(100vh - 80px);
     transition: 0.1s;
 }
