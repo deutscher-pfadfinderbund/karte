@@ -65,44 +65,37 @@ address {
 }
 
 .navbar {
-    width: 100%;
+    display: flex;
     min-height: 80px;
+    padding: 8px;
+    
+    color-scheme: dark only;
     background: var(--dark);
     color: var(--on-dark);
-    position: relative;
-    display: flex;
+    
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    gap:1em;
+    column-gap: 8px;
+
+    & img {
+        max-height:60px;
+        margin: 4px;
+    }
     
-}
+    & a {
+        color: var(--on-dark);
+        text-decoration: none; 
+        padding: 8px;
+        min-width: 48px;
+        min-height: 48px;
+        align-content: center;
 
-.navbar a:link, .navbar a:visited{
-    color: var(--on-dark);  
-    text-decoration: none;  
-}
-
-.navbar ul {
-    gap: 1em;
-    display: flex;
-    list-style: none;
-}
-.navbar ul li {
-   
-    display: inline;
-
-}
-
-.navbar ul li a:link {
-    padding: 0.5em;
-
-}
-.navbar ul li a:hover {
-   background-color: var(--on-dark);
-   color: var(--dark);
-
+        &:hover {
+            background-color: var(--on-dark);
+            color: var(--dark);
+            text-decoration: revert;
+        }
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -242,10 +235,7 @@ address {
 
 }
 
-.navbar img {
-   max-height:60px;
-   margin:0.2em;
-}
+
 
 .offcanvas-body > div  {
     margin-bottom: 1em;
