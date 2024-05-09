@@ -76,15 +76,24 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": null,
+            "imageWappen": "gau-rheinland.png",
             "name": "Gau Rheinland",
             "website": null
           },
           {
             "contact": null,
             "description": null,
-            "email": null,
-            "imageWappen": null,
+            "email": "info@rheinritter-dpb.de",
+            "imageWappen": "gau-rheinland-stamm-rheinritter.jpg",
+            "name": "Stamm Rheinritter",
+            "parent": ["Gau Rheinland"],
+            "website": "https://rheinritter-dpb.de"
+          },
+          {
+            "contact": null,
+            "description": null,
+            "email": "ms.volee@gmail.com",
+            "imageWappen": "ms-volee.png",
             "name": "Mädelschaft Volée",
             "website": null
           }
@@ -108,7 +117,7 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": null,
+            "imageWappen": "gau-rheinland.png",
             "name": "Gau Rheinland",
             "website": null
           }
@@ -772,9 +781,18 @@
         "address": {
           "locality": "Hürth",
           "postalCode": null,
-          "streetAddress": null
+          "streetAddress": null,
+          "globalWappen": "gau-rheinland.png"
         },
         "groups": [
+            {
+                "contact": null,
+                "description": null,
+                "email": null,
+                "imageWappen": "gau-rheinland.png",
+                "name": "Gau Rheinland",
+                "website": null
+              },
           {
             "contact": null,
             "description": null,
@@ -802,11 +820,29 @@
         "groups": [
           {
             "contact": null,
-            "description": "Jungenschaft Geusen & Mädelschaft Freya",
+            "description": null,
             "email": null,
             "imageWappen": null,
             "name": "Ring Florian Geyer",
             "website": "https://pfadfinder-iserlohn.de"
+          },
+          {
+            "contact": null,
+            "description": null,
+            "email": null,
+            "imageWappen": null,
+            "name": "Jungenschaft Geusen",
+            "parent": ["Ring Florian Geyer"],
+            "website": null
+          },
+          {
+            "contact": null,
+            "description": null,
+            "email": null,
+            "imageWappen": null,
+            "name": "Mädelschaft Freya",
+            "parent": ["Ring Florian Geyer"],
+            "website": null
           }
         ]
       },
@@ -996,15 +1032,15 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": null,
+            "imageWappen": "js-gralsritter.jpg",
             "name": "Jungenschaft Gralsritter",
-            "website": null
+            "website": "https://gralsritter-monheim.de/"
           },
           {
             "contact": null,
             "description": null,
-            "email": null,
-            "imageWappen": null,
+            "email": "ms.volee@gmail.com",
+            "imageWappen": "ms-volee.png",
             "name": "Mädelschaft Volée",
             "website": null
           }
@@ -1419,6 +1455,14 @@
           "streetAddress": null
         },
         "groups": [
+            {
+                "contact": null,
+                "description": null,
+                "email": null,
+                "imageWappen": "gau-rheinland.png",
+                "name": "Gau Rheinland",
+                "website": null
+              },
           {
             "contact": null,
             "description": null,
@@ -1430,11 +1474,12 @@
           },
           {
             "contact": null,
-            "description": "Aufbaugilde Sithonen",
+            "description": null,
             "email": "dpb.aachen@gmail.com",
             "imageWappen": null,
             "locality": "Aachen",
-            "name": "Mädeschaft Volée",
+            "name": "Aufbaugilde Sithonen",
+            "parent": ["Mädeschaft Volée"],
             "streetAddress": null,
             "website": null
           }
