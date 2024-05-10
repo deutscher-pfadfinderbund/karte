@@ -931,14 +931,14 @@
     },
     {
       "geometry": {
-        "coordinates": [10.84282, 48.53752],
+        "coordinates": [10.85578, 48.54510],
         "type": "Point"
       },
       "properties": {
         "address": {
           "locality": "Meitingen",
-          "postalCode": null,
-          "streetAddress": null
+          "postalCode": 86405 ,
+          "streetAddress": "St.-Johannes-Str. 6"
         },
         "globalWappen": null,
         "groups": [
@@ -1276,33 +1276,26 @@
     },
     {
       "geometry": {
-        "coordinates": [10.9053332, 48.5681767],
+        "coordinates": [10.9108852, 48.5632563],
         "type": "Point"
       },
       "properties": {
         "address": {
           "locality": "Thierhaupten",
-          "postalCode": null,
-          "streetAddress": null
+          "postalCode": 86672,
+          "streetAddress": "Klosterberg 1"
         },
-        "globalWappen": "gau-franken.png",
+        "globalWappen": null,
         "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-franken.png",
-            "name": "Gau Franken",
-            "website": "https://gau-franken.de"
-          },
+         
           {
             "contact": null,
             "description": null,
             "email": null,
             "imageWappen": null,
-            "name": "Stamm Hohlenstein",
-            "parent": ["Gau Franken"],
-            "website": null
+            "name": "Stamm Jakob Fugger",
+            "parent": null,
+            "website": "https://www.pfadfinder-meitingen.de"
           }
         ]
       },
