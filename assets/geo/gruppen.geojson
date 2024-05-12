@@ -158,7 +158,7 @@
         "address": {
           "locality": "Berlin-Frohnau",
           "postalCode": "13465",
-          "streetAddress": "Schönfließer Str. 11a"
+          "streetAddress": "Schönfließer Str. 11b"
         },
         "groups": [
           {
@@ -229,7 +229,7 @@
     },
     {
       "geometry": {
-        "coordinates": [13.29121123, 52.59541911],
+        "coordinates": [13.29133273, 52.59533183],
         "type": "Point"
       },
       "properties": {
