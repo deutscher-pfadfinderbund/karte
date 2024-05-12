@@ -284,3 +284,7 @@ address {
 .leaflet-control-search .search-tooltip {
 max-height: 60vh!important;
 }
+
+.leaflet-control-attribution {
+    padding: 5px!important;
+}

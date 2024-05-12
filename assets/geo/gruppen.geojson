@@ -399,7 +399,7 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": null,
+            "imageWappen": "hag-rheintoechter.gif",
             "name": "Hag Rheintöchter",
             "website": "https://bonner-pfadfinder.de"
           },
@@ -545,9 +545,9 @@
       },
       "properties": {
         "address": {
-          "locality": "Gelsenkirchen",
-          "postalCode": null,
-          "streetAddress": null
+          "locality": "Gelsenkirchen-Buer",
+          "postalCode": 45892,
+          "streetAddress": "Ressestraße 55a"
         },
         "groups": [
           {
@@ -699,14 +699,14 @@
     },
     {
       "geometry": {
-        "coordinates": [7.1368071, 51.5942009],
+        "coordinates": [7.1400734, 51.5818754],
         "type": "Point"
       },
       "properties": {
         "address": {
           "locality": "Herten",
-          "postalCode": null,
-          "streetAddress": null
+          "postalCode": 45699,
+          "streetAddress": "In der Feige 192"
         },
         "globalWappen": "ring-goldener-loewe.png",
         "groups": [
@@ -856,8 +856,8 @@
       "properties": {
         "address": {
           "locality": "Köln-Dellbrück",
-          "postalCode": null,
-          "streetAddress": null
+          "postalCode": 51069,
+          "streetAddress": "Penningsfelder Weg 2"
         },
         "globalWappen": "gau-wolkenburg.jpg",
         "groups": [
@@ -874,7 +874,7 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": null,
+            "imageWappen": "ms-schwarzer-adler.png",
             "name": "Mädelschaft Schwarzer Adler",
             "parent": ["Gau Wolkenburg"],
             "website": "https://schwarzer-adler.org"
@@ -883,7 +883,7 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": null,
+            "imageWappen": "js-schwarzer-adler.png",
             "name": "Jungenschaft Schwarzer Adler",
             "parent": ["Gau Wolkenburg"],
             "website": "https://schwarzer-adler.org"
@@ -1155,14 +1155,14 @@
     },
     {
       "geometry": {
-        "coordinates": [7.1978546, 51.6143815],
+        "coordinates": [7.262434, 51.601627],
         "type": "Point"
       },
       "properties": {
         "address": {
           "locality": "Recklinghausen",
-          "postalCode": null,
-          "streetAddress": null
+          "postalCode": 45665,
+          "streetAddress": "Henrichenburger Str. 66"
         },
         "globalWappen": "ring-goldener-loewe.png",
         "groups": [
@@ -1173,15 +1173,6 @@
             "imageWappen": "ring-goldener-loewe.png",
             "name": "Ring Goldener Löwe",
             "website": "https://pfadfinder-herten.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Mädelschaft Zugvögel",
-            "parent": ["Ring Goldener Löwe"],
-            "website": null
           },
           {
             "contact": null,
