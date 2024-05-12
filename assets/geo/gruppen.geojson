@@ -1024,8 +1024,8 @@
       "properties": {
         "address": {
           "locality": "Monheim am Rhein",
-          "postalCode": null,
-          "streetAddress": null
+          "postalCode": 40789,
+          "streetAddress": "Lottenstraße 4"
         },
         "groups": [
           {
