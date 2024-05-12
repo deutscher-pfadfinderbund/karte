@@ -621,7 +621,7 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": null,
+            "imageWappen": "gau-franken-stamm-wodan.svg",
             "name": "Stamm Wodan",
             "parent": ["Jungenschaft Ritter von Schleiffras", "Gau Franken"],
             "website": "https://pfadfinder-steinheim.de/"
@@ -644,7 +644,7 @@
         "groups": [
           {
             "contact": "Björn Trebels",
-            "description": "Der Stamm Hademare ist eine eigenständige Jungengruppe innerhalb des Deutschen Pfadfinderbundes und in Hemer (NRW) beheimatet. Der Name Hademare bedeutet wörtlich übersetzt „Wo das Wasser fließt“. Hademare ist die alte Bezeichnung für Hemer. Erstmals wurde der Name Hademare im Jahr 1072 erwähnt, als der Erzbischof Anno II. von Köln dem neu gegründeten Kloster Grafschaft beträchtliche Liegenschaften übertrug. Zu dieser Zeit bestand Hemer aus zwei Höfen und einer Kirche, der Vitus-Kirche. Wir haben unser Domizil im Park der Sinne des Sauerlandparks in Hemer.",
+            "description": "Der Stamm Hademare ist eine eigenständige Jungengruppe innerhalb des Deutschen Pfadfinderbundes und in Hemer (NRW) beheimatet. Wir haben unser Domizil im Park der Sinne des Sauerlandparks in Hemer. Übrigens: Hademare ist die alte Bezeichnung für Hemer",
             "email": "info@stamm-hademare.de",
             "imageWappen": "stamm-hademare.svg",
             "name": "Stamm Hademare",
