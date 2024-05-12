@@ -231,7 +231,14 @@ const wanderwege = L.tileLayer("https://tile.waymarkedtrails.org/hiking/{z}/{x}/
     maxZoom: 19,
     attribution: '&copy; <a href="https://hiking.waymarkedtrails.org/">Waymarked Trails</a>',
 });
+const currYear = new Date().getFullYear();
+const topplus_open = L.tileLayer("https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web/default/WEBMERCATOR/{z}/{y}/{x}.png", {
+    attribution: 'Kartendarstellung und Präsentationsgraphiken: &copy;  Bundesamt für Kartographie und Geodäsie (' + currYear + '), <a href="https://sgx.geodatenzentrum.de/web_public/gdz/datenquellen/Datenquellen_TopPlusOpen.html">Datenquellen</a>',
+});
 
+
+    
+    
 
 
 // Karte initialisieren
@@ -244,6 +251,7 @@ const map = L.map("map", {
     zoom: initialZoom,
     layers: [open_street_map],
 });
+
 
 // Datenlayer definieren
 const markerLayers = L.markerClusterGroup.layerSupport({
@@ -265,19 +273,24 @@ const markerLayers = L.markerClusterGroup.layerSupport({
 });
 
 map.addLayer(markerLayers);
+
+const baseMaps = {
+    "OpenStreetMap": open_street_map,
+    "TopPlusOpen": topplus_open
+    };
+const overlayMaps = {
+    "Wanderwege": wanderwege
+    };
 const layers = ['gruppen', 'heime'];
 
-//  Steuerelemente definieren
-var control = L.control.layers(
-    { OpenStreetMap: open_street_map },
-    { Wanderwege: wanderwege },
-    {
-        hideSingleBase: true,
-        sortLayers: true,
-        collapsed: true,
-        position: "topright"
-    }
-).addTo(map);
+
+var control = L.control.layers(baseMaps,overlayMaps, {
+    hideSingleBase: true,
+    sortLayers: true,
+    collapsed: true,
+    position: "topright"
+}).addTo(map);
+
 
 map.zoomControl.setPosition('topleft');
 
