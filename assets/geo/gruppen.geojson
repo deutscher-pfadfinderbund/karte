@@ -632,19 +632,19 @@
     },
     {
       "geometry": {
-        "coordinates": [7.78338, 51.38207],
+        "coordinates": [7.766143083572389, 51.3853610519201],
         "type": "Point"
       },
       "properties": {
         "address": {
           "locality": "Hemer",
           "postalCode": 58675,
-          "streetAddress": "Deilinghofer Str."
+          "streetAddress": null
         },
         "groups": [
           {
             "contact": "Björn Trebels",
-            "description": "Der Stamm Hademare ist eine eigenständige Jungengruppe innerhalb des Deutschen Pfadfinderbundes und in Hemer (NRW) beheimatet. Wir haben unser Domizil im Park der Sinne des Sauerlandparks in Hemer. Übrigens: Hademare ist die alte Bezeichnung für Hemer",
+            "description": "Der Stamm Hademare ist eine eigenständige Jungengruppe innerhalb des Deutschen Pfadfinderbundes aus Hemer (NRW). Übrigens: Hademare ist die alte Bezeichnung für Hemer.",
             "email": "info@stamm-hademare.de",
             "imageWappen": "stamm-hademare.svg",
             "name": "Stamm Hademare",
