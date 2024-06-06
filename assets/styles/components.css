@@ -75,3 +75,18 @@
     width: auto !important;
     height: auto !important;
 }
+
+.icon-button {
+    --_icon-size: 24px;
+    --_click-target-size: 48px;
+    --_padding: calc((var(--_click-target-size) - var(--_icon-size)) / 2);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--_click-target-size);
+    height: var(--_click-target-size);
+    padding: var(--_padding);
+}
