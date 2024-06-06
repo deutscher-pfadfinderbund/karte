@@ -8,6 +8,17 @@
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
     /* fix for Chrome */
+--sidebar-animation-duration: 0.25s;
+
+    --padding-normal: 8px;
+
+    --motion-easing-standard: cubic-bezier(0.2, 0.0, 0, 1.0);
+}
+
+@media (prefers-reduced-motion) {
+    :root {
+        --sidebar-animation-duration: 0s;
+    }
 }
 
 @supports (font-variation-settings: normal) {
@@ -27,17 +38,35 @@ address {
 body {
     height: 100dvh; /* 100% der (dynamischen) Viewport Höhe */
     display: grid;
+    overflow-x: hidden;
 
     /* 
      zwei Zeilen.
      Zeile 1: auto -> Der Inhalt entscheidet die Höhe.
      Zeile 2: 1fr  -> 1 Anteil (FRaction) des restlichen Platzes. */
-    grid-template-rows: auto 1fr; 
+    grid-template:
+            "header header" auto
+            /* auto -> Der Inhalt entscheidet die Höhe. */
+            "map    detail-pane" 1fr
+            /* 1fr  -> 1 Anteil (FRaction) des restlichen Platzes. */
+            / 1fr 0px;
+    
+        transition:
+            grid-template-columns var(--sidebar-animation-duration) var(--motion-easing-standard);
+    }
+    
+    body:has(.offcanvas.show) {
+        grid-template-columns: 1fr min(100%, 400px);
 }
 
 #map {
-    height: 100%; /* Fülle deinen Container */
-    transition: 0.1s;
+    grid-area: map;
+    }
+    
+    #detailPane {
+        position: relative;
+        /* Erstellung eines neuen Positionierungskontextes, damit die Positionierung der Kinder relativ zum DetailPane ist*/
+        grid-area: detail-pane;
 }
 
 .hyphens {
@@ -54,29 +83,26 @@ body {
     text-decoration: none;
 }
 
-.offcanvas-show {
-    visibility: visible !important;
-    height:100%;
-    overflow: auto;
-}
-
 .offcanvas {
+    /* visibility is für accessibility */
     visibility: hidden;
-    position: fixed;
     z-index: 9999;
-    top: 0;
-    right: 0;
+    width: 400px;
     background-color: #fefefe;
     overflow-x: hidden;
     overflow-y: auto;
     transition: 0.1s;
 }
 
+.offcanvas.show {
+    visibility: visible;
+}
 .offcanvas-header img {
     max-height: 1.2em;
 }
 
 .navbar {
+    grid-area: header;
     display: flex;
     min-height: 80px;
     padding: 8px;
@@ -112,83 +138,29 @@ body {
 
 .map-offcanvas {
     overflow: hidden;
-
 }
 
 
-@media (max-width: 767.98px) {
-
-    .offcanvas {
-        width: 100vw;
-        height: 100vh;
-
-    }
-
-    .map-offcanvas {
-        height: 0vh !important;
-
-    }
-
+@media (width < 600px) {
     .navbar {
-        justify-content:center;
-    }
-
-    .navbar ul {
-        margin-bottom: 0.5em;
+        justify-content: center;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1199.98px) {
-    .offcanvas {
-        width: 50vw;
-        height: 100vh;
-
-    }
-
-    .map-offcanvas {
-        width: 50vw !important;
-        margin-right: 50vw !important;
-    }
-
-       .navbar {
-        justify-content: start;
-        }
-
-
-}
-
-@media (min-width: 1200px) {
+@media (600px < width) {
     .navbar {
         justify-content: start;
-        }
-    .offcanvas {
-        width: 25vw;
-        height: 100vh;
-
-    }
-
-    .map-offcanvas {
-        width: 75vw !important;
-        margin-right: 25vw !important;
     }
 }
 
-.offcanvas .closebtn:hover {
+.closebtn:hover {
     color: #666;
 }
 
-.offcanvas .closebtn {
-    font-size: 2em;
-    font-weight: 600;
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
+.closebtn {
     position: absolute;
-    top: 0;
-    right: 0;
-    padding: 15px;
-    text-align: right;
+    color: #fff;
+    transition: 0.3s;
 }
 
 .offcanvas-title h2 {
@@ -212,28 +184,20 @@ body {
 }
 
 .offcanvas-body {
-    padding: 15px;
+    --_spacing: 8px;
+    
+        display: flex;
+        flex-direction: column;
+    
+        padding: var(--_spacing);
+        gap: var(--_spacing);
 }
 
 .offcanvas-title {
-    padding: 15px;
+    min-height: 48px;
+        padding: var(--padding-normal);
     background-color: var(--dark);
     color: var(--on-dark);
-}
-
-
-.offcanvas-header {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    background-color: var(--primary);
-    padding: 15px;
-    color: var(--on-primary);
-}
-
-.offcanvas-header img {
-    filter: invert(100);
-    margin: 15px;
 }
 
 .offcanvas-body .heimlogo {
@@ -250,16 +214,10 @@ body {
     align-items: center;
 }
 
-
-
-.offcanvas-body > div  {
-    margin-bottom: 1em;
-}
-
 .group {
-    margin-bottom: 2em;
     border: solid 1px var(--secondary);
- 
+    border-radius: 12px;
+        overflow: hidden;
 }
 
 .group-header {

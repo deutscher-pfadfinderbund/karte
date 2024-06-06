@@ -87,9 +87,6 @@ function formatWebsite(website) {
 function createDetailsGruppen(layer) {
     var item = layer.feature.properties;
     var details = (`
-        <div class="offcanvas-header">
-            <img src="./assets/img/fa-users-solid.svg" class="fs-1_2" aria-title="Gruppe">
-        </div>
         <div class="offcanvas-title">
             <h2>
                 ${item.address["streetAddress"] ? `${item.address["streetAddress"]}<br>` : ""}
@@ -127,9 +124,6 @@ function createDetailsGruppen(layer) {
 function createDetailsHeime(layer) {
     var item = layer.feature.properties;
     var details = (`
-        <div class="offcanvas-header">
-            <img src="./assets/img/fa-house-solid.svg" class="fs-1_2" aria-title="Gruppe">
-        </div>
         <div class="offcanvas-title">
             <h2 class="heime">${item["name"] ?? ""}</h2>
             <h3 class="text-centered">${item["addressLocality"] ?? ""}</h3>
@@ -325,9 +319,7 @@ search.on('search:locationfound', function(e) {
 
     if (e.layer instanceof L.Marker) {
         var canvasElement = document.getElementById("detailPane");
-        var mapElement = document.getElementById("map");
-        canvasElement.classList.add("offcanvas-show");
-        mapElement.classList.add("map-offcanvas");
+        canvasElement.classList.add("show");
         var canvasBodyElement = document.getElementById("detailPaneBody");
         //var latlang = e.layer.feature.geometry.coordinates;
         //map.setView([latlang[1], latlang[0]], 17);
@@ -411,9 +403,7 @@ function createDataLayer(value, index, array) {
             dataLayer.on("click", function (e) {
                 if (e.layer instanceof L.Marker) {
                     var canvasElement = document.getElementById("detailPane");
-                    var mapElement = document.getElementById("map");
-                    canvasElement.classList.add("offcanvas-show");
-                    mapElement.classList.add("map-offcanvas");
+                    canvasElement.classList.add("show");
                     var canvasBodyElement = document.getElementById("detailPaneBody");
                     //var latlang = e.layer.feature.geometry.coordinates;
                     //map.setView([latlang[1], latlang[0]], 17);
@@ -429,21 +419,8 @@ function createDataLayer(value, index, array) {
 }
 
 function closeOffcanvas() {
-    var canvasElement = document.getElementById("detailPane");
-    var mapElement = document.getElementById("map");
-    var canvasBodyElement = document.getElementById("detailPaneBody");
-    canvasElement.classList.remove("offcanvas-show");
-    mapElement.classList.remove("map-offcanvas");
-    canvasBodyElement.innerHTML = "";
+    document.getElementById("detailPane").classList.remove("show");
 };
-
-
-const detailPaneClose = document.getElementById("detailPaneClose");
-
-detailPaneClose.addEventListener("click", function (event) {
-    event.preventDefault();
-    closeOffcanvas();
-});
 
 map.on("click", function (event) {
     closeOffcanvas();
