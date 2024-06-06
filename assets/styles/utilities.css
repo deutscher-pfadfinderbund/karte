@@ -24,8 +24,19 @@ address {
     line-height: inherit;
 }
 
+body {
+    height: 100dvh; /* 100% der (dynamischen) Viewport Höhe */
+    display: grid;
+
+    /* 
+     zwei Zeilen.
+     Zeile 1: auto -> Der Inhalt entscheidet die Höhe.
+     Zeile 2: 1fr  -> 1 Anteil (FRaction) des restlichen Platzes. */
+    grid-template-rows: auto 1fr; 
+}
+
 #map {
-    height: calc(100vh - var(--nav-height));
+    height: 100%; /* Fülle deinen Container */
     transition: 0.1s;
 }
 
@@ -233,13 +244,10 @@ address {
 
 
 #branding {
-    height: 100%;
     display: flex;
     gap: 2rem;
     width: auto;
     align-items: center;
-
-
 }
 
 

@@ -37,7 +37,7 @@
 </head>
 
 <body>
-    <nav id="mainnav" class="navbar">
+    <nav class="navbar">
         <img style="color-scheme: dark;" src="./assets/img/Bundeslilie_dynamic.svg">
         <h1 id="branding">
             Karte des DPBs
@@ -61,26 +61,6 @@
     <script src="https://unpkg.com/leaflet.markercluster.layersupport@2/dist/leaflet.markercluster.layersupport.js" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet-search@4/dist/leaflet-search.min.js" crossorigin=""></script>
     <script src="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.js"></script>
-    
-    <script>
-
-        document.addEventListener("DOMContentLoaded", function() {
-            setnavheight();
-        });
-
-        window.addEventListener("resize", function() {
-            setnavheight();
-        });
-
-
-        function setnavheight() {
-            const navbar = document.getElementById("mainnav");
-            var r = document.querySelector(':root');
-            r.style.setProperty('--nav-height', navbar.offsetHeight + 'px');
-        }
-       
-    </script>
-
 
     <script src="assets/js/map.js" type="module" ></script>
    
