@@ -1206,7 +1206,7 @@
             "email": null,
             "imageWappen": "ring-namata.svg",
             "name": "Ring Namata",
-            "website": "https://namata.deutscher-pfadfinderbund.de/"
+            "website": "https://dpb-remscheid.de/"
           },
           {
             "contact": null,
@@ -1214,7 +1214,7 @@
             "email": null,
             "imageWappen": "ring-namata-js-hohenstaufen-remscheid.gif",
             "name": "Jungenschaft Hohenstaufen (Remscheid)",
-            "website": "https://namata.deutscher-pfadfinderbund.de/",
+            "website": "https://dpb-remscheid.de/",
             "parent": ["Ring Namata"]
           },
           {
@@ -1223,7 +1223,7 @@
             "email": null,
             "imageWappen": "ring-namata-ms-sturmvoegel.gif",
             "name": "Mädelschaft Sturmvögel",
-            "website": "https://namata.deutscher-pfadfinderbund.de/",
+            "website": "https://dpb-remscheid.de/",
             "parent": ["Ring Namata"]
           }
         ]
