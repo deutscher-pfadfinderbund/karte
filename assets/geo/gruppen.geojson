@@ -252,7 +252,7 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": "",
+            "imageWappen": null,
             "name": "Jungenschaft Artus",
             "parent": ["Gau Wartburg"],
             "website": "http://gau-wartburg.de"
@@ -261,7 +261,7 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": "",
+            "imageWappen": null,
             "name": "Mädelschaft Terre de la Joie",
             "parent": ["Ring Belakane", "Gau Wartburg"],
             "website": "http://gau-wartburg.de"
@@ -270,7 +270,7 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": "",
+            "imageWappen": null,
             "name": "Jungenschaft Parzival",
             "parent": ["Gau Wartburg"],
             "website": "http://gau-wartburg.de"
@@ -917,7 +917,7 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": "",
+            "imageWappen": null,
             "name": "Stamm Heinrich der Löwe",
             "parent": "Jungenschaft Hohenstaufen (Altenburg)",
             "website": [
