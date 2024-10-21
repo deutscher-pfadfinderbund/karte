@@ -954,28 +954,10 @@
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": "stamm-arimathia.png",
-            "name": "Stamm Arimathia",
-            "parent": "Gau Franken",
-            "website": ["https://www.pfadfinder-meitingen.de"]
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
             "imageWappen": "gau-sueben.jpg",
             "name": "Gau Sueben",
             "parent": null,
             "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-sueben-hag-andarta.jpg",
-            "name": "Hag Andarta",
-            "parent": "Gau Sueben",
-            "website": "https://www.pfadfinder-meitingen.de"
           }
         ]
       },
