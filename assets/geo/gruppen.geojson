@@ -1,1481 +1,1300 @@
 {
-  "features": [
-    {
-      "geometry": {
-        "coordinates": [12.4340988, 50.9852411],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Altenburg (Thüringen)",
-          "postalCode": null,
-          "streetAddress": null
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    12.4340988,
+                    50.9852411
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Altenburg (Thüringen)",
+                },
+                "globalWappen": "js_ms-hohenstaufen-altenburg.gif",
+                "groups": [
+                    {
+                        "imageWappen": "js_ms-hohenstaufen-altenburg.gif",
+                        "name": "Jungenschaft Hohenstaufen (Altenburg)",
+                        "website": "https://www.pfadfinder-altenburg.de"
+                    },
+                    {
+                        "imageWappen": "js_ms-hohenstaufen-altenburg.gif",
+                        "name": "Hag Hohenstaufen (Altenburg)",
+                        "website": "https://www.pfadfinder-altenburg.de"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "js_ms-hohenstaufen-altenburg.gif",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js_ms-hohenstaufen-altenburg.gif",
-            "name": "Jungenschaft Hohenstaufen (Altenburg)",
-            "parent": null,
-            "website": "https://www.pfadfinder-altenburg.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js_ms-hohenstaufen-altenburg.gif",
-            "name": "Hag Hohenstaufen (Altenburg)",
-            "parent": null,
-            "website": "https://www.pfadfinder-altenburg.de"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.973811861, 51.89577195],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Bad Meinberg",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    8.973811861,
+                    51.89577195
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Bad Meinberg",
+                },
+                "groups": [
+                    {
+                        "imageWappen": "js-theotmalli.gif",
+                        "name": "Jungenschaft Theotmalli",
+                        "website": "https://www.jungenschaft-theotmalli.de"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js-theotmalli.gif",
-            "name": "Jungenschaft Theotmalli",
-            "parent": null,
-            "website": "https://www.jungenschaft-theotmalli.de"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [6.87508348, 51.1634816],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Düsseldorf-Benrath",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    6.87508348,
+                    51.1634816
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Düsseldorf-Benrath",
+                },
+                "groups": [
+                    {
+                        "imageWappen": "gau-rheinland.png",
+                        "name": "Gau Rheinland",
+                    },
+                    {
+                        "email": "info@rheinritter-dpb.de",
+                        "imageWappen": "gau-rheinland-stamm-rheinritter.jpg",
+                        "name": "Stamm Rheinritter",
+                        "parent": [
+                            "Gau Rheinland"
+                        ],
+                        "website": "https://rheinritter-dpb.de"
+                    },
+                    {
+                        "email": "ms.volee@gmail.com",
+                        "imageWappen": "ms-volee.png",
+                        "name": "Mädelschaft Volée",
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-rheinland.png",
-            "name": "Gau Rheinland",
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": "info@rheinritter-dpb.de",
-            "imageWappen": "gau-rheinland-stamm-rheinritter.jpg",
-            "name": "Stamm Rheinritter",
-            "parent": ["Gau Rheinland"],
-            "website": "https://rheinritter-dpb.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": "ms.volee@gmail.com",
-            "imageWappen": "ms-volee.png",
-            "name": "Mädelschaft Volée",
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [6.6407656, 50.9540994],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Bergheim",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    6.6407656,
+                    50.9540994
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Bergheim",
+                },
+                "groups": [
+                    {
+                        "imageWappen": "gau-rheinland.png",
+                        "name": "Gau Rheinland",
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-rheinland.png",
-            "name": "Gau Rheinland",
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [6.7451978, 50.9638661],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Bergheim-Glessen",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    6.7451978,
+                    50.9638661
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Bergheim-Glessen",
+                },
+                "groups": [
+                    {
+                        "imageWappen": "js-volundr.png",
+                        "name": "Jungenschaft Volundr",
+                        "website": "https://www.dpb-bonn.de/volundr/"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js-volundr.png",
-            "name": "Jungenschaft Volundr",
-            "website": "https://www.dpb-bonn.de/volundr/"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [13.28881, 52.64205],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Berlin-Frohnau",
-          "postalCode": "13465",
-          "streetAddress": "Schönfließer Str. 11b"
+        {
+            "geometry": {
+                "coordinates": [
+                    13.28881,
+                    52.64205
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Berlin-Frohnau",
+                    "postalCode": "13465",
+                    "streetAddress": "Schönfließer Str. 11b"
+                },
+                "groups": [
+                    {
+                        "imageWappen": "js-gawan.svg",
+                        "name": "Jungenschaft Gawan",
+                        "website": "https://www.pfadfinder-frohnau.de/gawan.html"
+                    },
+                    {
+                        "name": "Mädelschaft Ginover",
+                        "imageWappen": "ms-ginover.png",
+                        "website": "https://www.pfadfinder-frohnau.de/ginover.html"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js-gawan.svg",
-            "name": "Jungenschaft Gawan",
-            "website": "https://www.pfadfinder-frohnau.de/gawan.html"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "name": "Mädelschaft Ginover",
-            "imageWappen": "ms-ginover.png",
-            "website": "https://www.pfadfinder-frohnau.de/ginover.html"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [13.39226385, 52.37810486],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Berlin-Lichtenrade",
-          "postalCode": "12307",
-          "streetAddress": "Löwenbrucher Weg 49"
+        {
+            "geometry": {
+                "coordinates": [
+                    13.39226385,
+                    52.37810486
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Berlin-Lichtenrade",
+                    "postalCode": "12307",
+                    "streetAddress": "Löwenbrucher Weg 49"
+                },
+                "globalWappen": "gau-wartburg.png",
+                "groups": [
+                    {
+                        "imageWappen": "gau-wartburg.png",
+                        "name": "Gau Wartburg",
+                        "website": "http://gau-wartburg.de"
+                    },
+                    {
+                        "name": "Jungenschaft Artus",
+                        "parent": [
+                            "Gau Wartburg"
+                        ],
+                        "website": "http://gau-wartburg.de"
+                    },
+                    {
+                        "imageWappen": "gau-wartburg-hag-kondwiramur.png",
+                        "name": "Hag Kondwiramur",
+                        "parent": [
+                            "Ring Belakane",
+                            "Gau Wartburg"
+                        ],
+                        "website": [
+                            "https://www.hag-kondwiramur-berlin.de",
+                            "http://gau-wartburg.de"
+                        ]
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-wartburg.png",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-wartburg.png",
-            "name": "Gau Wartburg",
-            "website": "http://gau-wartburg.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Jungenschaft Artus",
-            "parent": ["Gau Wartburg"],
-            "website": "http://gau-wartburg.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-wartburg-hag-kondwiramur.png",
-            "name": "Hag Kondwiramur",
-            "parent": ["Ring Belakane", "Gau Wartburg"],
-            "website": [
-              "https://www.hag-kondwiramur-berlin.de",
-              "http://gau-wartburg.de"
-            ]
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [13.29133273, 52.59533183],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Berlin-Tegel (Reinickendorf)",
-          "postalCode": "13509",
-          "streetAddress": "Ziekowstraße 163"
+        {
+            "geometry": {
+                "coordinates": [
+                    13.29133273,
+                    52.59533183
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Berlin-Tegel (Reinickendorf)",
+                    "postalCode": "13509",
+                    "streetAddress": "Ziekowstraße 163"
+                },
+                "globalWappen": "gau-wartburg.png",
+                "groups": [
+                    {
+                        "imageWappen": "gau-wartburg.png",
+                        "name": "Gau Wartburg",
+                        "website": "http://gau-wartburg.de"
+                    },
+                    {
+                        "name": "Jungenschaft Artus",
+                        "parent": [
+                            "Gau Wartburg"
+                        ],
+                        "website": "http://gau-wartburg.de"
+                    },
+                    {
+                        "name": "Mädelschaft Terre de la Joie",
+                        "parent": [
+                            "Ring Belakane",
+                            "Gau Wartburg"
+                        ],
+                        "website": "http://gau-wartburg.de"
+                    },
+                    {
+                        "name": "Jungenschaft Parzival",
+                        "parent": [
+                            "Gau Wartburg"
+                        ],
+                        "website": "http://gau-wartburg.de"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-wartburg.png",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-wartburg.png",
-            "name": "Gau Wartburg",
-            "website": "http://gau-wartburg.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Jungenschaft Artus",
-            "parent": ["Gau Wartburg"],
-            "website": "http://gau-wartburg.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Mädelschaft Terre de la Joie",
-            "parent": ["Ring Belakane", "Gau Wartburg"],
-            "website": "http://gau-wartburg.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Jungenschaft Parzival",
-            "parent": ["Gau Wartburg"],
-            "website": "http://gau-wartburg.de"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [13.347142, 52.45874643],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Berlin-Steglitz",
-          "postalCode": "12169",
-          "streetAddress": "Bergstraße 51"
+        {
+            "geometry": {
+                "coordinates": [
+                    13.347142,
+                    52.45874643
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Berlin-Steglitz",
+                    "postalCode": "12169",
+                    "streetAddress": "Bergstraße 51"
+                },
+                "globalWappen": "gau-wartburg.png",
+                "groups": [
+                    {
+                        "imageWappen": "gau-wartburg.png",
+                        "name": "Gau Wartburg",
+                        "website": "http://gau-wartburg.de"
+                    },
+                    {
+                        "imageWappen": "gau-wartburg-hag-kondwiramur.png",
+                        "name": "Hag Kondwiramur",
+                        "parent": [
+                            "Ring Belakane",
+                            "Gau Wartburg"
+                        ],
+                        "website": [
+                            "https://www.hag-kondwiramur-berlin.de",
+                            "http://gau-wartburg.de"
+                        ]
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-wartburg.png",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-wartburg.png",
-            "name": "Gau Wartburg",
-            "website": "http://gau-wartburg.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-wartburg-hag-kondwiramur.png",
-            "name": "Hag Kondwiramur",
-            "parent": ["Ring Belakane", "Gau Wartburg"],
-            "website": [
-              "https://www.hag-kondwiramur-berlin.de",
-              "http://gau-wartburg.de"
-            ]
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [13.3904793, 52.463072],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Berlin-Tempelhof",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    13.3904793,
+                    52.463072
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Berlin-Tempelhof",
+                },
+                "groups": [
+                    {
+                        "imageWappen": "ms-jeanne-d-arc.png",
+                        "name": "Mädelschaft Jeanne d'Arc",
+                        "website": "http://pfadfinder-tempelhof.de"
+                    },
+                    {
+                        "imageWappen": "js-jonathan.png",
+                        "name": "Jungenschaft Jonathan",
+                        "website": "http://pfadfinder-tempelhof.de"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ms-jeanne-d-arc.png",
-            "name": "Mädelschaft Jeanne d'Arc",
-            "website": "http://pfadfinder-tempelhof.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js-jonathan.png",
-            "name": "Jungenschaft Jonathan",
-            "website": "http://pfadfinder-tempelhof.de"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [7.10066, 50.735851],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Bonn",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    7.10066,
+                    50.735851
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Bonn",
+                },
+                "globalWappen": "gau-wolkenburg.jpg",
+                "groups": [
+                    {
+                        "imageWappen": "gau-wolkenburg.jpg",
+                        "name": "Gau Wolkenburg",
+                    },
+                    {
+                        "name": "Mädelschaft Ubier",
+                        "parent": [
+                            "Gau Wolkenburg"
+                        ],
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-wolkenburg.jpg",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-wolkenburg.jpg",
-            "name": "Gau Wolkenburg",
-            "parent": null,
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Mädelschaft Ubier",
-            "parent": ["Gau Wolkenburg"],
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [7.08138, 50.756225],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Bonn-Auerberg",
-          "postalCode": "53117",
-          "streetAddress": "An der Rheindorfer Burg 9"
+        {
+            "geometry": {
+                "coordinates": [
+                    7.08138,
+                    50.756225
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Bonn-Auerberg",
+                    "postalCode": "53117",
+                    "streetAddress": "An der Rheindorfer Burg 9"
+                },
+                "groups": [
+                    {
+                        "imageWappen": "hag-rheintoechter.gif",
+                        "name": "Hag Rheintöchter",
+                        "website": "https://bonner-pfadfinder.de"
+                    },
+                    {
+                        "imageWappen": "js-volundr.png",
+                        "name": "Jungenschaft Volundr",
+                        "website": "https://www.dpb-bonn.de/volundr/"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "hag-rheintoechter.gif",
-            "name": "Hag Rheintöchter",
-            "website": "https://bonner-pfadfinder.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js-volundr.png",
-            "name": "Jungenschaft Volundr",
-            "website": "https://www.dpb-bonn.de/volundr/"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [6.9052004, 51.4367253],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Bonn-Altstadt",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    6.9052004,
+                    51.4367253
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Bonn-Altstadt",
+                },
+                "groups": [
+                    {
+                        "imageWappen": "js-volundr.png",
+                        "name": "Jungenschaft Volundr",
+                        "website": "https://www.dpb-bonn.de/volundr/"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js-volundr.png",
-            "name": "Jungenschaft Volundr",
-            "website": "https://www.dpb-bonn.de/volundr/"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [6.92510009, 51.52332025],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Bottrop-Kirchhellen",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    6.92510009,
+                    51.52332025
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Bottrop-Kirchhellen",
+                },
+                "globalWappen": "gau-wolkenburg.jpg",
+                "groups": [
+                    {
+                        "imageWappen": "gau-wolkenburg.jpg",
+                        "name": "Gau Wolkenburg",
+                    },
+                    {
+                        "imageWappen": "ms-midgard.jpg",
+                        "name": "Mädelschaft Midgard",
+                        "parent": [
+                            "Gau Wolkenburg"
+                        ],
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-wolkenburg.jpg",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-wolkenburg.jpg",
-            "name": "Gau Wolkenburg",
-            "parent": null,
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ms-midgard.jpg",
-            "name": "Mädelschaft Midgard",
-            "parent": ["Gau Wolkenburg"],
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.879152, 51.936284],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Detmold",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    8.879152,
+                    51.936284
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Detmold",
+                },
+                "groups": [
+                    {
+                        "imageWappen": "ms-weisse-taube.gif",
+                        "name": "Mädelschaft Weiße Taube",
+                        "website": "https://www.jungenschaft-theotmalli.de"
+                    },
+                    {
+                        "imageWappen": "js-theotmalli.gif",
+                        "name": "Jungenschaft Theotmalli",
+                        "website": "https://www.jungenschaft-theotmalli.de"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ms-weisse-taube.gif",
-            "name": "Mädelschaft Weiße Taube",
-            "website": "https://www.jungenschaft-theotmalli.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js-theotmalli.gif",
-            "name": "Jungenschaft Theotmalli",
-            "website": "https://www.jungenschaft-theotmalli.de"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.89024631, 51.88519065],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Detmold-Heiligenkirchen",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    8.89024631,
+                    51.88519065
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Detmold-Heiligenkirchen",
+                },
+                "groups": [
+                    {
+                        "imageWappen": "js-theotmalli.gif",
+                        "name": "Jungenschaft Theotmalli",
+                        "website": "https://www.jungenschaft-theotmalli.de"
+                    },
+                    {
+                        "imageWappen": "ms-weisse-taube.gif",
+                        "name": "Mädelschaft Weiße Taube",
+                        "website": "https://www.jungenschaft-theotmalli.de"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js-theotmalli.gif",
-            "name": "Jungenschaft Theotmalli",
-            "website": "https://www.jungenschaft-theotmalli.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ms-weisse-taube.gif",
-            "name": "Mädelschaft Weiße Taube",
-            "website": "https://www.jungenschaft-theotmalli.de"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [7.08158, 51.58227],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Gelsenkirchen-Buer",
-          "postalCode": 45892,
-          "streetAddress": "Ressestraße 55a"
+        {
+            "geometry": {
+                "coordinates": [
+                    7.08158,
+                    51.58227
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Gelsenkirchen-Buer",
+                    "postalCode": 45892,
+                    "streetAddress": "Ressestraße 55a"
+                },
+                "groups": [
+                    {
+                        "imageWappen": "js-wulfila.png",
+                        "name": "Jungenschaft Wulfila",
+                        "website": "https://pfadfinder-gelsenkirchen.de"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js-wulfila.png",
-            "name": "Jungenschaft Wulfila",
-            "website": "https://pfadfinder-gelsenkirchen.de"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.86874, 50.11829],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Mühlheim am Main",
-          "postalCode": 63165,
-          "streetAddress": "Am Grünen See 19"
+        {
+            "geometry": {
+                "coordinates": [
+                    8.86874,
+                    50.11829
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Mühlheim am Main",
+                    "postalCode": 63165,
+                    "streetAddress": "Am Grünen See 19"
+                },
+                "globalWappen": "gau-franken.png",
+                "groups": [
+                    {
+                        "imageWappen": "gau-franken.png",
+                        "name": "Gau Franken",
+                        "website": [
+                            "http://www.gau-franken.de/"
+                        ]
+                    },
+                    {
+                        "name": "Stamm der Tscherkessen",
+                        "parent": [
+                            "Jungenschaft Ritter von Schleiffras",
+                            "Gau Franken"
+                        ],
+                        "website": "http://www.gau-franken.de/"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-franken.png",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-franken.png",
-            "name": "Gau Franken",
-            "website": ["http://www.gau-franken.de/"]
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Stamm der Tscherkessen",
-            "parent": ["Jungenschaft Ritter von Schleiffras", "Gau Franken"],
-            "website": "http://www.gau-franken.de/"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.90433, 50.109008],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Hanau",
-          "postalCode": 63456,
-          "streetAddress": "Schachenwaldstraße 17"
+        {
+            "geometry": {
+                "coordinates": [
+                    8.90433,
+                    50.109008
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Hanau",
+                    "postalCode": 63456,
+                    "streetAddress": "Schachenwaldstraße 17"
+                },
+                "globalWappen": "gau-franken.png",
+                "groups": [
+                    {
+                        "imageWappen": "gau-franken.png",
+                        "name": "Gau Franken",
+                        "website": [
+                            "http://www.gau-franken.de/"
+                        ]
+                    },
+                    {
+                        "imageWappen": "gau-franken-stamm-wodan.svg",
+                        "name": "Stamm Wodan",
+                        "parent": [
+                            "Jungenschaft Ritter von Schleiffras",
+                            "Gau Franken"
+                        ],
+                        "website": "https://pfadfinder-steinheim.de/"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-franken.png",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-franken.png",
-            "name": "Gau Franken",
-            "website": ["http://www.gau-franken.de/"]
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-franken-stamm-wodan.svg",
-            "name": "Stamm Wodan",
-            "parent": ["Jungenschaft Ritter von Schleiffras", "Gau Franken"],
-            "website": "https://pfadfinder-steinheim.de/"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [7.766143083572389, 51.3853610519201],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Hemer",
-          "postalCode": 58675,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    7.766143083572389,
+                    51.3853610519201
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Hemer",
+                    "postalCode": 58675,
+                },
+                "groups": [
+                    {
+                        "contact": "Björn Trebels",
+                        "email": "info@stamm-hademare.de",
+                        "imageWappen": "stamm-hademare.svg",
+                        "name": "Stamm Hademare",
+                        "website": "https://stamm-hademare.de"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": "Björn Trebels",
-            "description": "Der Stamm Hademare ist eine eigenständige Jungengruppe innerhalb des Deutschen Pfadfinderbundes aus Hemer (NRW). Übrigens: Hademare ist die alte Bezeichnung für Hemer.",
-            "email": "info@stamm-hademare.de",
-            "imageWappen": "stamm-hademare.svg",
-            "name": "Stamm Hademare",
-            "website": "https://stamm-hademare.de"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [7.75845, 51.370508],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Hemer",
-          "postalCode": 58675,
-          "streetAddress": "Rückertstraße"
+        {
+            "geometry": {
+                "coordinates": [
+                    7.75845,
+                    51.370508
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Hemer",
+                    "postalCode": 58675,
+                    "streetAddress": "Rückertstraße"
+                },
+                "globalWappen": "ring-rote-erde.png",
+                "groups": [
+                    {
+                        "email": "info@pfadfinder-hemer.de",
+                        "imageWappen": "ring-rote-erde.png",
+                        "name": "Ring Rote Erde",
+                        "website": "https://www.pfadfinder-hemer.de"
+                    },
+                    {
+                        "parent": "Ring Rote Erde",
+                        "name": "Jungenschaft Cherusker",
+                    },
+                    {
+                        "parent": "Ring Rote Erde",
+                        "name": "Mädelschaft Grieptoo",
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "ring-rote-erde.png",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": "info@pfadfinder-hemer.de",
-            "imageWappen": "ring-rote-erde.png",
-            "name": "Ring Rote Erde",
-            "website": "https://www.pfadfinder-hemer.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "parent": "Ring Rote Erde",
-            "name": "Jungenschaft Cherusker",
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "parent": "Ring Rote Erde",
-            "name": "Mädelschaft Grieptoo",
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [7.1400734, 51.5818754],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Herten",
-          "postalCode": 45699,
-          "streetAddress": "In der Feige 192"
+        {
+            "geometry": {
+                "coordinates": [
+                    7.1400734,
+                    51.5818754
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Herten",
+                    "postalCode": 45699,
+                    "streetAddress": "In der Feige 192"
+                },
+                "globalWappen": "ring-goldener-loewe.png",
+                "groups": [
+                    {
+                        "imageWappen": "ring-goldener-loewe.png",
+                        "name": "Ring Goldener Löwe",
+                        "website": "https://pfadfinder-herten.de"
+                    },
+                    {
+                        "name": "Mädelschaft Zugvögel",
+                        "parent": [
+                            "Ring Goldener Löwe"
+                        ],
+                    },
+                    {
+                        "name": "Jungenschaft Ostgoten",
+                        "parent": [
+                            "Ring Goldener Löwe"
+                        ],
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "ring-goldener-loewe.png",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ring-goldener-loewe.png",
-            "name": "Ring Goldener Löwe",
-            "website": "https://pfadfinder-herten.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Mädelschaft Zugvögel",
-            "parent": ["Ring Goldener Löwe"],
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Jungenschaft Ostgoten",
-            "parent": ["Ring Goldener Löwe"],
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.8432252, 51.9255366],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Hiddesen",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    8.8432252,
+                    51.9255366
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Hiddesen",
+                },
+                "groups": [
+                    {
+                        "name": "Jungenschaft Martin-Luther-King",
+                    },
+                    {
+                        "name": "Hag Weiße Rose",
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Jungenschaft Martin-Luther-King",
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Hag Weiße Rose",
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [6.876568, 50.8807379],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Hürth",
-          "postalCode": null,
-          "streetAddress": null,
-          "globalWappen": "gau-rheinland.png"
+        {
+            "geometry": {
+                "coordinates": [
+                    6.876568,
+                    50.8807379
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Hürth",
+                    "globalWappen": "gau-rheinland.png"
+                },
+                "groups": [
+                    {
+                        "imageWappen": "gau-rheinland.png",
+                        "name": "Gau Rheinland",
+                    },
+                    {
+                        "name": "Stamm Saporoger",
+                        "parent": [
+                            "Gau Rheinland"
+                        ],
+                        "website": "https://saporoger.de"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-            {
-                "contact": null,
-                "description": null,
-                "email": null,
-                "imageWappen": "gau-rheinland.png",
-                "name": "Gau Rheinland",
-                "website": null
-              },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Stamm Saporoger",
-            "parent": ["Gau Rheinland"],
-            "website": "https://saporoger.de"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [7.686342, 51.393663],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Iserlohn",
-          "postalCode": 58638,
-          "streetAddress": "Bremsheide 6"
+        {
+            "geometry": {
+                "coordinates": [
+                    7.686342,
+                    51.393663
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Iserlohn",
+                    "postalCode": 58638,
+                    "streetAddress": "Bremsheide 6"
+                },
+                "groups": [
+                    {
+                        "name": "Ring Florian Geyer",
+                        "website": "https://pfadfinder-iserlohn.de"
+                    },
+                    {
+                        "name": "Jungenschaft Geusen",
+                        "parent": [
+                            "Ring Florian Geyer"
+                        ],
+                    },
+                    {
+                        "name": "Mädelschaft Freya",
+                        "parent": [
+                            "Ring Florian Geyer"
+                        ],
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Ring Florian Geyer",
-            "website": "https://pfadfinder-iserlohn.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Jungenschaft Geusen",
-            "parent": ["Ring Florian Geyer"],
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Mädelschaft Freya",
-            "parent": ["Ring Florian Geyer"],
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [7.09198, 50.96878],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Köln-Dellbrück",
-          "postalCode": 51069,
-          "streetAddress": "Penningsfelder Weg 2"
+        {
+            "geometry": {
+                "coordinates": [
+                    7.09198,
+                    50.96878
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Köln-Dellbrück",
+                    "postalCode": 51069,
+                    "streetAddress": "Penningsfelder Weg 2"
+                },
+                "globalWappen": "gau-wolkenburg.jpg",
+                "groups": [
+                    {
+                        "imageWappen": "gau-wolkenburg.jpg",
+                        "name": "Gau Wolkenburg",
+                    },
+                    {
+                        "imageWappen": "ms-schwarzer-adler.png",
+                        "name": "Mädelschaft Schwarzer Adler",
+                        "parent": [
+                            "Gau Wolkenburg"
+                        ],
+                        "website": "https://schwarzer-adler.org"
+                    },
+                    {
+                        "imageWappen": "js-schwarzer-adler.png",
+                        "name": "Jungenschaft Schwarzer Adler",
+                        "parent": [
+                            "Gau Wolkenburg"
+                        ],
+                        "website": "https://schwarzer-adler.org"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-wolkenburg.jpg",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-wolkenburg.jpg",
-            "name": "Gau Wolkenburg",
-            "parent": null,
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ms-schwarzer-adler.png",
-            "name": "Mädelschaft Schwarzer Adler",
-            "parent": ["Gau Wolkenburg"],
-            "website": "https://schwarzer-adler.org"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js-schwarzer-adler.png",
-            "name": "Jungenschaft Schwarzer Adler",
-            "parent": ["Gau Wolkenburg"],
-            "website": "https://schwarzer-adler.org"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [10.0415839, 53.3953928],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Maschen",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    10.0415839,
+                    53.3953928
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Maschen",
+                },
+                "globalWappen": "js_ms-hohenstaufen-altenburg.gif",
+                "groups": [
+                    {
+                        "imageWappen": "js_ms-hohenstaufen-altenburg.gif",
+                        "name": "Jungenschaft Hohenstaufen (Altenburg)",
+                        "website": [
+                            "https://www.pfadfinder-altenburg.de"
+                        ]
+                    },
+                    {
+                        "name": "Stamm Heinrich der Löwe",
+                        "parent": "Jungenschaft Hohenstaufen (Altenburg)",
+                        "website": [
+                            "https://pfadfinder-maschen.jimdofree.com",
+                            "https://www.pfadfinder-altenburg.de"
+                        ]
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "js_ms-hohenstaufen-altenburg.gif",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js_ms-hohenstaufen-altenburg.gif",
-            "name": "Jungenschaft Hohenstaufen (Altenburg)",
-            "website": ["https://www.pfadfinder-altenburg.de"]
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Stamm Heinrich der Löwe",
-            "parent": "Jungenschaft Hohenstaufen (Altenburg)",
-            "website": [
-              "https://pfadfinder-maschen.jimdofree.com",
-              "https://www.pfadfinder-altenburg.de"
-            ]
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [10.85578, 48.54510],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Meitingen",
-          "postalCode": 86405 ,
-          "streetAddress": "St.-Johannes-Str. 6"
+        {
+            "geometry": {
+                "coordinates": [
+                    10.85578,
+                    48.54510
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Meitingen",
+                    "postalCode": 86405,
+                    "streetAddress": "St.-Johannes-Str. 6"
+                },
+                "groups": [
+                    {
+                        "imageWappen": "gau-franken.png",
+                        "name": "Gau Franken",
+                        "website": [
+                            "http://www.gau-franken.de/"
+                        ]
+                    },
+                    {
+                        "imageWappen": "gau-sueben.jpg",
+                        "name": "Gau Sueben",
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": null,
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-franken.png",
-            "name": "Gau Franken",
-            "website": ["http://www.gau-franken.de/"]
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-sueben.jpg",
-            "name": "Gau Sueben",
-            "parent": null,
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.9168852, 52.2881045],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Minden",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    8.9168852,
+                    52.2881045
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Minden",
+                },
+                "globalWappen": "gau-wolkenburg.jpg",
+                "groups": [
+                    {
+                        "imageWappen": "gau-wolkenburg.jpg",
+                        "name": "Gau Wolkenburg",
+                    },
+                    {
+                        "imageWappen": "ms-midgard.jpg",
+                        "name": "Mädelschaft Midgard",
+                        "parent": [
+                            "Gau Wolkenburg"
+                        ],
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-wolkenburg.jpg",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-wolkenburg.jpg",
-            "name": "Gau Wolkenburg",
-            "parent": null,
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ms-midgard.jpg",
-            "name": "Mädelschaft Midgard",
-            "parent": ["Gau Wolkenburg"],
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [6.8836952, 51.0912162],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Monheim am Rhein",
-          "postalCode": 40789,
-          "streetAddress": "Lottenstraße 4"
+        {
+            "geometry": {
+                "coordinates": [
+                    6.8836952,
+                    51.0912162
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Monheim am Rhein",
+                    "postalCode": 40789,
+                    "streetAddress": "Lottenstraße 4"
+                },
+                "groups": [
+                    {
+                        "imageWappen": "js-gralsritter.jpg",
+                        "name": "Jungenschaft Gralsritter",
+                        "website": "https://gralsritter-monheim.de/"
+                    },
+                    {
+                        "email": "ms.volee@gmail.com",
+                        "imageWappen": "ms-volee.png",
+                        "name": "Mädelschaft Volée",
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "js-gralsritter.jpg",
-            "name": "Jungenschaft Gralsritter",
-            "website": "https://gralsritter-monheim.de/"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": "ms.volee@gmail.com",
-            "imageWappen": "ms-volee.png",
-            "name": "Mädelschaft Volée",
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.847573, 50.1113641],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Mühlheim am Main",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    8.847573,
+                    50.1113641
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Mühlheim am Main",
+                },
+                "globalWappen": "gau-sueben.jpg",
+                "groups": [
+                    {
+                        "imageWappen": "gau-sueben.jpg",
+                        "name": "Gau Sueben",
+                    },
+                    {
+                        "name": "Mädelschaft Rheinmöwen",
+                        "parent": [
+                            "Gau Sueben"
+                        ],
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-sueben.jpg",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-sueben.jpg",
-            "name": "Gau Sueben",
-            "parent": null,
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Mädelschaft Rheinmöwen",
-            "parent": ["Gau Sueben"],
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [7.6133017, 51.9501317],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Münster",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    7.6133017,
+                    51.9501317
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Münster",
+                },
+                "globalWappen": "gau-wolkenburg.jpg",
+                "groups": [
+                    {
+                        "imageWappen": "gau-wolkenburg.jpg",
+                        "name": "Gau Wolkenburg",
+                    },
+                    {
+                        "imageWappen": "ms-midgard.jpg",
+                        "name": "Mädelschaft Midgard",
+                        "parent": [
+                            "Gau Wolkenburg"
+                        ],
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-wolkenburg.jpg",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-wolkenburg.jpg",
-            "name": "Gau Wolkenburg",
-            "parent": null,
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ms-midgard.jpg",
-            "name": "Mädelschaft Midgard",
-            "parent": ["Gau Wolkenburg"],
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [10.0865473, 49.8769993],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Oberpleichfeld",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    10.0865473,
+                    49.8769993
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Oberpleichfeld",
+                },
+                "globalWappen": "gau-sueben.jpg",
+                "groups": [
+                    {
+                        "imageWappen": "gau-sueben.jpg",
+                        "name": "Gau Sueben",
+                    },
+                    {
+                        "name": "Mädelschaft Tilman Riemenschneider",
+                        "parent": "Gau Sueben",
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-sueben.jpg",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-sueben.jpg",
-            "name": "Gau Sueben",
-            "parent": null,
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Mädelschaft Tilman Riemenschneider",
-            "parent": "Gau Sueben",
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [7.262434, 51.601627],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Recklinghausen",
-          "postalCode": 45665,
-          "streetAddress": "Henrichenburger Str. 66"
+        {
+            "geometry": {
+                "coordinates": [
+                    7.262434,
+                    51.601627
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Recklinghausen",
+                    "postalCode": 45665,
+                    "streetAddress": "Henrichenburger Str. 66"
+                },
+                "globalWappen": "ring-goldener-loewe.png",
+                "groups": [
+                    {
+                        "imageWappen": "ring-goldener-loewe.png",
+                        "name": "Ring Goldener Löwe",
+                        "website": "https://pfadfinder-herten.de"
+                    },
+                    {
+                        "name": "Jungenschaft Ostgoten",
+                        "parent": [
+                            "Ring Goldener Löwe"
+                        ],
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "ring-goldener-loewe.png",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ring-goldener-loewe.png",
-            "name": "Ring Goldener Löwe",
-            "website": "https://pfadfinder-herten.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Jungenschaft Ostgoten",
-            "parent": ["Ring Goldener Löwe"],
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [7.1943544, 51.1798706],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Remscheid",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    7.1943544,
+                    51.1798706
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Remscheid",
+                },
+                "globalWappen": "ring-namata.svg",
+                "groups": [
+                    {
+                        "imageWappen": "ring-namata.svg",
+                        "name": "Ring Namata",
+                        "website": "https://dpb-remscheid.de/"
+                    },
+                    {
+                        "imageWappen": "ring-namata-js-hohenstaufen-remscheid.gif",
+                        "name": "Jungenschaft Hohenstaufen (Remscheid)",
+                        "website": "https://dpb-remscheid.de/",
+                        "parent": [
+                            "Ring Namata"
+                        ]
+                    },
+                    {
+                        "imageWappen": "ring-namata-ms-sturmvoegel.gif",
+                        "name": "Mädelschaft Sturmvögel",
+                        "website": "https://dpb-remscheid.de/",
+                        "parent": [
+                            "Ring Namata"
+                        ]
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "ring-namata.svg",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ring-namata.svg",
-            "name": "Ring Namata",
-            "website": "https://dpb-remscheid.de/"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ring-namata-js-hohenstaufen-remscheid.gif",
-            "name": "Jungenschaft Hohenstaufen (Remscheid)",
-            "website": "https://dpb-remscheid.de/",
-            "parent": ["Ring Namata"]
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ring-namata-ms-sturmvoegel.gif",
-            "name": "Mädelschaft Sturmvögel",
-            "website": "https://dpb-remscheid.de/",
-            "parent": ["Ring Namata"]
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.904681, 50.112778],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Hanau-Steinheim",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    8.904681,
+                    50.112778
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Hanau-Steinheim",
+                },
+                "globalWappen": "gau-sueben.jpg",
+                "groups": [
+                    {
+                        "imageWappen": "gau-sueben.jpg",
+                        "name": "Gau Sueben",
+                    },
+                    {
+                        "name": "Mädelschaft Rheinmöwen",
+                        "parent": [
+                            "Gau Sueben"
+                        ],
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "gau-sueben.jpg",
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-sueben.jpg",
-            "name": "Gau Sueben",
-            "parent": null,
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Mädelschaft Rheinmöwen",
-            "parent": ["Gau Sueben"],
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [10.9108852, 48.5632563],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Thierhaupten",
-          "postalCode": 86672,
-          "streetAddress": "Klosterberg 1"
+        {
+            "geometry": {
+                "coordinates": [
+                    10.9108852,
+                    48.5632563
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Thierhaupten",
+                    "postalCode": 86672,
+                    "streetAddress": "Klosterberg 1"
+                },
+                "groups": [
+                    {
+                        "imageWappen": "trupp-jakob-fugger.png",
+                        "name": "Trupp Jakob Fugger",
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": null,
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "trupp-jakob-fugger.png",
-            "name": "Trupp Jakob Fugger",
-            "parent": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [10.6586863, 53.2329202],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Thomasburg",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    10.6586863,
+                    53.2329202
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Thomasburg",
+                },
+                "groups": [
+                    {
+                        "imageWappen": "ms-michael.png",
+                        "name": "Hag Michael",
+                        "website": "https://pfadfinder-thomasburg.de"
+                    },
+                    {
+                        "imageWappen": "stamm-izvor.png",
+                        "name": "Stamm Izvor",
+                        "website": "https://pfadfinder-thomasburg.de/"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "ms-michael.png",
-            "name": "Hag Michael",
-            "website": "https://pfadfinder-thomasburg.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "stamm-izvor.png",
-            "name": "Stamm Izvor",
-            "website": "https://pfadfinder-thomasburg.de/"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.2187727, 50.054255],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Wiesbaden-Gräselberg",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    8.2187727,
+                    50.054255
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Wiesbaden-Gräselberg",
+                },
+                "groups": [
+                    {
+                        "imageWappen": "stamm-wolfstein.jpg",
+                        "name": "Stamm Wolfstein",
+                        "website": "https://www.stamm-wolfstein.de"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "stamm-wolfstein.jpg",
-            "name": "Stamm Wolfstein",
-            "website": "https://www.stamm-wolfstein.de"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.299523464741561, 50.09646851425708],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Wiesbaden-Kloppenheim",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    8.299523464741561,
+                    50.09646851425708
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Wiesbaden-Kloppenheim",
+                },
+                "groups": [
+                    {
+                        "imageWappen": "stamm-wolfstein.jpg",
+                        "name": "Stamm Wolfstein",
+                        "website": "https://www.stamm-wolfstein.de"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "stamm-wolfstein.jpg",
-            "name": "Stamm Wolfstein",
-            "website": "https://www.stamm-wolfstein.de"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [9.935226, 49.77991],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Würzburg",
-          "postalCode": 97072,
-          "streetAddress": "Platenstraße 5"
+        {
+            "geometry": {
+                "coordinates": [
+                    9.935226,
+                    49.77991
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Würzburg",
+                    "postalCode": 97072,
+                    "streetAddress": "Platenstraße 5"
+                },
+                "groups": [
+                    {
+                        "imageWappen": "gau-franken.png",
+                        "name": "Gau Franken",
+                        "website": [
+                            "http://www.gau-franken.de/"
+                        ]
+                    },
+                    {
+                        "imageWappen": "gau-franken-stamm-schwarzer-haufen.jpg",
+                        "name": "Stamm Schwarzer Haufen",
+                        "parent": "Gau Franken",
+                        "website": [
+                            "http://pfadfinder-wuerzburg.de/",
+                            "http://www.gau-franken.de/"
+                        ]
+                    },
+                    {
+                        "imageWappen": "gau-sueben.jpg",
+                        "name": "Gau Sueben",
+                    },
+                    {
+                        "name": "Mädelschaft Tilman Riemenschneider",
+                        "parent": "Gau Sueben",
+                        "website": "http://pfadfinder-wuerzburg.de/"
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": null,
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-franken.png",
-            "name": "Gau Franken",
-            "website": ["http://www.gau-franken.de/"]
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-franken-stamm-schwarzer-haufen.jpg",
-            "name": "Stamm Schwarzer Haufen",
-            "parent": "Gau Franken",
-            "website": [
-              "http://pfadfinder-wuerzburg.de/",
-              "http://www.gau-franken.de/"
-            ]
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "gau-sueben.jpg",
-            "name": "Gau Sueben",
-            "parent": null,
-            "website": null
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": null,
-            "name": "Mädelschaft Tilman Riemenschneider",
-            "parent": "Gau Sueben",
-            "website": "http://pfadfinder-wuerzburg.de/"
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [6.0785894, 50.7814377],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Aachen",
-          "postalCode": null,
-          "streetAddress": null
+        {
+            "geometry": {
+                "coordinates": [
+                    6.0785894,
+                    50.7814377
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Aachen",
+                },
+                "globalWappen": "stamm-wiking.png",
+                "groups": [
+                    {
+                        "imageWappen": "gau-rheinland.png",
+                        "name": "Gau Rheinland",
+                    },
+                    {
+                        "email": "dpb.aachen@gmail.com",
+                        "imageWappen": "stamm-wiking.png",
+                        "name": "Stamm Wiking",
+                        "parent": [
+                            "Gau Rheinland"
+                        ],
+                        "website": "http://www.dpb-aachen.de"
+                    },
+                    {
+                        "email": "dpb.aachen@gmail.com",
+                        "locality": "Aachen",
+                        "name": "Aufbaugilde Sithonen",
+                        "parent": [
+                            "Mädeschaft Volée"
+                        ],
+                    }
+                ]
+            },
+            "type": "Feature"
         },
-        "globalWappen": "stamm-wiking.png",
-        "groups": [
-            {
-                "contact": null,
-                "description": null,
-                "email": null,
-                "imageWappen": "gau-rheinland.png",
-                "name": "Gau Rheinland",
-                "website": null
-              },
-          {
-            "contact": null,
-            "description": null,
-            "email": "dpb.aachen@gmail.com",
-            "imageWappen": "stamm-wiking.png",
-            "name": "Stamm Wiking",
-            "parent": ["Gau Rheinland"],
-            "website": "http://www.dpb-aachen.de"
-          },
-          {
-            "contact": null,
-            "description": null,
-            "email": "dpb.aachen@gmail.com",
-            "imageWappen": null,
-            "locality": "Aachen",
-            "name": "Aufbaugilde Sithonen",
-            "parent": ["Mädeschaft Volée"],
-            "streetAddress": null,
-            "website": null
-          }
-        ]
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [8.217639, 50.177361],
-        "type": "Point"
-      },
-      "properties": {
-        "address": {
-          "locality": "Taunusstein",
-          "postalCode": 65232,
-          "streetAddress": "Im Maisel 1b"
-        },
-        "groups": [
-          {
-            "contact": null,
-            "description": null,
-            "email": null,
-            "imageWappen": "stamm-wulfen.gif",
-            "name": "Stamm Wulfen",
-            "website": "https://www.dpb-taunusstein.de/wulfen"
-          }
-        ]
-      },
-      "type": "Feature"
-    }
-  ],
-  "type": "FeatureCollection"
+        {
+            "geometry": {
+                "coordinates": [
+                    8.217639,
+                    50.177361
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Taunusstein",
+                    "postalCode": 65232,
+                    "streetAddress": "Im Maisel 1b"
+                },
+                "groups": [
+                    {
+                        "imageWappen": "stamm-wulfen.gif",
+                        "name": "Stamm Wulfen",
+                        "website": "https://www.dpb-taunusstein.de/wulfen"
+                    }
+                ]
+            },
+            "type": "Feature"
+        }
+    ],
+    "type": "FeatureCollection"
 }

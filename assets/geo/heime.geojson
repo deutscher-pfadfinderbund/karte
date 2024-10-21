@@ -19,7 +19,6 @@
                 "imagePicture": "https://schloss-martinfeld.de/wp-content/uploads/2022/07/Aussen2_komplett.jpg",
                 "website": "https://schloss-martinfeld.de/",
                 "email": "info@schloss-martinfeld.de",
-                "contact": null,
                 "description": ""
             }
         },
@@ -37,11 +36,9 @@
                 "addressLocality": "Remscheid",
                 "postalCode": 42857,
                 "streetAddress": "Hammertal 4",
-                "imageLogo": null,
                 "imagePicture": "https://lh5.googleusercontent.com/p/AF1QipOpsgHd_oCZWQE_dPIB2IVuFooebEKDdUwTUR0=w408-h306-k-no",
                 "website": "https://diederichskotten.de/",
                 "email": "info@diederichskotten.de",
-                "contact": null,
                 "description": "Der Diederichskotten ist ein denkmalgeschütztes Gebäude im Hammertal, das seit den 1980er Jahren von den Remscheider Pfadfindern genutzt wird. Im Jahr 1990 wurde ein Verein gegründet, um das Gebäude zu erhalten und als Ort für bündische Veranstaltungen zu nutzen und so den Gruppen des Deutschen Pfadfinderbundes in Remscheid eine Heimat bietet."
             }
         },
@@ -59,11 +56,7 @@
                 "addressLocality": "Remscheid",
                 "postalCode": 42857,
                 "streetAddress": "Tyrol 4",
-                "imageLogo": null,
                 "imagePicture": "https://lh5.googleusercontent.com/p/AF1QipNvC6T1NCk9k-t3i1-WHJNtosCeJCBCwPfuAVE=w408-h306-k-no",
-                "website": null,
-                "email": null,
-                "contact": null,
                 "description": ""
             }
         },
@@ -81,8 +74,6 @@
                 "addressLocality": "Berlin-Tempelhof",
                 "postalCode": 12099,
                 "streetAddress": "Götzstr. 30-32 (keine Postadresse)",
-                "imageLogo": null,
-                "imagePicture": null,
                 "website": "http://pfadfinder-tempelhof.de",
                 "email": "vorstand@pfadfinder-tempelhof.de",
                 "contact": "Pfadfinderheim Marienhöhe e. V.",
@@ -103,11 +94,9 @@
                 "addressLocality": "Berlin-Fronhau",
                 "postalCode": 13465,
                 "streetAddress": "Schönfliesser Str. 11B",
-                "imageLogo": null,
                 "imagePicture": "https://lh5.googleusercontent.com/p/AF1QipM0jsqvfl5fjHQMYzMfh8OCyGBds2AC4zpwbGJ6=w203-h152-k-no",
                 "website": "https://www.pfadfinder-frohnau.de",
                 "email": "frohnau@dpb-berlin.de",
-                "contact": null,
                 "description": "Häuschen ~ Jungenschaft Gawan, Mädelschaft Ginover"
             }
         },
@@ -125,11 +114,8 @@
                 "addressLocality": "Berlin-Tegel",
                 "postalCode": 13509,
                 "streetAddress": "Ziekowstraße 163",
-                "imageLogo": null,
                 "imagePicture": "pfadfinderburg-tegel.png",
                 "website": "http://www.pfadfinderburg.de/",
-                "email": null,
-                "contact": null,
                 "description": "Die Pfadfinderburg in Berlin-Tegel ist das Heim vieler Gruppen des Gaues Wartburg im DPB und steht auch anderen Pfadfindergruppen nach Absprache zur Verfügung."
             }
         },
@@ -145,13 +131,7 @@
             "properties": {
                 "name": "Jugendheim Wolfstein e.V.",
                 "addressLocality": "Wiesbaden",
-                "postalCode": null,
-                "streetAddress": null,
-                "imageLogo": null,
-                "imagePicture": null,
                 "website": "https://www.stamm-wolfstein.de/",
-                "email": null,
-                "contact": null,
                 "description": ""
             }
         },
@@ -167,13 +147,6 @@
             "properties": {
                 "name": "Pfadfinderheim Bad Meinberg",
                 "addressLocality": "Bad Meinberg",
-                "postalCode": null,
-                "streetAddress": null,
-                "imageLogo": null,
-                "imagePicture": null,
-                "website": null,
-                "email": null,
-                "contact": null,
                 "description": "Jungenschaft Theotmalli Standort Bad Meinberg"
             }
         },
@@ -191,7 +164,6 @@
                 "addressLocality": "Iserlohn",
                 "postalCode": 58644,
                 "streetAddress": "Asbecker Weg 20",
-                "imageLogo": null,
                 "imagePicture": "https://lh5.googleusercontent.com/p/AF1QipM42ZjFIrLCzZw4G83CNedKva5xDpIyVfYnCcJs=w426-h240-k-no",
                 "website": "https://brackeler-huette.de",
                 "email": "info@brackeler-huette.de",
@@ -213,8 +185,6 @@
                 "addressLocality": "Schleiden",
                 "postalCode": 53937,
                 "streetAddress": "Weiherhardt 2",
-                "imageLogo": null,
-                "imagePicture": null,
                 "website": "https://www.akpz-ettelscheid.de/",
                 "email": "reservierung@akpz-ettelscheid.de",
                 "contact": "AKPZ e.V.<br>Herr Kersten Mülle",
@@ -235,11 +205,8 @@
                 "addressLocality": "Pegnitz - Körbeldorf",
                 "postalCode": 91257,
                 "streetAddress": "Hollenbergerweg 8",
-                "imageLogo": null,
-                "imagePicture": null,
                 "website": "http://www.dpb-landesheimfranken.de",
                 "email": "dpblandesheimfranken@gmail.com",
-                "contact": null,
                 "description": ""
             }
         },
@@ -257,11 +224,7 @@
                 "addressLocality": "Köln",
                 "postalCode": 51069,
                 "streetAddress": "Penningsfelder Weg 2",
-                "imageLogo": null,
-                "imagePicture": null,
                 "website": "https://schwarzer-adler.org",
-                "email": null,
-                "contact": null,
                 "description": ""
             }
         },
@@ -279,11 +242,7 @@
                 "addressLocality": "Gelsenkirchen",
                 "postalCode": 45892,
                 "streetAddress": "Ressestr. 55a",
-                "imageLogo": null,
-                "imagePicture": null,
                 "website": "https://pfadfinder-gelsenkirchen.de/pfadfinderheim/",
-                "email": null,
-                "contact": null,
                 "description": ""
             }
         },
@@ -301,11 +260,7 @@
                 "addressLocality": "Herleshausen-Willershausen",
                 "postalCode": 37293,
                 "streetAddress": "Bergring 10",
-                "imageLogo": null,
-                "imagePicture": null,
                 "website": "https://www.ausruester-eschwege.de/Gaestehaus-Willershausen:_:36.html",
-                "email": null,
-                "contact": null,
                 "description": ""
             }
         },
@@ -323,11 +278,7 @@
                 "addressLocality": "Taunusstein",
                 "postalCode": 65232,
                 "streetAddress": "Im Maisel 1b",
-                "imageLogo": null,
-                "imagePicture": null,
                 "website": "https://www.dpb-taunusstein.de/informationen",
-                "email": null,
-                "contact": null,
                 "description": ""
             }
         },
@@ -344,12 +295,7 @@
                 "name": "Schaalseeheim",
                 "addressLocality": "Seedorf - Groß Zecher",
                 "postalCode": 23883,
-                "streetAddress": null,
-                "imageLogo": null,
-                "imagePicture": null,
                 "website": "https://pfadfinderheim-gross-zecher.de",
-                "email": null,
-                "contact": null,
                 "description": ""
             }
         },
@@ -367,11 +313,7 @@
                 "addressLocality": "Hürth",
                 "postalCode": 50354,
                 "streetAddress": "Luxemburgerstraße 519",
-                "imageLogo": null,
-                "imagePicture": null,
                 "website": "https://saporoger.de/pfadfinderheim/",
-                "email": null,
-                "contact": null,
                 "description": ""
             }
         }
