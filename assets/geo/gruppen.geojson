@@ -1260,15 +1260,13 @@
         },
         "globalWappen": null,
         "groups": [
-         
           {
             "contact": null,
             "description": null,
             "email": null,
-            "imageWappen": null,
-            "name": "Stamm Jakob Fugger",
-            "parent": null,
-            "website": "https://www.pfadfinder-meitingen.de"
+            "imageWappen": "trupp-jakob-fugger.png",
+            "name": "Trupp Jakob Fugger",
+            "parent": null
           }
         ]
       },
