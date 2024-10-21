@@ -1418,6 +1418,7 @@
           "postalCode": null,
           "streetAddress": null
         },
+        "globalWappen": "stamm-wiking.png",
         "groups": [
             {
                 "contact": null,
