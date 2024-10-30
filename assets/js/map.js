@@ -82,23 +82,6 @@ function formatParent(parents) {
     return parentContainer;
 }
 
-/**
- * Format parent names into a string with 'im' separator.
- *
- * @param {string | string[]} parents - The parent name(s) to format.
- * @returns {string} The formatted parent names joined with 'im'.
- */
-function formatParentS(parents) {
-    if (!Array.isArray(parents)) {
-        parents = [parents];
-    }
-
-    const parentContainer = parents.map(function (parent) {
-        return parent;
-    }).join(' im ');
-
-    return parentContainer;
-}
 
 
 /**
@@ -226,7 +209,7 @@ function createMarkers(feature, type) {
 
         feature.properties.groups.forEach(function (element, index) {
             if (element.parent != null) {
-                var parentS = formatParentS(element.parent);
+                var parentS = formatParent(element.parent);
                 if (index == 0) {
                     markerTitle += element.name + ' - ' + parentS + ' (' + feature.properties.address.locality + ')';
                 } else {

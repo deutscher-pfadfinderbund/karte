@@ -10,7 +10,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Altenburg (Thüringen)",
+                    "locality": "Altenburg (Thüringen)"
                 },
                 "globalWappen": "js_ms-hohenstaufen-altenburg.gif",
                 "groups": [
@@ -38,7 +38,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Bad Meinberg",
+                    "locality": "Bad Meinberg"
                 },
                 "groups": [
                     {
@@ -60,12 +60,12 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Düsseldorf-Benrath",
+                    "locality": "Düsseldorf-Benrath"
                 },
                 "groups": [
                     {
                         "imageWappen": "gau-rheinland.png",
-                        "name": "Gau Rheinland",
+                        "name": "Gau Rheinland"
                     },
                     {
                         "email": "info@rheinritter-dpb.de",
@@ -79,7 +79,7 @@
                     {
                         "email": "ms.volee@gmail.com",
                         "imageWappen": "ms-volee.png",
-                        "name": "Mädelschaft Volée",
+                        "name": "Mädelschaft Volée"
                     }
                 ]
             },
@@ -95,12 +95,12 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Bergheim",
+                    "locality": "Bergheim"
                 },
                 "groups": [
                     {
                         "imageWappen": "gau-rheinland.png",
-                        "name": "Gau Rheinland",
+                        "name": "Gau Rheinland"
                     }
                 ]
             },
@@ -116,7 +116,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Bergheim-Glessen",
+                    "locality": "Bergheim-Glessen"
                 },
                 "groups": [
                     {
@@ -295,7 +295,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Berlin-Tempelhof",
+                    "locality": "Berlin-Tempelhof"
                 },
                 "groups": [
                     {
@@ -322,19 +322,19 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Bonn",
+                    "locality": "Bonn"
                 },
                 "globalWappen": "gau-wolkenburg.jpg",
                 "groups": [
                     {
                         "imageWappen": "gau-wolkenburg.jpg",
-                        "name": "Gau Wolkenburg",
+                        "name": "Gau Wolkenburg"
                     },
                     {
                         "name": "Mädelschaft Ubier",
                         "parent": [
                             "Gau Wolkenburg"
-                        ],
+                        ]
                     }
                 ]
             },
@@ -379,7 +379,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Bonn-Altstadt",
+                    "locality": "Bonn-Altstadt"
                 },
                 "groups": [
                     {
@@ -401,20 +401,20 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Bottrop-Kirchhellen",
+                    "locality": "Bottrop-Kirchhellen"
                 },
                 "globalWappen": "gau-wolkenburg.jpg",
                 "groups": [
                     {
                         "imageWappen": "gau-wolkenburg.jpg",
-                        "name": "Gau Wolkenburg",
+                        "name": "Gau Wolkenburg"
                     },
                     {
                         "imageWappen": "ms-midgard.jpg",
                         "name": "Mädelschaft Midgard",
                         "parent": [
                             "Gau Wolkenburg"
-                        ],
+                        ]
                     }
                 ]
             },
@@ -430,7 +430,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Detmold",
+                    "locality": "Detmold"
                 },
                 "groups": [
                     {
@@ -457,7 +457,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Detmold-Heiligenkirchen",
+                    "locality": "Detmold-Heiligenkirchen"
                 },
                 "groups": [
                     {
@@ -580,7 +580,7 @@
             "properties": {
                 "address": {
                     "locality": "Hemer",
-                    "postalCode": 58675,
+                    "postalCode": 58675
                 },
                 "groups": [
                     {
@@ -618,11 +618,11 @@
                     },
                     {
                         "parent": "Ring Rote Erde",
-                        "name": "Jungenschaft Cherusker",
+                        "name": "Jungenschaft Cherusker"
                     },
                     {
                         "parent": "Ring Rote Erde",
-                        "name": "Mädelschaft Grieptoo",
+                        "name": "Mädelschaft Grieptoo"
                     }
                 ]
             },
@@ -653,13 +653,13 @@
                         "name": "Mädelschaft Zugvögel",
                         "parent": [
                             "Ring Goldener Löwe"
-                        ],
+                        ]
                     },
                     {
                         "name": "Jungenschaft Ostgoten",
                         "parent": [
                             "Ring Goldener Löwe"
-                        ],
+                        ]
                     }
                 ]
             },
@@ -675,14 +675,14 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Hiddesen",
+                    "locality": "Hiddesen"
                 },
                 "groups": [
                     {
-                        "name": "Jungenschaft Martin-Luther-King",
+                        "name": "Jungenschaft Martin-Luther-King"
                     },
                     {
-                        "name": "Hag Weiße Rose",
+                        "name": "Hag Weiße Rose"
                     }
                 ]
             },
@@ -704,7 +704,7 @@
                 "groups": [
                     {
                         "imageWappen": "gau-rheinland.png",
-                        "name": "Gau Rheinland",
+                        "name": "Gau Rheinland"
                     },
                     {
                         "name": "Stamm Saporoger",
@@ -740,13 +740,13 @@
                         "name": "Jungenschaft Geusen",
                         "parent": [
                             "Ring Florian Geyer"
-                        ],
+                        ]
                     },
                     {
                         "name": "Mädelschaft Freya",
                         "parent": [
                             "Ring Florian Geyer"
-                        ],
+                        ]
                     }
                 ]
             },
@@ -770,7 +770,7 @@
                 "groups": [
                     {
                         "imageWappen": "gau-wolkenburg.jpg",
-                        "name": "Gau Wolkenburg",
+                        "name": "Gau Wolkenburg"
                     },
                     {
                         "imageWappen": "ms-schwarzer-adler.png",
@@ -802,7 +802,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Maschen",
+                    "locality": "Maschen"
                 },
                 "globalWappen": "js_ms-hohenstaufen-altenburg.gif",
                 "groups": [
@@ -849,7 +849,7 @@
                     },
                     {
                         "imageWappen": "gau-sueben.jpg",
-                        "name": "Gau Sueben",
+                        "name": "Gau Sueben"
                     }
                 ]
             },
@@ -865,20 +865,20 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Minden",
+                    "locality": "Minden"
                 },
                 "globalWappen": "gau-wolkenburg.jpg",
                 "groups": [
                     {
                         "imageWappen": "gau-wolkenburg.jpg",
-                        "name": "Gau Wolkenburg",
+                        "name": "Gau Wolkenburg"
                     },
                     {
                         "imageWappen": "ms-midgard.jpg",
                         "name": "Mädelschaft Midgard",
                         "parent": [
                             "Gau Wolkenburg"
-                        ],
+                        ]
                     }
                 ]
             },
@@ -907,7 +907,7 @@
                     {
                         "email": "ms.volee@gmail.com",
                         "imageWappen": "ms-volee.png",
-                        "name": "Mädelschaft Volée",
+                        "name": "Mädelschaft Volée"
                     }
                 ]
             },
@@ -923,19 +923,19 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Mühlheim am Main",
+                    "locality": "Mühlheim am Main"
                 },
                 "globalWappen": "gau-sueben.jpg",
                 "groups": [
                     {
                         "imageWappen": "gau-sueben.jpg",
-                        "name": "Gau Sueben",
+                        "name": "Gau Sueben"
                     },
                     {
                         "name": "Mädelschaft Rheinmöwen",
                         "parent": [
                             "Gau Sueben"
-                        ],
+                        ]
                     }
                 ]
             },
@@ -951,20 +951,20 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Münster",
+                    "locality": "Münster"
                 },
                 "globalWappen": "gau-wolkenburg.jpg",
                 "groups": [
                     {
                         "imageWappen": "gau-wolkenburg.jpg",
-                        "name": "Gau Wolkenburg",
+                        "name": "Gau Wolkenburg"
                     },
                     {
                         "imageWappen": "ms-midgard.jpg",
                         "name": "Mädelschaft Midgard",
                         "parent": [
                             "Gau Wolkenburg"
-                        ],
+                        ]
                     }
                 ]
             },
@@ -980,17 +980,17 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Oberpleichfeld",
+                    "locality": "Oberpleichfeld"
                 },
                 "globalWappen": "gau-sueben.jpg",
                 "groups": [
                     {
                         "imageWappen": "gau-sueben.jpg",
-                        "name": "Gau Sueben",
+                        "name": "Gau Sueben"
                     },
                     {
                         "name": "Mädelschaft Tilman Riemenschneider",
-                        "parent": "Gau Sueben",
+                        "parent": "Gau Sueben"
                     }
                 ]
             },
@@ -1021,7 +1021,7 @@
                         "name": "Jungenschaft Ostgoten",
                         "parent": [
                             "Ring Goldener Löwe"
-                        ],
+                        ]
                     }
                 ]
             },
@@ -1037,7 +1037,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Remscheid",
+                    "locality": "Remscheid"
                 },
                 "globalWappen": "ring-namata.svg",
                 "groups": [
@@ -1076,19 +1076,19 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Hanau-Steinheim",
+                    "locality": "Hanau-Steinheim"
                 },
                 "globalWappen": "gau-sueben.jpg",
                 "groups": [
                     {
                         "imageWappen": "gau-sueben.jpg",
-                        "name": "Gau Sueben",
+                        "name": "Gau Sueben"
                     },
                     {
                         "name": "Mädelschaft Rheinmöwen",
                         "parent": [
                             "Gau Sueben"
-                        ],
+                        ]
                     }
                 ]
             },
@@ -1111,7 +1111,7 @@
                 "groups": [
                     {
                         "imageWappen": "trupp-jakob-fugger.png",
-                        "name": "Trupp Jakob Fugger",
+                        "name": "Trupp Jakob Fugger"
                     }
                 ]
             },
@@ -1127,7 +1127,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Thomasburg",
+                    "locality": "Thomasburg"
                 },
                 "groups": [
                     {
@@ -1154,7 +1154,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Wiesbaden-Gräselberg",
+                    "locality": "Wiesbaden-Gräselberg"
                 },
                 "groups": [
                     {
@@ -1176,7 +1176,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Wiesbaden-Kloppenheim",
+                    "locality": "Wiesbaden-Kloppenheim"
                 },
                 "groups": [
                     {
@@ -1221,7 +1221,7 @@
                     },
                     {
                         "imageWappen": "gau-sueben.jpg",
-                        "name": "Gau Sueben",
+                        "name": "Gau Sueben"
                     },
                     {
                         "name": "Mädelschaft Tilman Riemenschneider",
@@ -1242,13 +1242,13 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Aachen",
+                    "locality": "Aachen"
                 },
                 "globalWappen": "stamm-wiking.png",
                 "groups": [
                     {
                         "imageWappen": "gau-rheinland.png",
-                        "name": "Gau Rheinland",
+                        "name": "Gau Rheinland"
                     },
                     {
                         "email": "dpb.aachen@gmail.com",
@@ -1265,7 +1265,7 @@
                         "name": "Aufbaugilde Sithonen",
                         "parent": [
                             "Mädeschaft Volée"
-                        ],
+                        ]
                     }
                 ]
             },
