@@ -106,7 +106,7 @@
             },
             "type": "Feature"
         },
-       
+       {
             "geometry": {
                 "coordinates": [
                     13.28881,
@@ -290,14 +290,7 @@
             },
             "type": "Feature"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    7.10066,
-                    50.735851
-                ],
-                "type": "Point"
-            },
+        
         {
             "geometry": {
                 "coordinates": [

@@ -21,25 +21,15 @@ function isValidUrl(url) {
  * @returns {HTMLElement} The container element with image elements.
  */
 function formatImage(images, type) {
-    let imgPath;
-    if (type === "gruppe") {
-        imgPath = "gruppen";
-    } else if (type === "heim") {
-        imgPath = "heime";
-    } else {
-        throw new Error("Invalid image type. Supported types are 'gruppe' or 'heim'.");
-    }
+    const imgPath = type === "gruppe" ? "gruppen" : type === "heim" ? "heime" : (() => { throw new Error("Invalid image type. Supported types are 'gruppe' or 'heim'.") })();
 
     if (!Array.isArray(images)) {
         images = [images];
     }
 
     const imageContainer = document.createElement("div");
-    if (type === "gruppe") {
-        imageContainer.className = "wappen-container";
-    } else if (type === "heim") {
-        imageContainer.className = "image-container";
-    }
+    imageContainer.className = type === "gruppe" ? "wappen-container" : type === "heim" ? "image-container" : "";
+
 
     imageContainer.append(
         ...images.map((imageUrl) => {
@@ -71,13 +61,9 @@ function formatImage(images, type) {
  * @returns {string} The formatted parent names joined with 'im'.
  */
 function formatParent(parents) {
-    if (!Array.isArray(parents)) {
-        parents = [parents];
-    }
+    parents = Array.isArray(parents) ? parents : [parents];
 
-    const parentContainer = parents.map(function (parent) {
-        return parent;
-    }).join(' im ');
+    const parentContainer = parents.map(parent => parent).join(' im ');
 
     return parentContainer;
 }
@@ -91,13 +77,11 @@ function formatParent(parents) {
  * @returns {string} The formatted HTML anchor elements for the website URLs.
  */
 function formatWebsite(websites) {
-    if (!Array.isArray(websites)) {
-        websites = [websites];
-    }
 
-    const websiteContainer = websites.map(function (website) {
-        var websiteElement = `<div>&#x1F30D;&nbsp;&nbsp;<a href='${website}' target='_blank' rel='noopener noreferrer'>${website}</a></div>`;
-        return websiteElement;
+    websites = Array.isArray(websites) ? websites : [websites];
+
+    const websiteContainer = websites.map(website => {
+        return `<div>&#x1F30D;&nbsp;&nbsp;<a href='${website}' target='_blank' rel='noopener noreferrer'>${website}</a></div>`;
     }).join('');
 
     return websiteContainer;
@@ -188,14 +172,13 @@ function createDetailsHeime(layer) {
  */
 function createMarkers(feature, type) {
     // Initialize variables for image paths and types
-    var img_path;
-    var img_generic;
-    let scalinghack;
+     let img_path, img_generic, scalinghack;
 
     // Check the type of feature to determine which marker to create
     if (type == "gruppe") {
         img_path = "gruppen";
         img_generic = "Bundeslilie_dynamic.svg";
+        
 
         var image = null;
         if ((feature.properties.groups.length != 1) && (feature.properties.globalWappen != null)) {
@@ -250,9 +233,9 @@ function createMarkers(feature, type) {
         var markerIcon = "./assets/img/" + img_generic;
     }
 
-    var logoMarker = L.divIcon({
+    const logoMarker = L.divIcon({
         className: "marker-div-icon",
-        html: `<div class="marker-pin" style="--marker-color: ` + markerColor + `;" title="` + markerTitle + `"><div class="marker-pin-inner"><img class="marker-image" src="` + markerIcon + `" style="color-scheme: light; --markerImageMargin: ` + markerImageMargin + `;"></div></div>`,
+        html: `<div class="marker-pin" style="--marker-color: ${markerColor};" title="${markerTitle}"><div class="marker-pin-inner"><img class="marker-image" src="${markerIcon}" style="color-scheme: light; --markerImageMargin: ${markerImageMargin};"></div></div>`,
         iconSize: [40, 40],
         iconAnchor: [25, 50]
     });
