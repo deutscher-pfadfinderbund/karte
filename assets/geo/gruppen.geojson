@@ -106,29 +106,7 @@
             },
             "type": "Feature"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    6.7451978,
-                    50.9638661
-                ],
-                "type": "Point"
-            },
-            "properties": {
-                "address": {
-                    "locality": "Bergheim-Glessen"
-                },
-                "groups": [
-                    {
-                        "imageWappen": "js-volundr.png",
-                        "name": "Jungenschaft Volundr",
-                        "website": "https://www.dpb-bonn.de/volundr/"
-                    }
-                ]
-            },
-            "type": "Feature"
-        },
-        {
+       
             "geometry": {
                 "coordinates": [
                     13.28881,
@@ -320,26 +298,6 @@
                 ],
                 "type": "Point"
             },
-            "properties": {
-                "address": {
-                    "locality": "Bonn"
-                },
-                "globalWappen": "gau-wolkenburg.jpg",
-                "groups": [
-                    {
-                        "imageWappen": "gau-wolkenburg.jpg",
-                        "name": "Gau Wolkenburg"
-                    },
-                    {
-                        "name": "Mädelschaft Ubier",
-                        "parent": [
-                            "Gau Wolkenburg"
-                        ]
-                    }
-                ]
-            },
-            "type": "Feature"
-        },
         {
             "geometry": {
                 "coordinates": [
@@ -350,7 +308,7 @@
             },
             "properties": {
                 "address": {
-                    "locality": "Bonn-Auerberg",
+                    "locality": "Bonn",
                     "postalCode": "53117",
                     "streetAddress": "An der Rheindorfer Burg 9"
                 },
@@ -369,28 +327,7 @@
             },
             "type": "Feature"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    6.9052004,
-                    51.4367253
-                ],
-                "type": "Point"
-            },
-            "properties": {
-                "address": {
-                    "locality": "Bonn-Altstadt"
-                },
-                "groups": [
-                    {
-                        "imageWappen": "js-volundr.png",
-                        "name": "Jungenschaft Volundr",
-                        "website": "https://www.dpb-bonn.de/volundr/"
-                    }
-                ]
-            },
-            "type": "Feature"
-        },
+        
         {
             "geometry": {
                 "coordinates": [
