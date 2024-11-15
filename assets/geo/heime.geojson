@@ -196,25 +196,6 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    11.494977,
-                    49.770567
-                ]
-            },
-            "properties": {
-                "name": "DPB Landesheim Franken e.V.",
-                "addressLocality": "Pegnitz - Körbeldorf",
-                "postalCode": 91257,
-                "streetAddress": "Hollenbergerweg 8",
-                "website": "http://www.dpb-landesheimfranken.de",
-                "email": "dpblandesheimfranken@gmail.com",
-                "description": ""
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
                     7.09198,
                     50.96878
                 ]
