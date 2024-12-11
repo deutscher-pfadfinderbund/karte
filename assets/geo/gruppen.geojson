@@ -3,6 +3,28 @@
         {
             "geometry": {
                 "coordinates": [
+                    10.9111645,
+                    48.5633935
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "address": {
+                    "locality": "Thierhaupten"
+                },
+            
+                "groups": [
+                    {
+                        "imageWappen": "stamm-hohlenstein.png",
+                        "name": "Stamm Hohlenstein - Älterenkreis"
+                    }
+                ]
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
                     12.4340988,
                     50.9852411
                 ],
