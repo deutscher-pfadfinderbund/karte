@@ -1026,6 +1026,12 @@
                     {
                         "imageWappen": "stamm-hohlenstein.png",
                         "name": "Stamm Hohlenstein - Älterenkreis"
+                    },
+                    {
+                        "imageWappen": "gilde-noreia.png",
+                        "name": "Gilde Noreia",
+                        "website": "https://thierhaupten-pfadfinder.de/Noreia/",
+                        "email": "info@thierhaupten-pfadfinder.de"
                     }
                 ]
             },
