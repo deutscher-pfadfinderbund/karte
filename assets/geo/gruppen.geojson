@@ -1028,8 +1028,13 @@
                         "name": "Stamm Hohlenstein - Älterenkreis"
                     },
                     {
+                        "imageWappen": "gau-sueben.jpg",
+                        "name": "Gau Sueben"
+                    },
+                    {
                         "imageWappen": "gilde-noreia.png",
                         "name": "Gilde Noreia",
+                        "parent": "Gau Sueben",
                         "website": "https://thierhaupten-pfadfinder.de/",
                         "email": "info@thierhaupten-pfadfinder.de"
                     }
